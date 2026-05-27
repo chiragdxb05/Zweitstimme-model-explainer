@@ -1,0 +1,1786 @@
+wkr,wkr_name,party_raw,vote_share_2021,party
+1,Flensburg – Schleswig,SPD,21.8,SPD
+1,Flensburg – Schleswig,Grune,28.1,Grune
+1,Flensburg – Schleswig,AfD,5.5,AfD
+1,Flensburg – Schleswig,Linke,3.7,Linke
+1,Flensburg – Schleswig,FDP,6.9,FDP
+1,Flensburg – Schleswig,CDU_CSU,23.4,CDU/CSU
+2,Nordfriesland – Dithmarschen Nord,SPD,27.8,SPD
+2,Nordfriesland – Dithmarschen Nord,Grune,14.3,Grune
+2,Nordfriesland – Dithmarschen Nord,AfD,5.7,AfD
+2,Nordfriesland – Dithmarschen Nord,Linke,2.8,Linke
+2,Nordfriesland – Dithmarschen Nord,FDP,9.7,FDP
+2,Nordfriesland – Dithmarschen Nord,CDU_CSU,30.4,CDU/CSU
+3,Steinburg – Dithmarschen Süd,SPD,29.2,SPD
+3,Steinburg – Dithmarschen Süd,Grune,12.4,Grune
+3,Steinburg – Dithmarschen Süd,AfD,7.7,AfD
+3,Steinburg – Dithmarschen Süd,Linke,3.2,Linke
+3,Steinburg – Dithmarschen Süd,FDP,14.3,FDP
+3,Steinburg – Dithmarschen Süd,CDU_CSU,29.2,CDU/CSU
+4,Rendsburg-Eckernförde,SPD,30.8,SPD
+4,Rendsburg-Eckernförde,Grune,14.8,Grune
+4,Rendsburg-Eckernförde,AfD,6.3,AfD
+4,Rendsburg-Eckernförde,Linke,2.7,Linke
+4,Rendsburg-Eckernförde,FDP,8,FDP
+4,Rendsburg-Eckernförde,CDU_CSU,29.7,CDU/CSU
+5,Kiel,SPD,29.5,SPD
+5,Kiel,Grune,28.1,Grune
+5,Kiel,AfD,4.6,AfD
+5,Kiel,Linke,4.7,Linke
+5,Kiel,FDP,7.4,FDP
+5,Kiel,CDU_CSU,18.4,CDU/CSU
+6,Plön – Neumünster,SPD,31.4,SPD
+6,Plön – Neumünster,Grune,15.7,Grune
+6,Plön – Neumünster,AfD,7.1,AfD
+6,Plön – Neumünster,Linke,2.8,Linke
+6,Plön – Neumünster,FDP,9.4,FDP
+6,Plön – Neumünster,CDU_CSU,27.9,CDU/CSU
+7,Pinneberg,SPD,31.2,SPD
+7,Pinneberg,Grune,16.9,Grune
+7,Pinneberg,AfD,6.4,AfD
+7,Pinneberg,Linke,3,Linke
+7,Pinneberg,FDP,10.9,FDP
+7,Pinneberg,CDU_CSU,26.2,CDU/CSU
+8,Segeberg – Stormarn-Mitte,SPD,32,SPD
+8,Segeberg – Stormarn-Mitte,Grune,13.7,Grune
+8,Segeberg – Stormarn-Mitte,AfD,7.1,AfD
+8,Segeberg – Stormarn-Mitte,Linke,3.1,Linke
+8,Segeberg – Stormarn-Mitte,FDP,10.4,FDP
+8,Segeberg – Stormarn-Mitte,CDU_CSU,27.9,CDU/CSU
+9,Ostholstein – Stormarn-Nord,SPD,33.7,SPD
+9,Ostholstein – Stormarn-Nord,Grune,13.4,Grune
+9,Ostholstein – Stormarn-Nord,AfD,6.8,AfD
+9,Ostholstein – Stormarn-Nord,Linke,2.9,Linke
+9,Ostholstein – Stormarn-Nord,FDP,9.4,FDP
+9,Ostholstein – Stormarn-Nord,CDU_CSU,30.3,CDU/CSU
+10,Herzogtum Lauenburg – Stormarn-Süd,SPD,31,SPD
+10,Herzogtum Lauenburg – Stormarn-Süd,Grune,17.4,Grune
+10,Herzogtum Lauenburg – Stormarn-Süd,AfD,7.2,AfD
+10,Herzogtum Lauenburg – Stormarn-Süd,Linke,2.6,Linke
+10,Herzogtum Lauenburg – Stormarn-Süd,FDP,10.5,FDP
+10,Herzogtum Lauenburg – Stormarn-Süd,CDU_CSU,26.6,CDU/CSU
+11,Lübeck,SPD,34.1,SPD
+11,Lübeck,Grune,21.4,Grune
+11,Lübeck,AfD,6.6,AfD
+11,Lübeck,Linke,3.1,Linke
+11,Lübeck,FDP,7.5,FDP
+11,Lübeck,CDU_CSU,21.8,CDU/CSU
+12,Schwerin – Ludwigslust-Parchim I – Nordwestmecklenburg I,SPD,29.4,SPD
+12,Schwerin – Ludwigslust-Parchim I – Nordwestmecklenburg I,Grune,7.9,Grune
+12,Schwerin – Ludwigslust-Parchim I – Nordwestmecklenburg I,AfD,16.5,AfD
+12,Schwerin – Ludwigslust-Parchim I – Nordwestmecklenburg I,Linke,11.7,Linke
+12,Schwerin – Ludwigslust-Parchim I – Nordwestmecklenburg I,FDP,7.7,FDP
+12,Schwerin – Ludwigslust-Parchim I – Nordwestmecklenburg I,CDU_CSU,20.7,CDU/CSU
+13,Ludwigslust-Parchim II – Nordwestmecklenburg II – Landkreis Rostock I,SPD,35.2,SPD
+13,Ludwigslust-Parchim II – Nordwestmecklenburg II – Landkreis Rostock I,Grune,5.7,Grune
+13,Ludwigslust-Parchim II – Nordwestmecklenburg II – Landkreis Rostock I,AfD,17.2,AfD
+13,Ludwigslust-Parchim II – Nordwestmecklenburg II – Landkreis Rostock I,Linke,10.4,Linke
+13,Ludwigslust-Parchim II – Nordwestmecklenburg II – Landkreis Rostock I,FDP,7.2,FDP
+13,Ludwigslust-Parchim II – Nordwestmecklenburg II – Landkreis Rostock I,CDU_CSU,18.2,CDU/CSU
+14,Rostock – Landkreis Rostock II,SPD,27,SPD
+14,Rostock – Landkreis Rostock II,Grune,10.2,Grune
+14,Rostock – Landkreis Rostock II,AfD,12.2,AfD
+14,Rostock – Landkreis Rostock II,Linke,18.2,Linke
+14,Rostock – Landkreis Rostock II,FDP,7.5,FDP
+14,Rostock – Landkreis Rostock II,CDU_CSU,17,CDU/CSU
+15,Vorpommern-Rügen – Vorpommern-Greifswald I,SPD,24.3,SPD
+15,Vorpommern-Rügen – Vorpommern-Greifswald I,Grune,7.3,Grune
+15,Vorpommern-Rügen – Vorpommern-Greifswald I,AfD,19.9,AfD
+15,Vorpommern-Rügen – Vorpommern-Greifswald I,Linke,13.7,Linke
+15,Vorpommern-Rügen – Vorpommern-Greifswald I,FDP,6.6,FDP
+15,Vorpommern-Rügen – Vorpommern-Greifswald I,CDU_CSU,20.4,CDU/CSU
+16,Mecklenburgische Seenplatte I – Vorpommern-Greifswald II,SPD,24.8,SPD
+16,Mecklenburgische Seenplatte I – Vorpommern-Greifswald II,Grune,4.1,Grune
+16,Mecklenburgische Seenplatte I – Vorpommern-Greifswald II,AfD,24.3,AfD
+16,Mecklenburgische Seenplatte I – Vorpommern-Greifswald II,Linke,10.8,Linke
+16,Mecklenburgische Seenplatte I – Vorpommern-Greifswald II,FDP,7.4,FDP
+16,Mecklenburgische Seenplatte I – Vorpommern-Greifswald II,CDU_CSU,20.7,CDU/CSU
+17,Mecklenburgische Seenplatte II – Landkreis Rostock III,SPD,31.1,SPD
+17,Mecklenburgische Seenplatte II – Landkreis Rostock III,Grune,5.4,Grune
+17,Mecklenburgische Seenplatte II – Landkreis Rostock III,AfD,21.6,AfD
+17,Mecklenburgische Seenplatte II – Landkreis Rostock III,Linke,10.3,Linke
+17,Mecklenburgische Seenplatte II – Landkreis Rostock III,FDP,7,FDP
+17,Mecklenburgische Seenplatte II – Landkreis Rostock III,CDU_CSU,21.3,CDU/CSU
+18,Hamburg-Mitte,SPD,33.2,SPD
+18,Hamburg-Mitte,Grune,26,Grune
+18,Hamburg-Mitte,AfD,4.9,AfD
+18,Hamburg-Mitte,Linke,9.1,Linke
+18,Hamburg-Mitte,FDP,8.1,FDP
+18,Hamburg-Mitte,CDU_CSU,13,CDU/CSU
+19,Hamburg-Altona,SPD,28.6,SPD
+19,Hamburg-Altona,Grune,29.7,Grune
+19,Hamburg-Altona,AfD,3.4,AfD
+19,Hamburg-Altona,Linke,9.7,Linke
+19,Hamburg-Altona,FDP,8.2,FDP
+19,Hamburg-Altona,CDU_CSU,16.8,CDU/CSU
+20,Hamburg-Eimsbüttel,SPD,29.6,SPD
+20,Hamburg-Eimsbüttel,Grune,29.8,Grune
+20,Hamburg-Eimsbüttel,AfD,3.4,AfD
+20,Hamburg-Eimsbüttel,Linke,7.1,Linke
+20,Hamburg-Eimsbüttel,FDP,8.1,FDP
+20,Hamburg-Eimsbüttel,CDU_CSU,17.2,CDU/CSU
+21,Hamburg-Nord,SPD,30.7,SPD
+21,Hamburg-Nord,Grune,25.7,Grune
+21,Hamburg-Nord,AfD,3.4,AfD
+21,Hamburg-Nord,Linke,4.9,Linke
+21,Hamburg-Nord,FDP,8.6,FDP
+21,Hamburg-Nord,CDU_CSU,23.8,CDU/CSU
+22,Hamburg-Wandsbek,SPD,38.7,SPD
+22,Hamburg-Wandsbek,Grune,15.4,Grune
+22,Hamburg-Wandsbek,AfD,6.7,AfD
+22,Hamburg-Wandsbek,Linke,6.2,Linke
+22,Hamburg-Wandsbek,FDP,9.1,FDP
+22,Hamburg-Wandsbek,CDU_CSU,19.2,CDU/CSU
+23,Hamburg-Bergedorf – Harburg,SPD,39.3,SPD
+23,Hamburg-Bergedorf – Harburg,Grune,15.5,Grune
+23,Hamburg-Bergedorf – Harburg,AfD,8.2,AfD
+23,Hamburg-Bergedorf – Harburg,Linke,6.7,Linke
+23,Hamburg-Bergedorf – Harburg,FDP,8.5,FDP
+23,Hamburg-Bergedorf – Harburg,CDU_CSU,16.9,CDU/CSU
+24,Aurich – Emden,SPD,52.8,SPD
+24,Aurich – Emden,Grune,9.3,Grune
+24,Aurich – Emden,Linke,3.6,Linke
+24,Aurich – Emden,FDP,8.7,FDP
+24,Aurich – Emden,CDU_CSU,17.7,CDU/CSU
+25,Unterems,SPD,28.5,SPD
+25,Unterems,Grune,9.5,Grune
+25,Unterems,AfD,7.8,AfD
+25,Unterems,Linke,2.5,Linke
+25,Unterems,FDP,6.2,FDP
+25,Unterems,CDU_CSU,44.4,CDU/CSU
+26,Friesland – Wilhelmshaven – Wittmund,SPD,45.4,SPD
+26,Friesland – Wilhelmshaven – Wittmund,Grune,10.2,Grune
+26,Friesland – Wilhelmshaven – Wittmund,AfD,7.7,AfD
+26,Friesland – Wilhelmshaven – Wittmund,Linke,2.6,Linke
+26,Friesland – Wilhelmshaven – Wittmund,FDP,7.1,FDP
+26,Friesland – Wilhelmshaven – Wittmund,CDU_CSU,22,CDU/CSU
+27,Oldenburg – Ammerland,SPD,38.2,SPD
+27,Oldenburg – Ammerland,Grune,20.4,Grune
+27,Oldenburg – Ammerland,AfD,5,AfD
+27,Oldenburg – Ammerland,Linke,5.9,Linke
+27,Oldenburg – Ammerland,FDP,7.5,FDP
+27,Oldenburg – Ammerland,CDU_CSU,19.9,CDU/CSU
+28,Delmenhorst – Wesermarsch – Oldenburg-Land,SPD,36.7,SPD
+28,Delmenhorst – Wesermarsch – Oldenburg-Land,Grune,13.1,Grune
+28,Delmenhorst – Wesermarsch – Oldenburg-Land,AfD,7.4,AfD
+28,Delmenhorst – Wesermarsch – Oldenburg-Land,Linke,3,Linke
+28,Delmenhorst – Wesermarsch – Oldenburg-Land,FDP,10.7,FDP
+28,Delmenhorst – Wesermarsch – Oldenburg-Land,CDU_CSU,24.9,CDU/CSU
+29,Cuxhaven – Stade II,SPD,36.8,SPD
+29,Cuxhaven – Stade II,Grune,11,Grune
+29,Cuxhaven – Stade II,AfD,7.3,AfD
+29,Cuxhaven – Stade II,Linke,1.9,Linke
+29,Cuxhaven – Stade II,FDP,6.9,FDP
+29,Cuxhaven – Stade II,CDU_CSU,30.1,CDU/CSU
+30,Stade I – Rotenburg II,SPD,31.7,SPD
+30,Stade I – Rotenburg II,Grune,13.2,Grune
+30,Stade I – Rotenburg II,AfD,7.1,AfD
+30,Stade I – Rotenburg II,Linke,2.9,Linke
+30,Stade I – Rotenburg II,FDP,8,FDP
+30,Stade I – Rotenburg II,CDU_CSU,34.6,CDU/CSU
+31,Mittelems,SPD,29.2,SPD
+31,Mittelems,Grune,12.6,Grune
+31,Mittelems,AfD,5,AfD
+31,Mittelems,Linke,2.2,Linke
+31,Mittelems,FDP,9.7,FDP
+31,Mittelems,CDU_CSU,40.5,CDU/CSU
+32,Cloppenburg – Vechta,SPD,20.7,SPD
+32,Cloppenburg – Vechta,Grune,10.6,Grune
+32,Cloppenburg – Vechta,AfD,7.8,AfD
+32,Cloppenburg – Vechta,Linke,2.2,Linke
+32,Cloppenburg – Vechta,FDP,8.8,FDP
+32,Cloppenburg – Vechta,CDU_CSU,49.1,CDU/CSU
+33,Diepholz – Nienburg I,SPD,31.9,SPD
+33,Diepholz – Nienburg I,Grune,13.5,Grune
+33,Diepholz – Nienburg I,AfD,6.7,AfD
+33,Diepholz – Nienburg I,Linke,2.8,Linke
+33,Diepholz – Nienburg I,FDP,9.4,FDP
+33,Diepholz – Nienburg I,CDU_CSU,33.8,CDU/CSU
+34,Osterholz – Verden,SPD,32.5,SPD
+34,Osterholz – Verden,Grune,14.7,Grune
+34,Osterholz – Verden,Linke,4.3,Linke
+34,Osterholz – Verden,FDP,9.2,FDP
+34,Osterholz – Verden,CDU_CSU,33.7,CDU/CSU
+35,Rotenburg I – Heidekreis,SPD,47.6,SPD
+35,Rotenburg I – Heidekreis,Grune,8.1,Grune
+35,Rotenburg I – Heidekreis,AfD,7.4,AfD
+35,Rotenburg I – Heidekreis,Linke,2.4,Linke
+35,Rotenburg I – Heidekreis,FDP,5.9,FDP
+35,Rotenburg I – Heidekreis,CDU_CSU,26.4,CDU/CSU
+36,Harburg,SPD,31,SPD
+36,Harburg,Grune,15,Grune
+36,Harburg,AfD,6.9,AfD
+36,Harburg,Linke,2.6,Linke
+36,Harburg,FDP,9,FDP
+36,Harburg,CDU_CSU,29.1,CDU/CSU
+37,Lüchow-Dannenberg – Lüneburg,SPD,28.2,SPD
+37,Lüchow-Dannenberg – Lüneburg,Grune,25.1,Grune
+37,Lüchow-Dannenberg – Lüneburg,AfD,6.3,AfD
+37,Lüchow-Dannenberg – Lüneburg,Linke,3.9,Linke
+37,Lüchow-Dannenberg – Lüneburg,FDP,6.9,FDP
+37,Lüchow-Dannenberg – Lüneburg,CDU_CSU,24.9,CDU/CSU
+38,Osnabrück-Land,SPD,29.7,SPD
+38,Osnabrück-Land,Grune,14.6,Grune
+38,Osnabrück-Land,AfD,6.3,AfD
+38,Osnabrück-Land,Linke,2.4,Linke
+38,Osnabrück-Land,FDP,8.6,FDP
+38,Osnabrück-Land,CDU_CSU,36.2,CDU/CSU
+39,Stadt Osnabrück,SPD,30.3,SPD
+39,Stadt Osnabrück,Grune,23,Grune
+39,Stadt Osnabrück,AfD,4.5,AfD
+39,Stadt Osnabrück,Linke,4.7,Linke
+39,Stadt Osnabrück,FDP,6.8,FDP
+39,Stadt Osnabrück,CDU_CSU,29.2,CDU/CSU
+40,Nienburg II – Schaumburg,SPD,35.3,SPD
+40,Nienburg II – Schaumburg,Grune,12.8,Grune
+40,Nienburg II – Schaumburg,AfD,8.3,AfD
+40,Nienburg II – Schaumburg,Linke,2.2,Linke
+40,Nienburg II – Schaumburg,FDP,6.2,FDP
+40,Nienburg II – Schaumburg,CDU_CSU,30.9,CDU/CSU
+41,Stadt Hannover I,SPD,34.9,SPD
+41,Stadt Hannover I,Grune,21.8,Grune
+41,Stadt Hannover I,AfD,5.9,AfD
+41,Stadt Hannover I,Linke,3.7,Linke
+41,Stadt Hannover I,FDP,7.5,FDP
+41,Stadt Hannover I,CDU_CSU,21.4,CDU/CSU
+42,Stadt Hannover II,SPD,32.9,SPD
+42,Stadt Hannover II,Grune,26.5,Grune
+42,Stadt Hannover II,AfD,4.5,AfD
+42,Stadt Hannover II,Linke,5.2,Linke
+42,Stadt Hannover II,FDP,6.7,FDP
+42,Stadt Hannover II,CDU_CSU,18.4,CDU/CSU
+43,Hannover-Land I,SPD,33.7,SPD
+43,Hannover-Land I,Grune,13,Grune
+43,Hannover-Land I,AfD,7.5,AfD
+43,Hannover-Land I,Linke,2.3,Linke
+43,Hannover-Land I,FDP,7.3,FDP
+43,Hannover-Land I,CDU_CSU,31.9,CDU/CSU
+44,Celle – Uelzen,SPD,32.3,SPD
+44,Celle – Uelzen,Grune,12,Grune
+44,Celle – Uelzen,AfD,9.3,AfD
+44,Celle – Uelzen,Linke,2.8,Linke
+44,Celle – Uelzen,FDP,8.6,FDP
+44,Celle – Uelzen,CDU_CSU,32.9,CDU/CSU
+45,Gifhorn – Peine,SPD,43.7,SPD
+45,Gifhorn – Peine,Grune,9.6,Grune
+45,Gifhorn – Peine,AfD,9.3,AfD
+45,Gifhorn – Peine,Linke,2.2,Linke
+45,Gifhorn – Peine,FDP,6.5,FDP
+45,Gifhorn – Peine,CDU_CSU,24.4,CDU/CSU
+46,Hameln-Pyrmont – Holzminden,SPD,43.2,SPD
+46,Hameln-Pyrmont – Holzminden,Grune,10.1,Grune
+46,Hameln-Pyrmont – Holzminden,AfD,8.5,AfD
+46,Hameln-Pyrmont – Holzminden,Linke,2.8,Linke
+46,Hameln-Pyrmont – Holzminden,FDP,6.9,FDP
+46,Hameln-Pyrmont – Holzminden,CDU_CSU,25.5,CDU/CSU
+47,Hannover-Land II,SPD,40.7,SPD
+47,Hannover-Land II,Grune,12.4,Grune
+47,Hannover-Land II,AfD,7.5,AfD
+47,Hannover-Land II,Linke,2.3,Linke
+47,Hannover-Land II,FDP,6.6,FDP
+47,Hannover-Land II,CDU_CSU,25.5,CDU/CSU
+48,Hildesheim,SPD,38.7,SPD
+48,Hildesheim,Grune,14.4,Grune
+48,Hildesheim,AfD,7.1,AfD
+48,Hildesheim,Linke,3.4,Linke
+48,Hildesheim,FDP,7.2,FDP
+48,Hildesheim,CDU_CSU,25.8,CDU/CSU
+49,Salzgitter – Wolfenbüttel,SPD,38.6,SPD
+49,Salzgitter – Wolfenbüttel,Grune,10.6,Grune
+49,Salzgitter – Wolfenbüttel,AfD,9.9,AfD
+49,Salzgitter – Wolfenbüttel,Linke,3.9,Linke
+49,Salzgitter – Wolfenbüttel,FDP,6.6,FDP
+49,Salzgitter – Wolfenbüttel,CDU_CSU,27.2,CDU/CSU
+50,Braunschweig,SPD,36.7,SPD
+50,Braunschweig,Grune,20.2,Grune
+50,Braunschweig,AfD,5.8,AfD
+50,Braunschweig,Linke,3.8,Linke
+50,Braunschweig,FDP,7,FDP
+50,Braunschweig,CDU_CSU,22.4,CDU/CSU
+51,Helmstedt – Wolfsburg,SPD,42.1,SPD
+51,Helmstedt – Wolfsburg,Grune,8.8,Grune
+51,Helmstedt – Wolfsburg,AfD,9.6,AfD
+51,Helmstedt – Wolfsburg,Linke,2.8,Linke
+51,Helmstedt – Wolfsburg,FDP,7.6,FDP
+51,Helmstedt – Wolfsburg,CDU_CSU,26.6,CDU/CSU
+52,Goslar – Northeim – Osterode,SPD,36.7,SPD
+52,Goslar – Northeim – Osterode,Grune,10.5,Grune
+52,Goslar – Northeim – Osterode,AfD,7.9,AfD
+52,Goslar – Northeim – Osterode,Linke,2.7,Linke
+52,Goslar – Northeim – Osterode,FDP,6.2,FDP
+52,Goslar – Northeim – Osterode,CDU_CSU,33.2,CDU/CSU
+53,Göttingen,SPD,32.2,SPD
+53,Göttingen,Grune,23.2,Grune
+53,Göttingen,Linke,5.1,Linke
+53,Göttingen,FDP,9.6,FDP
+53,Göttingen,CDU_CSU,26.9,CDU/CSU
+54,Bremen I,SPD,30.2,SPD
+54,Bremen I,Grune,21.5,Grune
+54,Bremen I,AfD,4.9,AfD
+54,Bremen I,Linke,8.3,Linke
+54,Bremen I,FDP,7.5,FDP
+54,Bremen I,CDU_CSU,21.3,CDU/CSU
+55,Bremen II – Bremerhaven,SPD,36.9,SPD
+55,Bremen II – Bremerhaven,Grune,14.6,Grune
+55,Bremen II – Bremerhaven,AfD,8.8,AfD
+55,Bremen II – Bremerhaven,Linke,7.5,Linke
+55,Bremen II – Bremerhaven,FDP,6,FDP
+55,Bremen II – Bremerhaven,CDU_CSU,20.1,CDU/CSU
+56,Prignitz – Ostprignitz-Ruppin – Havelland I,SPD,33,SPD
+56,Prignitz – Ostprignitz-Ruppin – Havelland I,Grune,4.7,Grune
+56,Prignitz – Ostprignitz-Ruppin – Havelland I,AfD,19.7,AfD
+56,Prignitz – Ostprignitz-Ruppin – Havelland I,Linke,9,Linke
+56,Prignitz – Ostprignitz-Ruppin – Havelland I,FDP,6.1,FDP
+56,Prignitz – Ostprignitz-Ruppin – Havelland I,CDU_CSU,19.4,CDU/CSU
+57,Uckermark – Barnim I,SPD,29.6,SPD
+57,Uckermark – Barnim I,Grune,5.8,Grune
+57,Uckermark – Barnim I,AfD,20.3,AfD
+57,Uckermark – Barnim I,Linke,9.5,Linke
+57,Uckermark – Barnim I,FDP,8.5,FDP
+57,Uckermark – Barnim I,CDU_CSU,17.8,CDU/CSU
+58,Oberhavel – Havelland II,SPD,26.3,SPD
+58,Oberhavel – Havelland II,Grune,9.9,Grune
+58,Oberhavel – Havelland II,AfD,16,AfD
+58,Oberhavel – Havelland II,Linke,8,Linke
+58,Oberhavel – Havelland II,FDP,9,FDP
+58,Oberhavel – Havelland II,CDU_CSU,20.8,CDU/CSU
+59,Märkisch-Oderland – Barnim II,SPD,24.8,SPD
+59,Märkisch-Oderland – Barnim II,Grune,6.7,Grune
+59,Märkisch-Oderland – Barnim II,AfD,18.3,AfD
+59,Märkisch-Oderland – Barnim II,Linke,12.5,Linke
+59,Märkisch-Oderland – Barnim II,FDP,7,FDP
+59,Märkisch-Oderland – Barnim II,CDU_CSU,23.4,CDU/CSU
+60,Brandenburg an der Havel – Potsdam-Mittelmark I – Havelland III – Teltow-Fläming I,SPD,32.1,SPD
+60,Brandenburg an der Havel – Potsdam-Mittelmark I – Havelland III – Teltow-Fläming I,Grune,6.5,Grune
+60,Brandenburg an der Havel – Potsdam-Mittelmark I – Havelland III – Teltow-Fläming I,AfD,16.5,AfD
+60,Brandenburg an der Havel – Potsdam-Mittelmark I – Havelland III – Teltow-Fläming I,Linke,8.7,Linke
+60,Brandenburg an der Havel – Potsdam-Mittelmark I – Havelland III – Teltow-Fläming I,FDP,6.4,FDP
+60,Brandenburg an der Havel – Potsdam-Mittelmark I – Havelland III – Teltow-Fläming I,CDU_CSU,20.1,CDU/CSU
+61,Potsdam – Potsdam-Mittelmark II – Teltow-Fläming II,SPD,34,SPD
+61,Potsdam – Potsdam-Mittelmark II – Teltow-Fläming II,Grune,18.8,Grune
+61,Potsdam – Potsdam-Mittelmark II – Teltow-Fläming II,AfD,9.2,AfD
+61,Potsdam – Potsdam-Mittelmark II – Teltow-Fläming II,Linke,7.8,Linke
+61,Potsdam – Potsdam-Mittelmark II – Teltow-Fläming II,FDP,8.9,FDP
+61,Potsdam – Potsdam-Mittelmark II – Teltow-Fläming II,CDU_CSU,13.8,CDU/CSU
+62,Dahme-Spreewald – Teltow-Fläming III – Oberspreewald-Lausitz I,SPD,26.5,SPD
+62,Dahme-Spreewald – Teltow-Fläming III – Oberspreewald-Lausitz I,Grune,7.1,Grune
+62,Dahme-Spreewald – Teltow-Fläming III – Oberspreewald-Lausitz I,AfD,17.6,AfD
+62,Dahme-Spreewald – Teltow-Fläming III – Oberspreewald-Lausitz I,Linke,9.1,Linke
+62,Dahme-Spreewald – Teltow-Fläming III – Oberspreewald-Lausitz I,FDP,7.9,FDP
+62,Dahme-Spreewald – Teltow-Fläming III – Oberspreewald-Lausitz I,CDU_CSU,19.9,CDU/CSU
+63,Frankfurt (Oder) – Oder-Spree,SPD,28,SPD
+63,Frankfurt (Oder) – Oder-Spree,Grune,6.3,Grune
+63,Frankfurt (Oder) – Oder-Spree,AfD,21.5,AfD
+63,Frankfurt (Oder) – Oder-Spree,Linke,11.2,Linke
+63,Frankfurt (Oder) – Oder-Spree,FDP,7.1,FDP
+63,Frankfurt (Oder) – Oder-Spree,CDU_CSU,16.3,CDU/CSU
+64,Cottbus – Spree-Neiße,SPD,27.6,SPD
+64,Cottbus – Spree-Neiße,Grune,3.7,Grune
+64,Cottbus – Spree-Neiße,AfD,25.7,AfD
+64,Cottbus – Spree-Neiße,Linke,8.8,Linke
+64,Cottbus – Spree-Neiße,FDP,9,FDP
+64,Cottbus – Spree-Neiße,CDU_CSU,16.7,CDU/CSU
+65,Elbe-Elster – Oberspreewald-Lausitz II,SPD,25.4,SPD
+65,Elbe-Elster – Oberspreewald-Lausitz II,Grune,3.5,Grune
+65,Elbe-Elster – Oberspreewald-Lausitz II,AfD,25,AfD
+65,Elbe-Elster – Oberspreewald-Lausitz II,Linke,9,Linke
+65,Elbe-Elster – Oberspreewald-Lausitz II,FDP,9,FDP
+65,Elbe-Elster – Oberspreewald-Lausitz II,CDU_CSU,16.2,CDU/CSU
+66,Altmark,SPD,27.5,SPD
+66,Altmark,Grune,4.3,Grune
+66,Altmark,AfD,19.4,AfD
+66,Altmark,Linke,10.4,Linke
+66,Altmark,FDP,8.5,FDP
+66,Altmark,CDU_CSU,21.8,CDU/CSU
+67,Börde – Jerichower Land,SPD,26.2,SPD
+67,Börde – Jerichower Land,Grune,4.2,Grune
+67,Börde – Jerichower Land,AfD,20.3,AfD
+67,Börde – Jerichower Land,Linke,8.7,Linke
+67,Börde – Jerichower Land,FDP,8.1,FDP
+67,Börde – Jerichower Land,CDU_CSU,25,CDU/CSU
+68,Harz,SPD,25.4,SPD
+68,Harz,Grune,4.6,Grune
+68,Harz,AfD,18.2,AfD
+68,Harz,Linke,10.5,Linke
+68,Harz,FDP,7.4,FDP
+68,Harz,CDU_CSU,27.7,CDU/CSU
+69,Magdeburg,SPD,25.3,SPD
+69,Magdeburg,Grune,9.3,Grune
+69,Magdeburg,AfD,15.1,AfD
+69,Magdeburg,Linke,9.7,Linke
+69,Magdeburg,FDP,7.8,FDP
+69,Magdeburg,CDU_CSU,22,CDU/CSU
+70,Dessau – Wittenberg,SPD,19.5,SPD
+70,Dessau – Wittenberg,Grune,6.7,Grune
+70,Dessau – Wittenberg,AfD,19.3,AfD
+70,Dessau – Wittenberg,Linke,7.9,Linke
+70,Dessau – Wittenberg,FDP,6.7,FDP
+70,Dessau – Wittenberg,CDU_CSU,34.3,CDU/CSU
+71,Anhalt,SPD,20.7,SPD
+71,Anhalt,Grune,3.3,Grune
+71,Anhalt,AfD,24.2,AfD
+71,Anhalt,Linke,14.8,Linke
+71,Anhalt,FDP,7.8,FDP
+71,Anhalt,CDU_CSU,23.5,CDU/CSU
+72,Halle,SPD,28.8,SPD
+72,Halle,Grune,8.5,Grune
+72,Halle,AfD,15.3,AfD
+72,Halle,Linke,13.1,Linke
+72,Halle,FDP,8.1,FDP
+72,Halle,CDU_CSU,20.7,CDU/CSU
+73,Burgenland – Saalekreis,SPD,21.9,SPD
+73,Burgenland – Saalekreis,Grune,3.4,Grune
+73,Burgenland – Saalekreis,AfD,26,AfD
+73,Burgenland – Saalekreis,Linke,10,Linke
+73,Burgenland – Saalekreis,FDP,9.5,FDP
+73,Burgenland – Saalekreis,CDU_CSU,26.3,CDU/CSU
+74,Mansfeld,SPD,23.6,SPD
+74,Mansfeld,Grune,2.9,Grune
+74,Mansfeld,AfD,25.1,AfD
+74,Mansfeld,Linke,10,Linke
+74,Mansfeld,FDP,8.4,FDP
+74,Mansfeld,CDU_CSU,24.9,CDU/CSU
+75,Berlin-Mitte,SPD,22.1,SPD
+75,Berlin-Mitte,Grune,30.6,Grune
+75,Berlin-Mitte,AfD,5.5,AfD
+75,Berlin-Mitte,Linke,14.3,Linke
+75,Berlin-Mitte,FDP,6.1,FDP
+75,Berlin-Mitte,CDU_CSU,13.9,CDU/CSU
+76,Berlin-Pankow,SPD,15.9,SPD
+76,Berlin-Pankow,Grune,26.8,Grune
+76,Berlin-Pankow,AfD,14.2,AfD
+76,Berlin-Pankow,Linke,14.2,Linke
+76,Berlin-Pankow,FDP,3,FDP
+76,Berlin-Pankow,CDU_CSU,17.5,CDU/CSU
+77,Berlin-Reinickendorf,SPD,24.1,SPD
+77,Berlin-Reinickendorf,Grune,13.9,Grune
+77,Berlin-Reinickendorf,AfD,11.3,AfD
+77,Berlin-Reinickendorf,Linke,4.6,Linke
+77,Berlin-Reinickendorf,FDP,7.5,FDP
+77,Berlin-Reinickendorf,CDU_CSU,29.5,CDU/CSU
+78,Berlin-Spandau – Charlottenburg Nord,SPD,32.6,SPD
+78,Berlin-Spandau – Charlottenburg Nord,Grune,11.7,Grune
+78,Berlin-Spandau – Charlottenburg Nord,AfD,10.4,AfD
+78,Berlin-Spandau – Charlottenburg Nord,Linke,5.4,Linke
+78,Berlin-Spandau – Charlottenburg Nord,FDP,8.3,FDP
+78,Berlin-Spandau – Charlottenburg Nord,CDU_CSU,23.9,CDU/CSU
+79,Berlin-Steglitz-Zehlendorf,SPD,24.4,SPD
+79,Berlin-Steglitz-Zehlendorf,Grune,22.3,Grune
+79,Berlin-Steglitz-Zehlendorf,AfD,5.5,AfD
+79,Berlin-Steglitz-Zehlendorf,Linke,4.2,Linke
+79,Berlin-Steglitz-Zehlendorf,FDP,8.8,FDP
+79,Berlin-Steglitz-Zehlendorf,CDU_CSU,28.6,CDU/CSU
+80,Berlin-Charlottenburg-Wilmersdorf,SPD,25.6,SPD
+80,Berlin-Charlottenburg-Wilmersdorf,Grune,25.1,Grune
+80,Berlin-Charlottenburg-Wilmersdorf,AfD,5.4,AfD
+80,Berlin-Charlottenburg-Wilmersdorf,Linke,5.6,Linke
+80,Berlin-Charlottenburg-Wilmersdorf,FDP,7.8,FDP
+80,Berlin-Charlottenburg-Wilmersdorf,CDU_CSU,25.1,CDU/CSU
+81,Berlin-Tempelhof-Schöneberg,SPD,26.7,SPD
+81,Berlin-Tempelhof-Schöneberg,Grune,25.2,Grune
+81,Berlin-Tempelhof-Schöneberg,AfD,5.9,AfD
+81,Berlin-Tempelhof-Schöneberg,Linke,6,Linke
+81,Berlin-Tempelhof-Schöneberg,FDP,7.1,FDP
+81,Berlin-Tempelhof-Schöneberg,CDU_CSU,22.4,CDU/CSU
+82,Berlin-Neukölln,SPD,25.8,SPD
+82,Berlin-Neukölln,Grune,19.7,Grune
+82,Berlin-Neukölln,AfD,7.7,AfD
+82,Berlin-Neukölln,Linke,12.9,Linke
+82,Berlin-Neukölln,FDP,6.3,FDP
+82,Berlin-Neukölln,CDU_CSU,19.2,CDU/CSU
+83,Berlin-Friedrichshain-Kreuzberg – Prenzlauer Berg Ost,SPD,16.3,SPD
+83,Berlin-Friedrichshain-Kreuzberg – Prenzlauer Berg Ost,Grune,37.8,Grune
+83,Berlin-Friedrichshain-Kreuzberg – Prenzlauer Berg Ost,AfD,4.7,AfD
+83,Berlin-Friedrichshain-Kreuzberg – Prenzlauer Berg Ost,Linke,18.1,Linke
+83,Berlin-Friedrichshain-Kreuzberg – Prenzlauer Berg Ost,FDP,4.5,FDP
+83,Berlin-Friedrichshain-Kreuzberg – Prenzlauer Berg Ost,CDU_CSU,8.5,CDU/CSU
+84,Berlin-Treptow-Köpenick,SPD,15.4,SPD
+84,Berlin-Treptow-Köpenick,Grune,10.3,Grune
+84,Berlin-Treptow-Köpenick,AfD,11.7,AfD
+84,Berlin-Treptow-Köpenick,Linke,35.4,Linke
+84,Berlin-Treptow-Köpenick,FDP,5.8,FDP
+84,Berlin-Treptow-Köpenick,CDU_CSU,13.6,CDU/CSU
+85,Berlin-Marzahn-Hellersdorf,SPD,14.4,SPD
+85,Berlin-Marzahn-Hellersdorf,Grune,6.2,Grune
+85,Berlin-Marzahn-Hellersdorf,AfD,16,AfD
+85,Berlin-Marzahn-Hellersdorf,Linke,21.8,Linke
+85,Berlin-Marzahn-Hellersdorf,FDP,4.5,FDP
+85,Berlin-Marzahn-Hellersdorf,CDU_CSU,29.7,CDU/CSU
+86,Berlin-Lichtenberg,SPD,19.4,SPD
+86,Berlin-Lichtenberg,Grune,13.6,Grune
+86,Berlin-Lichtenberg,AfD,12.3,AfD
+86,Berlin-Lichtenberg,Linke,25.8,Linke
+86,Berlin-Lichtenberg,FDP,6,FDP
+86,Berlin-Lichtenberg,CDU_CSU,12.5,CDU/CSU
+87,Aachen I,SPD,23.8,SPD
+87,Aachen I,Grune,30.2,Grune
+87,Aachen I,AfD,3.8,AfD
+87,Aachen I,Linke,4.4,Linke
+87,Aachen I,FDP,7.9,FDP
+87,Aachen I,CDU_CSU,25.6,CDU/CSU
+88,Aachen II,SPD,34.5,SPD
+88,Aachen II,Grune,11.8,Grune
+88,Aachen II,AfD,7.5,AfD
+88,Aachen II,Linke,2.7,Linke
+88,Aachen II,FDP,7.1,FDP
+88,Aachen II,CDU_CSU,32.5,CDU/CSU
+89,Heinsberg,SPD,25.9,SPD
+89,Heinsberg,Grune,10.7,Grune
+89,Heinsberg,AfD,7.6,AfD
+89,Heinsberg,Linke,2.5,Linke
+89,Heinsberg,FDP,7.4,FDP
+89,Heinsberg,CDU_CSU,39.7,CDU/CSU
+90,Düren,SPD,30.8,SPD
+90,Düren,Grune,9.3,Grune
+90,Düren,AfD,8.5,AfD
+90,Düren,Linke,2.3,Linke
+90,Düren,FDP,7.4,FDP
+90,Düren,CDU_CSU,36.7,CDU/CSU
+91,Rhein-Erft-Kreis I,SPD,30.5,SPD
+91,Rhein-Erft-Kreis I,Grune,13.2,Grune
+91,Rhein-Erft-Kreis I,AfD,7,AfD
+91,Rhein-Erft-Kreis I,Linke,3.1,Linke
+91,Rhein-Erft-Kreis I,FDP,9.1,FDP
+91,Rhein-Erft-Kreis I,CDU_CSU,33,CDU/CSU
+92,Euskirchen – Rhein-Erft-Kreis II,SPD,26.7,SPD
+92,Euskirchen – Rhein-Erft-Kreis II,Grune,13.1,Grune
+92,Euskirchen – Rhein-Erft-Kreis II,AfD,7.9,AfD
+92,Euskirchen – Rhein-Erft-Kreis II,Linke,2.6,Linke
+92,Euskirchen – Rhein-Erft-Kreis II,FDP,10.4,FDP
+92,Euskirchen – Rhein-Erft-Kreis II,CDU_CSU,34.6,CDU/CSU
+93,Köln I,SPD,27.9,SPD
+93,Köln I,Grune,23.9,Grune
+93,Köln I,AfD,6.3,AfD
+93,Köln I,Linke,5.2,Linke
+93,Köln I,FDP,8.2,FDP
+93,Köln I,CDU_CSU,22.6,CDU/CSU
+94,Köln II,SPD,19.7,SPD
+94,Köln II,Grune,34.6,Grune
+94,Köln II,AfD,2.7,AfD
+94,Köln II,Linke,4.3,Linke
+94,Köln II,FDP,8.3,FDP
+94,Köln II,CDU_CSU,25,CDU/CSU
+95,Köln III,SPD,29.9,SPD
+95,Köln III,Grune,28.3,Grune
+95,Köln III,AfD,5.2,AfD
+95,Köln III,Linke,5.5,Linke
+95,Köln III,FDP,6.9,FDP
+95,Köln III,CDU_CSU,18.6,CDU/CSU
+96,Bonn,SPD,25.1,SPD
+96,Bonn,Grune,25.2,Grune
+96,Bonn,AfD,4,AfD
+96,Bonn,Linke,3.6,Linke
+96,Bonn,FDP,12.6,FDP
+96,Bonn,CDU_CSU,24.4,CDU/CSU
+97,Rhein-Sieg-Kreis I,SPD,28.5,SPD
+97,Rhein-Sieg-Kreis I,Grune,14.1,Grune
+97,Rhein-Sieg-Kreis I,AfD,7,AfD
+97,Rhein-Sieg-Kreis I,Linke,3.3,Linke
+97,Rhein-Sieg-Kreis I,FDP,8.9,FDP
+97,Rhein-Sieg-Kreis I,CDU_CSU,32.6,CDU/CSU
+98,Rhein-Sieg-Kreis II,SPD,23.4,SPD
+98,Rhein-Sieg-Kreis II,Grune,15.4,Grune
+98,Rhein-Sieg-Kreis II,AfD,5.9,AfD
+98,Rhein-Sieg-Kreis II,Linke,2.6,Linke
+98,Rhein-Sieg-Kreis II,FDP,7.9,FDP
+98,Rhein-Sieg-Kreis II,CDU_CSU,40,CDU/CSU
+99,Oberbergischer Kreis,SPD,26.8,SPD
+99,Oberbergischer Kreis,Grune,12,Grune
+99,Oberbergischer Kreis,AfD,9.5,AfD
+99,Oberbergischer Kreis,Linke,2.9,Linke
+99,Oberbergischer Kreis,FDP,9.9,FDP
+99,Oberbergischer Kreis,CDU_CSU,33.9,CDU/CSU
+100,Rheinisch-Bergischer Kreis,SPD,22.7,SPD
+100,Rheinisch-Bergischer Kreis,Grune,18,Grune
+100,Rheinisch-Bergischer Kreis,AfD,5.4,AfD
+100,Rheinisch-Bergischer Kreis,Linke,2.8,Linke
+100,Rheinisch-Bergischer Kreis,FDP,16.8,FDP
+100,Rheinisch-Bergischer Kreis,CDU_CSU,30,CDU/CSU
+101,Leverkusen – Köln IV,SPD,45.6,SPD
+101,Leverkusen – Köln IV,Grune,11.3,Grune
+101,Leverkusen – Köln IV,AfD,7.1,AfD
+101,Leverkusen – Köln IV,Linke,3.7,Linke
+101,Leverkusen – Köln IV,FDP,7.2,FDP
+101,Leverkusen – Köln IV,CDU_CSU,20.4,CDU/CSU
+102,Wuppertal I,SPD,37.3,SPD
+102,Wuppertal I,Grune,13.1,Grune
+102,Wuppertal I,AfD,8.3,AfD
+102,Wuppertal I,Linke,4.7,Linke
+102,Wuppertal I,FDP,9.5,FDP
+102,Wuppertal I,CDU_CSU,22,CDU/CSU
+103,Solingen – Remscheid – Wuppertal II,SPD,32.6,SPD
+103,Solingen – Remscheid – Wuppertal II,Grune,12.9,Grune
+103,Solingen – Remscheid – Wuppertal II,AfD,7.6,AfD
+103,Solingen – Remscheid – Wuppertal II,Linke,3.1,Linke
+103,Solingen – Remscheid – Wuppertal II,FDP,10.7,FDP
+103,Solingen – Remscheid – Wuppertal II,CDU_CSU,27.6,CDU/CSU
+104,Mettmann I,SPD,24.9,SPD
+104,Mettmann I,Grune,22.9,Grune
+104,Mettmann I,AfD,6.8,AfD
+104,Mettmann I,Linke,2.7,Linke
+104,Mettmann I,FDP,9.4,FDP
+104,Mettmann I,CDU_CSU,30,CDU/CSU
+105,Mettmann II,SPD,30.7,SPD
+105,Mettmann II,Grune,14.5,Grune
+105,Mettmann II,AfD,7.3,AfD
+105,Mettmann II,Linke,2.8,Linke
+105,Mettmann II,FDP,9.1,FDP
+105,Mettmann II,CDU_CSU,31.3,CDU/CSU
+106,Düsseldorf I,SPD,22.4,SPD
+106,Düsseldorf I,Grune,21.2,Grune
+106,Düsseldorf I,AfD,4,AfD
+106,Düsseldorf I,Linke,2.9,Linke
+106,Düsseldorf I,FDP,13.9,FDP
+106,Düsseldorf I,CDU_CSU,31.1,CDU/CSU
+107,Düsseldorf II,SPD,29.2,SPD
+107,Düsseldorf II,Grune,21.4,Grune
+107,Düsseldorf II,AfD,5.8,AfD
+107,Düsseldorf II,Linke,3.8,Linke
+107,Düsseldorf II,FDP,10,FDP
+107,Düsseldorf II,CDU_CSU,24.7,CDU/CSU
+108,Neuss I,SPD,32,SPD
+108,Neuss I,Grune,11.2,Grune
+108,Neuss I,AfD,6.7,AfD
+108,Neuss I,Linke,2.6,Linke
+108,Neuss I,FDP,8.1,FDP
+108,Neuss I,CDU_CSU,35.8,CDU/CSU
+109,Mönchengladbach,SPD,29.3,SPD
+109,Mönchengladbach,Grune,13.5,Grune
+109,Mönchengladbach,AfD,7.7,AfD
+109,Mönchengladbach,FDP,8.6,FDP
+109,Mönchengladbach,CDU_CSU,35.6,CDU/CSU
+110,Krefeld I – Neuss II,SPD,25.5,SPD
+110,Krefeld I – Neuss II,Grune,15.8,Grune
+110,Krefeld I – Neuss II,AfD,5.9,AfD
+110,Krefeld I – Neuss II,Linke,2.8,Linke
+110,Krefeld I – Neuss II,FDP,12.2,FDP
+110,Krefeld I – Neuss II,CDU_CSU,33.4,CDU/CSU
+111,Viersen,SPD,27.6,SPD
+111,Viersen,Grune,14.1,Grune
+111,Viersen,AfD,5.9,AfD
+111,Viersen,Linke,3.2,Linke
+111,Viersen,FDP,8.7,FDP
+111,Viersen,CDU_CSU,35.8,CDU/CSU
+112,Kleve,SPD,28.4,SPD
+112,Kleve,Grune,13.9,Grune
+112,Kleve,AfD,5.8,AfD
+112,Kleve,Linke,2.5,Linke
+112,Kleve,FDP,8.7,FDP
+112,Kleve,CDU_CSU,37.6,CDU/CSU
+113,Wesel I,SPD,34.2,SPD
+113,Wesel I,Grune,12.5,Grune
+113,Wesel I,AfD,6.8,AfD
+113,Wesel I,Linke,2.9,Linke
+113,Wesel I,FDP,9.1,FDP
+113,Wesel I,CDU_CSU,29.8,CDU/CSU
+114,Krefeld II – Wesel II,SPD,35.2,SPD
+114,Krefeld II – Wesel II,Grune,13.4,Grune
+114,Krefeld II – Wesel II,AfD,7,AfD
+114,Krefeld II – Wesel II,Linke,3.1,Linke
+114,Krefeld II – Wesel II,FDP,8.4,FDP
+114,Krefeld II – Wesel II,CDU_CSU,28.4,CDU/CSU
+115,Duisburg I,SPD,40.3,SPD
+115,Duisburg I,Grune,14.3,Grune
+115,Duisburg I,AfD,9.5,AfD
+115,Duisburg I,Linke,4.7,Linke
+115,Duisburg I,FDP,7,FDP
+115,Duisburg I,CDU_CSU,20.7,CDU/CSU
+116,Duisburg II,SPD,39.4,SPD
+116,Duisburg II,Grune,10.9,Grune
+116,Duisburg II,AfD,13.8,AfD
+116,Duisburg II,Linke,5.1,Linke
+116,Duisburg II,FDP,7.1,FDP
+116,Duisburg II,CDU_CSU,20,CDU/CSU
+117,Oberhausen – Wesel III,SPD,38.8,SPD
+117,Oberhausen – Wesel III,Grune,11.9,Grune
+117,Oberhausen – Wesel III,AfD,9.5,AfD
+117,Oberhausen – Wesel III,Linke,3.4,Linke
+117,Oberhausen – Wesel III,FDP,7,FDP
+117,Oberhausen – Wesel III,CDU_CSU,22.5,CDU/CSU
+118,Mülheim – Essen I,SPD,36.3,SPD
+118,Mülheim – Essen I,Grune,14.1,Grune
+118,Mülheim – Essen I,AfD,8.5,AfD
+118,Mülheim – Essen I,Linke,2.7,Linke
+118,Mülheim – Essen I,FDP,8.6,FDP
+118,Mülheim – Essen I,CDU_CSU,24,CDU/CSU
+119,Essen II,SPD,37.8,SPD
+119,Essen II,Grune,12.1,Grune
+119,Essen II,AfD,11.5,AfD
+119,Essen II,Linke,4.2,Linke
+119,Essen II,FDP,6.7,FDP
+119,Essen II,CDU_CSU,22.8,CDU/CSU
+120,Essen III,SPD,30,SPD
+120,Essen III,Grune,18.9,Grune
+120,Essen III,AfD,5.4,AfD
+120,Essen III,Linke,3.3,Linke
+120,Essen III,FDP,7.2,FDP
+120,Essen III,CDU_CSU,30.7,CDU/CSU
+121,Recklinghausen I,SPD,41,SPD
+121,Recklinghausen I,Grune,10.6,Grune
+121,Recklinghausen I,AfD,9.2,AfD
+121,Recklinghausen I,Linke,3,Linke
+121,Recklinghausen I,FDP,7,FDP
+121,Recklinghausen I,CDU_CSU,25.6,CDU/CSU
+122,Recklinghausen II,SPD,37.4,SPD
+122,Recklinghausen II,Grune,10.9,Grune
+122,Recklinghausen II,AfD,9.6,AfD
+122,Recklinghausen II,Linke,2.8,Linke
+122,Recklinghausen II,FDP,8.3,FDP
+122,Recklinghausen II,CDU_CSU,28.1,CDU/CSU
+123,Gelsenkirchen,SPD,40.5,SPD
+123,Gelsenkirchen,Grune,10.2,Grune
+123,Gelsenkirchen,AfD,14,AfD
+123,Gelsenkirchen,Linke,3.2,Linke
+123,Gelsenkirchen,FDP,8.1,FDP
+123,Gelsenkirchen,CDU_CSU,19.8,CDU/CSU
+124,Steinfurt I – Borken I,SPD,28.3,SPD
+124,Steinfurt I – Borken I,Grune,12,Grune
+124,Steinfurt I – Borken I,AfD,5.4,AfD
+124,Steinfurt I – Borken I,Linke,2.4,Linke
+124,Steinfurt I – Borken I,FDP,9.3,FDP
+124,Steinfurt I – Borken I,CDU_CSU,40,CDU/CSU
+125,Bottrop – Recklinghausen III,SPD,39.1,SPD
+125,Bottrop – Recklinghausen III,Grune,10.3,Grune
+125,Bottrop – Recklinghausen III,AfD,9.6,AfD
+125,Bottrop – Recklinghausen III,Linke,2.6,Linke
+125,Bottrop – Recklinghausen III,FDP,7.7,FDP
+125,Bottrop – Recklinghausen III,CDU_CSU,27,CDU/CSU
+126,Borken II,SPD,25.4,SPD
+126,Borken II,Grune,12.4,Grune
+126,Borken II,AfD,4.9,AfD
+126,Borken II,Linke,2.4,Linke
+126,Borken II,FDP,8.3,FDP
+126,Borken II,CDU_CSU,43.7,CDU/CSU
+127,Coesfeld – Steinfurt II,SPD,25.1,SPD
+127,Coesfeld – Steinfurt II,Grune,16.9,Grune
+127,Coesfeld – Steinfurt II,AfD,4.5,AfD
+127,Coesfeld – Steinfurt II,Linke,2.7,Linke
+127,Coesfeld – Steinfurt II,FDP,7.8,FDP
+127,Coesfeld – Steinfurt II,CDU_CSU,40.9,CDU/CSU
+128,Steinfurt III,SPD,31.1,SPD
+128,Steinfurt III,Grune,15.5,Grune
+128,Steinfurt III,AfD,5.7,AfD
+128,Steinfurt III,Linke,3,Linke
+128,Steinfurt III,FDP,7.4,FDP
+128,Steinfurt III,CDU_CSU,34,CDU/CSU
+129,Münster,SPD,24.1,SPD
+129,Münster,Grune,32.3,Grune
+129,Münster,AfD,2.7,AfD
+129,Münster,Linke,3.6,Linke
+129,Münster,FDP,6.7,FDP
+129,Münster,CDU_CSU,26.2,CDU/CSU
+130,Warendorf,SPD,30.8,SPD
+130,Warendorf,Grune,12.9,Grune
+130,Warendorf,AfD,6.2,AfD
+130,Warendorf,Linke,2.5,Linke
+130,Warendorf,FDP,7.8,FDP
+130,Warendorf,CDU_CSU,36.3,CDU/CSU
+131,Gütersloh I,SPD,25.8,SPD
+131,Gütersloh I,Grune,12.8,Grune
+131,Gütersloh I,AfD,7.2,AfD
+131,Gütersloh I,Linke,2.4,Linke
+131,Gütersloh I,FDP,7.6,FDP
+131,Gütersloh I,CDU_CSU,40,CDU/CSU
+132,Bielefeld – Gütersloh II,SPD,30,SPD
+132,Bielefeld – Gütersloh II,Grune,21.8,Grune
+132,Bielefeld – Gütersloh II,AfD,6.7,AfD
+132,Bielefeld – Gütersloh II,Linke,5.4,Linke
+132,Bielefeld – Gütersloh II,FDP,9.7,FDP
+132,Bielefeld – Gütersloh II,CDU_CSU,22.3,CDU/CSU
+133,Herford – Minden-Lübbecke II,SPD,36.5,SPD
+133,Herford – Minden-Lübbecke II,Grune,10.7,Grune
+133,Herford – Minden-Lübbecke II,AfD,9.4,AfD
+133,Herford – Minden-Lübbecke II,Linke,3.2,Linke
+133,Herford – Minden-Lübbecke II,FDP,8.3,FDP
+133,Herford – Minden-Lübbecke II,CDU_CSU,26.7,CDU/CSU
+134,Minden-Lübbecke I,SPD,38.4,SPD
+134,Minden-Lübbecke I,Grune,10.5,Grune
+134,Minden-Lübbecke I,AfD,8.9,AfD
+134,Minden-Lübbecke I,Linke,2.6,Linke
+134,Minden-Lübbecke I,FDP,8.2,FDP
+134,Minden-Lübbecke I,CDU_CSU,26.2,CDU/CSU
+135,Lippe I,SPD,30.7,SPD
+135,Lippe I,Grune,15.8,Grune
+135,Lippe I,AfD,9.5,AfD
+135,Lippe I,Linke,3.1,Linke
+135,Lippe I,FDP,9.8,FDP
+135,Lippe I,CDU_CSU,26.2,CDU/CSU
+136,Höxter – Gütersloh III – Lippe II,SPD,28,SPD
+136,Höxter – Gütersloh III – Lippe II,Grune,9.5,Grune
+136,Höxter – Gütersloh III – Lippe II,AfD,8.5,AfD
+136,Höxter – Gütersloh III – Lippe II,Linke,2.5,Linke
+136,Höxter – Gütersloh III – Lippe II,FDP,7.1,FDP
+136,Höxter – Gütersloh III – Lippe II,CDU_CSU,40.1,CDU/CSU
+137,Paderborn,SPD,19,SPD
+137,Paderborn,Grune,13,Grune
+137,Paderborn,AfD,7.4,AfD
+137,Paderborn,Linke,3.1,Linke
+137,Paderborn,FDP,5.6,FDP
+137,Paderborn,CDU_CSU,47.9,CDU/CSU
+138,Hagen – Ennepe-Ruhr-Kreis I,SPD,33.3,SPD
+138,Hagen – Ennepe-Ruhr-Kreis I,Grune,12.5,Grune
+138,Hagen – Ennepe-Ruhr-Kreis I,AfD,10.1,AfD
+138,Hagen – Ennepe-Ruhr-Kreis I,Linke,3.2,Linke
+138,Hagen – Ennepe-Ruhr-Kreis I,FDP,9.5,FDP
+138,Hagen – Ennepe-Ruhr-Kreis I,CDU_CSU,26.4,CDU/CSU
+139,Ennepe-Ruhr-Kreis II,SPD,35.4,SPD
+139,Ennepe-Ruhr-Kreis II,Grune,16,Grune
+139,Ennepe-Ruhr-Kreis II,AfD,7.2,AfD
+139,Ennepe-Ruhr-Kreis II,Linke,2.7,Linke
+139,Ennepe-Ruhr-Kreis II,FDP,8.5,FDP
+139,Ennepe-Ruhr-Kreis II,CDU_CSU,24.6,CDU/CSU
+140,Bochum I,SPD,38.3,SPD
+140,Bochum I,Grune,18.6,Grune
+140,Bochum I,Linke,6.2,Linke
+140,Bochum I,FDP,9,FDP
+140,Bochum I,CDU_CSU,21.7,CDU/CSU
+141,Herne – Bochum II,SPD,43.4,SPD
+141,Herne – Bochum II,Grune,11.7,Grune
+141,Herne – Bochum II,AfD,9.8,AfD
+141,Herne – Bochum II,Linke,3.8,Linke
+141,Herne – Bochum II,FDP,7,FDP
+141,Herne – Bochum II,CDU_CSU,19.8,CDU/CSU
+142,Dortmund I,SPD,33,SPD
+142,Dortmund I,Grune,17,Grune
+142,Dortmund I,AfD,6.8,AfD
+142,Dortmund I,Linke,3.8,Linke
+142,Dortmund I,FDP,6.7,FDP
+142,Dortmund I,CDU_CSU,19.4,CDU/CSU
+143,Dortmund II,SPD,39.1,SPD
+143,Dortmund II,Grune,14.8,Grune
+143,Dortmund II,AfD,8.3,AfD
+143,Dortmund II,Linke,4.1,Linke
+143,Dortmund II,FDP,7.2,FDP
+143,Dortmund II,CDU_CSU,20.3,CDU/CSU
+144,Unna I,SPD,40.8,SPD
+144,Unna I,Grune,13.9,Grune
+144,Unna I,AfD,8,AfD
+144,Unna I,Linke,3.2,Linke
+144,Unna I,FDP,6.2,FDP
+144,Unna I,CDU_CSU,25.1,CDU/CSU
+145,Hamm – Unna II,SPD,40.6,SPD
+145,Hamm – Unna II,Grune,10.2,Grune
+145,Hamm – Unna II,AfD,9.3,AfD
+145,Hamm – Unna II,Linke,3.8,Linke
+145,Hamm – Unna II,FDP,7.2,FDP
+145,Hamm – Unna II,CDU_CSU,26.5,CDU/CSU
+146,Soest,SPD,30.8,SPD
+146,Soest,Grune,12.5,Grune
+146,Soest,AfD,7.9,AfD
+146,Soest,Linke,3.1,Linke
+146,Soest,FDP,10,FDP
+146,Soest,CDU_CSU,33.1,CDU/CSU
+147,Hochsauerlandkreis,SPD,32.2,SPD
+147,Hochsauerlandkreis,Grune,8,Grune
+147,Hochsauerlandkreis,AfD,6.5,AfD
+147,Hochsauerlandkreis,Linke,1.7,Linke
+147,Hochsauerlandkreis,FDP,7,FDP
+147,Hochsauerlandkreis,CDU_CSU,40.4,CDU/CSU
+148,Siegen-Wittgenstein,SPD,30.4,SPD
+148,Siegen-Wittgenstein,Grune,10.3,Grune
+148,Siegen-Wittgenstein,AfD,9,AfD
+148,Siegen-Wittgenstein,Linke,3,Linke
+148,Siegen-Wittgenstein,FDP,8.4,FDP
+148,Siegen-Wittgenstein,CDU_CSU,33.6,CDU/CSU
+149,Olpe – Märkischer Kreis I,SPD,29.6,SPD
+149,Olpe – Märkischer Kreis I,Grune,8.9,Grune
+149,Olpe – Märkischer Kreis I,AfD,8.5,AfD
+149,Olpe – Märkischer Kreis I,Linke,2.6,Linke
+149,Olpe – Märkischer Kreis I,FDP,10.4,FDP
+149,Olpe – Märkischer Kreis I,CDU_CSU,37.1,CDU/CSU
+150,Märkischer Kreis II,SPD,30.4,SPD
+150,Märkischer Kreis II,Grune,9,Grune
+150,Märkischer Kreis II,AfD,9.1,AfD
+150,Märkischer Kreis II,Linke,3.3,Linke
+150,Märkischer Kreis II,FDP,8.9,FDP
+150,Märkischer Kreis II,CDU_CSU,33.6,CDU/CSU
+151,Nordsachsen,SPD,18.9,SPD
+151,Nordsachsen,Grune,5,Grune
+151,Nordsachsen,AfD,27.8,AfD
+151,Nordsachsen,Linke,8,Linke
+151,Nordsachsen,FDP,8.7,FDP
+151,Nordsachsen,CDU_CSU,22.8,CDU/CSU
+152,Leipzig I,SPD,20.2,SPD
+152,Leipzig I,Grune,11.9,Grune
+152,Leipzig I,AfD,15.9,AfD
+152,Leipzig I,Linke,15.3,Linke
+152,Leipzig I,FDP,8.1,FDP
+152,Leipzig I,CDU_CSU,20.5,CDU/CSU
+153,Leipzig II,SPD,16.6,SPD
+153,Leipzig II,Grune,18.4,Grune
+153,Leipzig II,AfD,11.5,AfD
+153,Leipzig II,Linke,22.8,Linke
+153,Leipzig II,FDP,7.4,FDP
+153,Leipzig II,CDU_CSU,16.5,CDU/CSU
+154,Leipzig-Land,SPD,20,SPD
+154,Leipzig-Land,Grune,5,Grune
+154,Leipzig-Land,AfD,24.6,AfD
+154,Leipzig-Land,Linke,7.9,Linke
+154,Leipzig-Land,FDP,9.8,FDP
+154,Leipzig-Land,CDU_CSU,24.4,CDU/CSU
+155,Meißen,SPD,15.4,SPD
+155,Meißen,Grune,5.1,Grune
+155,Meißen,AfD,31,AfD
+155,Meißen,Linke,7,Linke
+155,Meißen,FDP,9.3,FDP
+155,Meißen,CDU_CSU,22.3,CDU/CSU
+156,Bautzen I,SPD,13.4,SPD
+156,Bautzen I,Grune,2.6,Grune
+156,Bautzen I,AfD,33.4,AfD
+156,Bautzen I,Linke,9,Linke
+156,Bautzen I,FDP,8,FDP
+156,Bautzen I,CDU_CSU,26,CDU/CSU
+157,Görlitz,SPD,12.5,SPD
+157,Görlitz,Grune,4.1,Grune
+157,Görlitz,AfD,35.8,AfD
+157,Görlitz,Linke,7.8,Linke
+157,Görlitz,FDP,7.4,FDP
+157,Görlitz,CDU_CSU,26.1,CDU/CSU
+158,Sächsische Schweiz-Osterzgebirge,SPD,11.5,SPD
+158,Sächsische Schweiz-Osterzgebirge,Grune,4.5,Grune
+158,Sächsische Schweiz-Osterzgebirge,AfD,33,AfD
+158,Sächsische Schweiz-Osterzgebirge,Linke,10,Linke
+158,Sächsische Schweiz-Osterzgebirge,FDP,8.5,FDP
+158,Sächsische Schweiz-Osterzgebirge,CDU_CSU,19.2,CDU/CSU
+159,Dresden I,SPD,14.6,SPD
+159,Dresden I,Grune,9.5,Grune
+159,Dresden I,AfD,18.8,AfD
+159,Dresden I,Linke,18.9,Linke
+159,Dresden I,FDP,10.4,FDP
+159,Dresden I,CDU_CSU,21.1,CDU/CSU
+160,Dresden II – Bautzen II,SPD,15.3,SPD
+160,Dresden II – Bautzen II,Grune,13.6,Grune
+160,Dresden II – Bautzen II,AfD,18.6,AfD
+160,Dresden II – Bautzen II,Linke,11.8,Linke
+160,Dresden II – Bautzen II,FDP,11,FDP
+160,Dresden II – Bautzen II,CDU_CSU,18.6,CDU/CSU
+161,Mittelsachsen,SPD,17.7,SPD
+161,Mittelsachsen,Grune,3.7,Grune
+161,Mittelsachsen,AfD,33.4,AfD
+161,Mittelsachsen,Linke,8.3,Linke
+161,Mittelsachsen,FDP,9.9,FDP
+161,Mittelsachsen,CDU_CSU,23.8,CDU/CSU
+162,Chemnitz,SPD,25.1,SPD
+162,Chemnitz,Grune,7.1,Grune
+162,Chemnitz,AfD,21.9,AfD
+162,Chemnitz,Linke,10.9,Linke
+162,Chemnitz,FDP,10,FDP
+162,Chemnitz,CDU_CSU,18.5,CDU/CSU
+163,Chemnitzer Umland – Erzgebirgskreis II,SPD,17.1,SPD
+163,Chemnitzer Umland – Erzgebirgskreis II,Grune,4.1,Grune
+163,Chemnitzer Umland – Erzgebirgskreis II,AfD,28.9,AfD
+163,Chemnitzer Umland – Erzgebirgskreis II,Linke,8.3,Linke
+163,Chemnitzer Umland – Erzgebirgskreis II,FDP,8.7,FDP
+163,Chemnitzer Umland – Erzgebirgskreis II,CDU_CSU,23.7,CDU/CSU
+164,Erzgebirgskreis I,SPD,14.8,SPD
+164,Erzgebirgskreis I,Grune,2.5,Grune
+164,Erzgebirgskreis I,AfD,31.7,AfD
+164,Erzgebirgskreis I,Linke,8,Linke
+164,Erzgebirgskreis I,FDP,7.5,FDP
+164,Erzgebirgskreis I,CDU_CSU,25.4,CDU/CSU
+165,Zwickau,SPD,16.6,SPD
+165,Zwickau,Grune,4.1,Grune
+165,Zwickau,AfD,25.6,AfD
+165,Zwickau,Linke,15.5,Linke
+165,Zwickau,FDP,9.6,FDP
+165,Zwickau,CDU_CSU,21.2,CDU/CSU
+166,Vogtlandkreis,SPD,19.5,SPD
+166,Vogtlandkreis,Grune,4.7,Grune
+166,Vogtlandkreis,AfD,26.8,AfD
+166,Vogtlandkreis,Linke,9.3,Linke
+166,Vogtlandkreis,FDP,8.5,FDP
+166,Vogtlandkreis,CDU_CSU,27.7,CDU/CSU
+167,Waldeck,SPD,38,SPD
+167,Waldeck,Grune,10,Grune
+167,Waldeck,AfD,9.2,AfD
+167,Waldeck,Linke,3.1,Linke
+167,Waldeck,FDP,8.9,FDP
+167,Waldeck,CDU_CSU,26.3,CDU/CSU
+168,Kassel,SPD,36.1,SPD
+168,Kassel,Grune,17.3,Grune
+168,Kassel,AfD,7.1,AfD
+168,Kassel,Linke,5.8,Linke
+168,Kassel,FDP,8.1,FDP
+168,Kassel,CDU_CSU,20.4,CDU/CSU
+169,Werra-Meißner – Hersfeld-Rotenburg,SPD,43.7,SPD
+169,Werra-Meißner – Hersfeld-Rotenburg,Grune,6.2,Grune
+169,Werra-Meißner – Hersfeld-Rotenburg,AfD,11,AfD
+169,Werra-Meißner – Hersfeld-Rotenburg,Linke,3,Linke
+169,Werra-Meißner – Hersfeld-Rotenburg,FDP,5.5,FDP
+169,Werra-Meißner – Hersfeld-Rotenburg,CDU_CSU,26.8,CDU/CSU
+170,Schwalm-Eder,SPD,39.3,SPD
+170,Schwalm-Eder,Grune,8.9,Grune
+170,Schwalm-Eder,AfD,10.3,AfD
+170,Schwalm-Eder,Linke,2.7,Linke
+170,Schwalm-Eder,FDP,8.8,FDP
+170,Schwalm-Eder,CDU_CSU,24,CDU/CSU
+171,Marburg,SPD,36.9,SPD
+171,Marburg,Grune,13.4,Grune
+171,Marburg,AfD,9,AfD
+171,Marburg,Linke,4.7,Linke
+171,Marburg,FDP,6.7,FDP
+171,Marburg,CDU_CSU,26.1,CDU/CSU
+172,Lahn-Dill,SPD,33.1,SPD
+172,Lahn-Dill,Grune,9.1,Grune
+172,Lahn-Dill,AfD,10.5,AfD
+172,Lahn-Dill,Linke,3.1,Linke
+172,Lahn-Dill,FDP,8,FDP
+172,Lahn-Dill,CDU_CSU,30.1,CDU/CSU
+173,Gießen,SPD,30.4,SPD
+173,Gießen,Grune,13.3,Grune
+173,Gießen,AfD,9.1,AfD
+173,Gießen,Linke,4,Linke
+173,Gießen,FDP,7.6,FDP
+173,Gießen,CDU_CSU,29.6,CDU/CSU
+174,Fulda,SPD,21.8,SPD
+174,Fulda,Grune,8.6,Grune
+174,Fulda,AfD,15.2,AfD
+174,Fulda,Linke,2.9,Linke
+174,Fulda,FDP,8.6,FDP
+174,Fulda,CDU_CSU,38.1,CDU/CSU
+175,Main-Kinzig – Wetterau II – Schotten,SPD,30.5,SPD
+175,Main-Kinzig – Wetterau II – Schotten,Grune,9.4,Grune
+175,Main-Kinzig – Wetterau II – Schotten,AfD,13,AfD
+175,Main-Kinzig – Wetterau II – Schotten,Linke,3,Linke
+175,Main-Kinzig – Wetterau II – Schotten,FDP,11.2,FDP
+175,Main-Kinzig – Wetterau II – Schotten,CDU_CSU,27.5,CDU/CSU
+176,Hochtaunus,SPD,27,SPD
+176,Hochtaunus,Grune,15.3,Grune
+176,Hochtaunus,AfD,7.5,AfD
+176,Hochtaunus,Linke,2.6,Linke
+176,Hochtaunus,FDP,11.3,FDP
+176,Hochtaunus,CDU_CSU,31.3,CDU/CSU
+177,Wetterau I,SPD,29.7,SPD
+177,Wetterau I,Grune,13.9,Grune
+177,Wetterau I,AfD,8.3,AfD
+177,Wetterau I,Linke,2.9,Linke
+177,Wetterau I,FDP,11,FDP
+177,Wetterau I,CDU_CSU,28.3,CDU/CSU
+178,Rheingau-Taunus – Limburg,SPD,28.5,SPD
+178,Rheingau-Taunus – Limburg,Grune,14.4,Grune
+178,Rheingau-Taunus – Limburg,AfD,8,AfD
+178,Rheingau-Taunus – Limburg,Linke,2.7,Linke
+178,Rheingau-Taunus – Limburg,FDP,10.7,FDP
+178,Rheingau-Taunus – Limburg,CDU_CSU,30.2,CDU/CSU
+179,Wiesbaden,SPD,25.8,SPD
+179,Wiesbaden,Grune,19.2,Grune
+179,Wiesbaden,AfD,6.8,AfD
+179,Wiesbaden,Linke,4.9,Linke
+179,Wiesbaden,FDP,10.4,FDP
+179,Wiesbaden,CDU_CSU,26.3,CDU/CSU
+180,Hanau,SPD,31.1,SPD
+180,Hanau,Grune,12.4,Grune
+180,Hanau,AfD,10.3,AfD
+180,Hanau,Linke,3.4,Linke
+180,Hanau,FDP,10.1,FDP
+180,Hanau,CDU_CSU,27.8,CDU/CSU
+181,Main-Taunus,SPD,22.8,SPD
+181,Main-Taunus,Grune,16.9,Grune
+181,Main-Taunus,AfD,6.8,AfD
+181,Main-Taunus,Linke,2.7,Linke
+181,Main-Taunus,FDP,13,FDP
+181,Main-Taunus,CDU_CSU,33.3,CDU/CSU
+182,Frankfurt am Main I,SPD,29,SPD
+182,Frankfurt am Main I,Grune,18.8,Grune
+182,Frankfurt am Main I,AfD,5.5,AfD
+182,Frankfurt am Main I,Linke,8.8,Linke
+182,Frankfurt am Main I,FDP,11.4,FDP
+182,Frankfurt am Main I,CDU_CSU,21.7,CDU/CSU
+183,Frankfurt am Main II,SPD,23.3,SPD
+183,Frankfurt am Main II,Grune,29,Grune
+183,Frankfurt am Main II,AfD,4.6,AfD
+183,Frankfurt am Main II,Linke,6.1,Linke
+183,Frankfurt am Main II,FDP,11.4,FDP
+183,Frankfurt am Main II,CDU_CSU,22.5,CDU/CSU
+184,Groß-Gerau,SPD,33.5,SPD
+184,Groß-Gerau,Grune,11.7,Grune
+184,Groß-Gerau,AfD,8.5,AfD
+184,Groß-Gerau,Linke,4,Linke
+184,Groß-Gerau,FDP,8.4,FDP
+184,Groß-Gerau,CDU_CSU,27.7,CDU/CSU
+185,Offenbach,SPD,26.4,SPD
+185,Offenbach,Grune,16.8,Grune
+185,Offenbach,AfD,7.6,AfD
+185,Offenbach,Linke,4.8,Linke
+185,Offenbach,FDP,9.5,FDP
+185,Offenbach,CDU_CSU,27.8,CDU/CSU
+186,Darmstadt,SPD,27.4,SPD
+186,Darmstadt,Grune,23.8,Grune
+186,Darmstadt,AfD,6,AfD
+186,Darmstadt,Linke,5,Linke
+186,Darmstadt,FDP,9.2,FDP
+186,Darmstadt,CDU_CSU,22.7,CDU/CSU
+187,Odenwald,SPD,32.3,SPD
+187,Odenwald,Grune,12.2,Grune
+187,Odenwald,AfD,8.5,AfD
+187,Odenwald,Linke,3.4,Linke
+187,Odenwald,FDP,9.7,FDP
+187,Odenwald,CDU_CSU,27.9,CDU/CSU
+188,Bergstraße,SPD,27.2,SPD
+188,Bergstraße,Grune,13.9,Grune
+188,Bergstraße,AfD,9.5,AfD
+188,Bergstraße,Linke,2.7,Linke
+188,Bergstraße,FDP,10.7,FDP
+188,Bergstraße,CDU_CSU,30.5,CDU/CSU
+189,Eichsfeld – Nordhausen – Kyffhäuserkreis,SPD,22.3,SPD
+189,Eichsfeld – Nordhausen – Kyffhäuserkreis,Grune,3.9,Grune
+189,Eichsfeld – Nordhausen – Kyffhäuserkreis,AfD,22.7,AfD
+189,Eichsfeld – Nordhausen – Kyffhäuserkreis,Linke,10.9,Linke
+189,Eichsfeld – Nordhausen – Kyffhäuserkreis,FDP,6.8,FDP
+189,Eichsfeld – Nordhausen – Kyffhäuserkreis,CDU_CSU,26.6,CDU/CSU
+190,Eisenach – Wartburgkreis – Unstrut-Hainich-Kreis,SPD,23.8,SPD
+190,Eisenach – Wartburgkreis – Unstrut-Hainich-Kreis,Grune,3.5,Grune
+190,Eisenach – Wartburgkreis – Unstrut-Hainich-Kreis,AfD,24.8,AfD
+190,Eisenach – Wartburgkreis – Unstrut-Hainich-Kreis,Linke,11.2,Linke
+190,Eisenach – Wartburgkreis – Unstrut-Hainich-Kreis,FDP,5.8,FDP
+190,Eisenach – Wartburgkreis – Unstrut-Hainich-Kreis,CDU_CSU,23,CDU/CSU
+191,Jena – Sömmerda – Weimarer Land I,SPD,20.1,SPD
+191,Jena – Sömmerda – Weimarer Land I,Grune,9.6,Grune
+191,Jena – Sömmerda – Weimarer Land I,AfD,19.4,AfD
+191,Jena – Sömmerda – Weimarer Land I,Linke,16.9,Linke
+191,Jena – Sömmerda – Weimarer Land I,FDP,7,FDP
+191,Jena – Sömmerda – Weimarer Land I,CDU_CSU,18.5,CDU/CSU
+192,Gotha – Ilm-Kreis,SPD,23.5,SPD
+192,Gotha – Ilm-Kreis,Grune,4.6,Grune
+192,Gotha – Ilm-Kreis,AfD,26.5,AfD
+192,Gotha – Ilm-Kreis,Linke,11.1,Linke
+192,Gotha – Ilm-Kreis,FDP,6.8,FDP
+192,Gotha – Ilm-Kreis,CDU_CSU,18.4,CDU/CSU
+193,Erfurt – Weimar – Weimarer Land II,SPD,24.4,SPD
+193,Erfurt – Weimar – Weimarer Land II,Grune,11.8,Grune
+193,Erfurt – Weimar – Weimarer Land II,AfD,16.5,AfD
+193,Erfurt – Weimar – Weimarer Land II,Linke,16.4,Linke
+193,Erfurt – Weimar – Weimarer Land II,FDP,7.5,FDP
+193,Erfurt – Weimar – Weimarer Land II,CDU_CSU,17.4,CDU/CSU
+194,Gera – Greiz – Altenburger Land,SPD,22.2,SPD
+194,Gera – Greiz – Altenburger Land,Grune,3.8,Grune
+194,Gera – Greiz – Altenburger Land,AfD,29,AfD
+194,Gera – Greiz – Altenburger Land,Linke,11.7,Linke
+194,Gera – Greiz – Altenburger Land,FDP,8.6,FDP
+194,Gera – Greiz – Altenburger Land,CDU_CSU,20,CDU/CSU
+195,Saalfeld-Rudolstadt – Saale-Holzland-Kreis – Saale-Orla-Kreis,SPD,18.7,SPD
+195,Saalfeld-Rudolstadt – Saale-Holzland-Kreis – Saale-Orla-Kreis,Grune,3.8,Grune
+195,Saalfeld-Rudolstadt – Saale-Holzland-Kreis – Saale-Orla-Kreis,AfD,29.3,AfD
+195,Saalfeld-Rudolstadt – Saale-Holzland-Kreis – Saale-Orla-Kreis,Linke,12.1,Linke
+195,Saalfeld-Rudolstadt – Saale-Holzland-Kreis – Saale-Orla-Kreis,FDP,7.5,FDP
+195,Saalfeld-Rudolstadt – Saale-Holzland-Kreis – Saale-Orla-Kreis,CDU_CSU,21,CDU/CSU
+196,Suhl – Schmalkalden-Meiningen – Hildburghausen – Sonneberg,SPD,33.6,SPD
+196,Suhl – Schmalkalden-Meiningen – Hildburghausen – Sonneberg,Grune,2.1,Grune
+196,Suhl – Schmalkalden-Meiningen – Hildburghausen – Sonneberg,AfD,21.2,AfD
+196,Suhl – Schmalkalden-Meiningen – Hildburghausen – Sonneberg,Linke,8.4,Linke
+196,Suhl – Schmalkalden-Meiningen – Hildburghausen – Sonneberg,FDP,6.3,FDP
+196,Suhl – Schmalkalden-Meiningen – Hildburghausen – Sonneberg,CDU_CSU,22.3,CDU/CSU
+197,Neuwied,SPD,30.2,SPD
+197,Neuwied,Grune,9.2,Grune
+197,Neuwied,AfD,9.4,AfD
+197,Neuwied,Linke,2.8,Linke
+197,Neuwied,FDP,8.9,FDP
+197,Neuwied,CDU_CSU,31.9,CDU/CSU
+198,Ahrweiler,SPD,30.2,SPD
+198,Ahrweiler,Grune,10.6,Grune
+198,Ahrweiler,AfD,7.4,AfD
+198,Ahrweiler,Linke,2.4,Linke
+198,Ahrweiler,FDP,8.3,FDP
+198,Ahrweiler,CDU_CSU,34.3,CDU/CSU
+199,Koblenz,SPD,29.9,SPD
+199,Koblenz,Grune,12.4,Grune
+199,Koblenz,AfD,6.7,AfD
+199,Koblenz,Linke,2.8,Linke
+199,Koblenz,FDP,7.7,FDP
+199,Koblenz,CDU_CSU,31.7,CDU/CSU
+200,Mosel/Rhein-Hunsrück,SPD,26.9,SPD
+200,Mosel/Rhein-Hunsrück,Grune,9.7,Grune
+200,Mosel/Rhein-Hunsrück,AfD,8,AfD
+200,Mosel/Rhein-Hunsrück,FDP,11.8,FDP
+200,Mosel/Rhein-Hunsrück,CDU_CSU,34.3,CDU/CSU
+201,Kreuznach,SPD,33,SPD
+201,Kreuznach,Grune,7.3,Grune
+201,Kreuznach,AfD,9.5,AfD
+201,Kreuznach,Linke,3.2,Linke
+201,Kreuznach,FDP,7.2,FDP
+201,Kreuznach,CDU_CSU,29.1,CDU/CSU
+202,Bitburg,SPD,27.4,SPD
+202,Bitburg,Grune,6.9,Grune
+202,Bitburg,AfD,6.5,AfD
+202,Bitburg,Linke,2.3,Linke
+202,Bitburg,FDP,7.4,FDP
+202,Bitburg,CDU_CSU,37.8,CDU/CSU
+203,Trier,SPD,33,SPD
+203,Trier,Grune,13,Grune
+203,Trier,AfD,5.7,AfD
+203,Trier,Linke,3.5,Linke
+203,Trier,FDP,7,FDP
+203,Trier,CDU_CSU,27.7,CDU/CSU
+204,Montabaur,SPD,31.5,SPD
+204,Montabaur,Grune,8.8,Grune
+204,Montabaur,AfD,8.7,AfD
+204,Montabaur,Linke,2.8,Linke
+204,Montabaur,FDP,9.3,FDP
+204,Montabaur,CDU_CSU,30,CDU/CSU
+205,Mainz,SPD,24.9,SPD
+205,Mainz,Grune,18.7,Grune
+205,Mainz,AfD,5.2,AfD
+205,Mainz,Linke,12.4,Linke
+205,Mainz,FDP,7.2,FDP
+205,Mainz,CDU_CSU,23.6,CDU/CSU
+206,Worms,SPD,30.3,SPD
+206,Worms,Grune,9.7,Grune
+206,Worms,AfD,9.8,AfD
+206,Worms,Linke,3.1,Linke
+206,Worms,FDP,7.9,FDP
+206,Worms,CDU_CSU,32.2,CDU/CSU
+207,Ludwigshafen/Frankenthal,SPD,32.8,SPD
+207,Ludwigshafen/Frankenthal,Grune,11.2,Grune
+207,Ludwigshafen/Frankenthal,AfD,11.6,AfD
+207,Ludwigshafen/Frankenthal,Linke,3,Linke
+207,Ludwigshafen/Frankenthal,FDP,9,FDP
+207,Ludwigshafen/Frankenthal,CDU_CSU,25,CDU/CSU
+208,Neustadt – Speyer,SPD,28.1,SPD
+208,Neustadt – Speyer,Grune,12.2,Grune
+208,Neustadt – Speyer,AfD,10,AfD
+208,Neustadt – Speyer,Linke,2.6,Linke
+208,Neustadt – Speyer,FDP,8.5,FDP
+208,Neustadt – Speyer,CDU_CSU,30.2,CDU/CSU
+209,Kaiserslautern,SPD,33.9,SPD
+209,Kaiserslautern,Grune,8.7,Grune
+209,Kaiserslautern,AfD,12,AfD
+209,Kaiserslautern,Linke,4,Linke
+209,Kaiserslautern,FDP,7.1,FDP
+209,Kaiserslautern,CDU_CSU,21.5,CDU/CSU
+210,Pirmasens,SPD,30.4,SPD
+210,Pirmasens,Grune,6,Grune
+210,Pirmasens,AfD,12.7,AfD
+210,Pirmasens,Linke,2.8,Linke
+210,Pirmasens,FDP,7.6,FDP
+210,Pirmasens,CDU_CSU,30.1,CDU/CSU
+211,Südpfalz,SPD,28.2,SPD
+211,Südpfalz,Grune,11.2,Grune
+211,Südpfalz,AfD,9.8,AfD
+211,Südpfalz,Linke,3.1,Linke
+211,Südpfalz,FDP,10,FDP
+211,Südpfalz,CDU_CSU,28.2,CDU/CSU
+212,Altötting,SPD,11.4,SPD
+212,Altötting,Grune,8.7,Grune
+212,Altötting,AfD,11.1,AfD
+212,Altötting,Linke,2.5,Linke
+212,Altötting,FDP,7.2,FDP
+212,Altötting,CDU_CSU,43.3,CDU/CSU
+213,Erding – Ebersberg,SPD,14.5,SPD
+213,Erding – Ebersberg,Grune,14.9,Grune
+213,Erding – Ebersberg,AfD,6.8,AfD
+213,Erding – Ebersberg,Linke,2,Linke
+213,Erding – Ebersberg,FDP,7.9,FDP
+213,Erding – Ebersberg,CDU_CSU,42.3,CDU/CSU
+214,Freising,SPD,13.5,SPD
+214,Freising,Grune,12.5,Grune
+214,Freising,AfD,9.4,AfD
+214,Freising,Linke,2,Linke
+214,Freising,FDP,7.6,FDP
+214,Freising,CDU_CSU,36.2,CDU/CSU
+215,Fürstenfeldbruck,SPD,19.3,SPD
+215,Fürstenfeldbruck,Grune,13.3,Grune
+215,Fürstenfeldbruck,AfD,6.8,AfD
+215,Fürstenfeldbruck,Linke,1.7,Linke
+215,Fürstenfeldbruck,FDP,8.4,FDP
+215,Fürstenfeldbruck,CDU_CSU,38,CDU/CSU
+216,Ingolstadt,SPD,13.9,SPD
+216,Ingolstadt,Grune,9.8,Grune
+216,Ingolstadt,AfD,9.6,AfD
+216,Ingolstadt,Linke,2.5,Linke
+216,Ingolstadt,FDP,5.8,FDP
+216,Ingolstadt,CDU_CSU,44.9,CDU/CSU
+217,München-Nord,SPD,21.9,SPD
+217,München-Nord,Grune,24.2,Grune
+217,München-Nord,AfD,4.3,AfD
+217,München-Nord,Linke,3.6,Linke
+217,München-Nord,FDP,11.2,FDP
+217,München-Nord,CDU_CSU,25.7,CDU/CSU
+218,München-Ost,SPD,19.8,SPD
+218,München-Ost,Grune,21.9,Grune
+218,München-Ost,AfD,4.2,AfD
+218,München-Ost,Linke,2.5,Linke
+218,München-Ost,FDP,9.4,FDP
+218,München-Ost,CDU_CSU,31.7,CDU/CSU
+219,München-Süd,SPD,19.7,SPD
+219,München-Süd,Grune,27.5,Grune
+219,München-Süd,AfD,4.4,AfD
+219,München-Süd,Linke,3.6,Linke
+219,München-Süd,FDP,9.5,FDP
+219,München-Süd,CDU_CSU,26.8,CDU/CSU
+220,München-West/Mitte,SPD,19.9,SPD
+220,München-West/Mitte,Grune,26.9,Grune
+220,München-West/Mitte,AfD,3.8,AfD
+220,München-West/Mitte,Linke,3.5,Linke
+220,München-West/Mitte,FDP,9.7,FDP
+220,München-West/Mitte,CDU_CSU,27,CDU/CSU
+221,München-Land,SPD,15.2,SPD
+221,München-Land,Grune,20.4,Grune
+221,München-Land,AfD,5,AfD
+221,München-Land,Linke,1.9,Linke
+221,München-Land,FDP,9.2,FDP
+221,München-Land,CDU_CSU,39.1,CDU/CSU
+222,Rosenheim,SPD,12,SPD
+222,Rosenheim,Grune,13.8,Grune
+222,Rosenheim,AfD,8.3,AfD
+222,Rosenheim,Linke,2.2,Linke
+222,Rosenheim,FDP,9.3,FDP
+222,Rosenheim,CDU_CSU,36.1,CDU/CSU
+223,Bad Tölz-Wolfratshausen – Miesbach,SPD,11.5,SPD
+223,Bad Tölz-Wolfratshausen – Miesbach,Grune,15.5,Grune
+223,Bad Tölz-Wolfratshausen – Miesbach,Linke,2,Linke
+223,Bad Tölz-Wolfratshausen – Miesbach,FDP,8.7,FDP
+223,Bad Tölz-Wolfratshausen – Miesbach,CDU_CSU,41.3,CDU/CSU
+224,Starnberg – Landsberg am Lech,SPD,13.3,SPD
+224,Starnberg – Landsberg am Lech,Grune,19.9,Grune
+224,Starnberg – Landsberg am Lech,AfD,6,AfD
+224,Starnberg – Landsberg am Lech,Linke,2.1,Linke
+224,Starnberg – Landsberg am Lech,FDP,9.2,FDP
+224,Starnberg – Landsberg am Lech,CDU_CSU,38.2,CDU/CSU
+225,Traunstein,SPD,17,SPD
+225,Traunstein,Grune,10.6,Grune
+225,Traunstein,AfD,7.8,AfD
+225,Traunstein,Linke,2.2,Linke
+225,Traunstein,FDP,7.5,FDP
+225,Traunstein,CDU_CSU,36.6,CDU/CSU
+226,Weilheim,SPD,14.4,SPD
+226,Weilheim,Grune,11.9,Grune
+226,Weilheim,AfD,7.1,AfD
+226,Weilheim,Linke,2,Linke
+226,Weilheim,FDP,6.3,FDP
+226,Weilheim,CDU_CSU,41.9,CDU/CSU
+227,Deggendorf,SPD,15.4,SPD
+227,Deggendorf,Grune,5.4,Grune
+227,Deggendorf,AfD,13.8,AfD
+227,Deggendorf,Linke,1.5,Linke
+227,Deggendorf,FDP,5,FDP
+227,Deggendorf,CDU_CSU,37.4,CDU/CSU
+228,Landshut,SPD,11.6,SPD
+228,Landshut,Grune,11.2,Grune
+228,Landshut,AfD,9.9,AfD
+228,Landshut,Linke,2,Linke
+228,Landshut,FDP,11.7,FDP
+228,Landshut,CDU_CSU,36.4,CDU/CSU
+229,Passau,SPD,20.9,SPD
+229,Passau,Grune,8.9,Grune
+229,Passau,AfD,12,AfD
+229,Passau,Linke,2,Linke
+229,Passau,FDP,7.8,FDP
+229,Passau,CDU_CSU,30.7,CDU/CSU
+230,Rottal-Inn,SPD,11.9,SPD
+230,Rottal-Inn,Grune,7.7,Grune
+230,Rottal-Inn,AfD,12.7,AfD
+230,Rottal-Inn,Linke,1.4,Linke
+230,Rottal-Inn,FDP,7.7,FDP
+230,Rottal-Inn,CDU_CSU,35.1,CDU/CSU
+231,Straubing,SPD,12.4,SPD
+231,Straubing,Grune,6.5,Grune
+231,Straubing,AfD,12.7,AfD
+231,Straubing,Linke,1.5,Linke
+231,Straubing,FDP,5.2,FDP
+231,Straubing,CDU_CSU,44.3,CDU/CSU
+232,Amberg,SPD,16,SPD
+232,Amberg,Grune,8.1,Grune
+232,Amberg,AfD,10.4,AfD
+232,Amberg,Linke,2.4,Linke
+232,Amberg,FDP,5.9,FDP
+232,Amberg,CDU_CSU,40.3,CDU/CSU
+233,Regensburg,SPD,16.6,SPD
+233,Regensburg,Grune,15.3,Grune
+233,Regensburg,AfD,8.4,AfD
+233,Regensburg,Linke,3,Linke
+233,Regensburg,FDP,7,FDP
+233,Regensburg,CDU_CSU,35.3,CDU/CSU
+234,Schwandorf,SPD,22.8,SPD
+234,Schwandorf,Grune,4.6,Grune
+234,Schwandorf,AfD,13.3,AfD
+234,Schwandorf,Linke,1.8,Linke
+234,Schwandorf,FDP,4.2,FDP
+234,Schwandorf,CDU_CSU,35.1,CDU/CSU
+235,Weiden,SPD,22.5,SPD
+235,Weiden,Grune,5,Grune
+235,Weiden,AfD,10.3,AfD
+235,Weiden,Linke,1.8,Linke
+235,Weiden,FDP,4.8,FDP
+235,Weiden,CDU_CSU,38.5,CDU/CSU
+236,Bamberg,SPD,19,SPD
+236,Bamberg,Grune,15.4,Grune
+236,Bamberg,AfD,9,AfD
+236,Bamberg,Linke,2.5,Linke
+236,Bamberg,FDP,6.6,FDP
+236,Bamberg,CDU_CSU,37,CDU/CSU
+237,Bayreuth,SPD,19.4,SPD
+237,Bayreuth,Grune,11,Grune
+237,Bayreuth,AfD,8.4,AfD
+237,Bayreuth,Linke,2,Linke
+237,Bayreuth,FDP,7.2,FDP
+237,Bayreuth,CDU_CSU,42.4,CDU/CSU
+238,Coburg,SPD,26.1,SPD
+238,Coburg,Grune,8.6,Grune
+238,Coburg,AfD,9.7,AfD
+238,Coburg,Linke,1.9,Linke
+238,Coburg,FDP,5.2,FDP
+238,Coburg,CDU_CSU,36.5,CDU/CSU
+239,Hof,SPD,23.9,SPD
+239,Hof,Grune,6.4,Grune
+239,Hof,AfD,11.8,AfD
+239,Hof,Linke,2.1,Linke
+239,Hof,FDP,5.2,FDP
+239,Hof,CDU_CSU,41.2,CDU/CSU
+240,Kulmbach,SPD,16.2,SPD
+240,Kulmbach,Grune,7.5,Grune
+240,Kulmbach,AfD,10.6,AfD
+240,Kulmbach,Linke,1.8,Linke
+240,Kulmbach,FDP,4.8,FDP
+240,Kulmbach,CDU_CSU,47.8,CDU/CSU
+241,Ansbach,SPD,17.7,SPD
+241,Ansbach,Grune,11.2,Grune
+241,Ansbach,AfD,9.6,AfD
+241,Ansbach,Linke,2,Linke
+241,Ansbach,FDP,6.8,FDP
+241,Ansbach,CDU_CSU,38.4,CDU/CSU
+242,Erlangen,SPD,20.7,SPD
+242,Erlangen,Grune,19.4,Grune
+242,Erlangen,AfD,6.9,AfD
+242,Erlangen,FDP,6.7,FDP
+242,Erlangen,CDU_CSU,35.1,CDU/CSU
+243,Fürth,SPD,24,SPD
+243,Fürth,Grune,13.8,Grune
+243,Fürth,AfD,8.6,AfD
+243,Fürth,Linke,3.2,Linke
+243,Fürth,FDP,6.6,FDP
+243,Fürth,CDU_CSU,33.5,CDU/CSU
+244,Nürnberg-Nord,SPD,21.9,SPD
+244,Nürnberg-Nord,Grune,22.6,Grune
+244,Nürnberg-Nord,AfD,5.9,AfD
+244,Nürnberg-Nord,Linke,5.4,Linke
+244,Nürnberg-Nord,FDP,7.5,FDP
+244,Nürnberg-Nord,CDU_CSU,28.5,CDU/CSU
+245,Nürnberg-Süd,SPD,24.2,SPD
+245,Nürnberg-Süd,Grune,12.1,Grune
+245,Nürnberg-Süd,AfD,10.2,AfD
+245,Nürnberg-Süd,Linke,4,Linke
+245,Nürnberg-Süd,FDP,6.8,FDP
+245,Nürnberg-Süd,CDU_CSU,34.4,CDU/CSU
+246,Roth,SPD,16.9,SPD
+246,Roth,Grune,13.4,Grune
+246,Roth,AfD,7.9,AfD
+246,Roth,Linke,2.7,Linke
+246,Roth,FDP,6.7,FDP
+246,Roth,CDU_CSU,38,CDU/CSU
+247,Aschaffenburg,SPD,17.1,SPD
+247,Aschaffenburg,Grune,13.5,Grune
+247,Aschaffenburg,AfD,9.6,AfD
+247,Aschaffenburg,Linke,2.4,Linke
+247,Aschaffenburg,FDP,8,FDP
+247,Aschaffenburg,CDU_CSU,40.7,CDU/CSU
+248,Bad Kissingen,SPD,19,SPD
+248,Bad Kissingen,Grune,9.5,Grune
+248,Bad Kissingen,AfD,9.9,AfD
+248,Bad Kissingen,Linke,2.6,Linke
+248,Bad Kissingen,FDP,7.1,FDP
+248,Bad Kissingen,CDU_CSU,39.1,CDU/CSU
+249,Main-Spessart,SPD,21.5,SPD
+249,Main-Spessart,Grune,10.1,Grune
+249,Main-Spessart,AfD,8,AfD
+249,Main-Spessart,Linke,2.6,Linke
+249,Main-Spessart,FDP,6.1,FDP
+249,Main-Spessart,CDU_CSU,38.6,CDU/CSU
+250,Schweinfurt,SPD,18.6,SPD
+250,Schweinfurt,Grune,9.5,Grune
+250,Schweinfurt,AfD,9.9,AfD
+250,Schweinfurt,Linke,4.2,Linke
+250,Schweinfurt,FDP,8,FDP
+250,Schweinfurt,CDU_CSU,40.9,CDU/CSU
+251,Würzburg,SPD,18.1,SPD
+251,Würzburg,Grune,19.8,Grune
+251,Würzburg,Linke,4.1,Linke
+251,Würzburg,FDP,10.6,FDP
+251,Würzburg,CDU_CSU,36.9,CDU/CSU
+252,Augsburg-Stadt,SPD,18,SPD
+252,Augsburg-Stadt,Grune,20.6,Grune
+252,Augsburg-Stadt,AfD,8.8,AfD
+252,Augsburg-Stadt,Linke,4.7,Linke
+252,Augsburg-Stadt,FDP,8.5,FDP
+252,Augsburg-Stadt,CDU_CSU,28.1,CDU/CSU
+253,Augsburg-Land,SPD,14.5,SPD
+253,Augsburg-Land,Grune,12.2,Grune
+253,Augsburg-Land,AfD,9.7,AfD
+253,Augsburg-Land,Linke,1.8,Linke
+253,Augsburg-Land,FDP,7.9,FDP
+253,Augsburg-Land,CDU_CSU,40.6,CDU/CSU
+254,Donau-Ries,SPD,19.2,SPD
+254,Donau-Ries,Grune,7.1,Grune
+254,Donau-Ries,AfD,10.1,AfD
+254,Donau-Ries,Linke,2,Linke
+254,Donau-Ries,FDP,6.4,FDP
+254,Donau-Ries,CDU_CSU,41.1,CDU/CSU
+255,Neu-Ulm,SPD,16,SPD
+255,Neu-Ulm,Grune,11,Grune
+255,Neu-Ulm,AfD,12,AfD
+255,Neu-Ulm,Linke,1.9,Linke
+255,Neu-Ulm,FDP,7.8,FDP
+255,Neu-Ulm,CDU_CSU,37.2,CDU/CSU
+256,Oberallgäu,SPD,15.8,SPD
+256,Oberallgäu,Grune,15.4,Grune
+256,Oberallgäu,AfD,8,AfD
+256,Oberallgäu,Linke,2.7,Linke
+256,Oberallgäu,FDP,13.1,FDP
+256,Oberallgäu,CDU_CSU,29.7,CDU/CSU
+257,Ostallgäu,SPD,12.3,SPD
+257,Ostallgäu,Grune,12.2,Grune
+257,Ostallgäu,AfD,10.2,AfD
+257,Ostallgäu,Linke,3.4,Linke
+257,Ostallgäu,FDP,7.2,FDP
+257,Ostallgäu,CDU_CSU,38.8,CDU/CSU
+258,Stuttgart I,SPD,12.8,SPD
+258,Stuttgart I,Grune,39.9,Grune
+258,Stuttgart I,AfD,4,AfD
+258,Stuttgart I,Linke,4.1,Linke
+258,Stuttgart I,FDP,10.5,FDP
+258,Stuttgart I,CDU_CSU,23.4,CDU/CSU
+259,Stuttgart II,SPD,20.6,SPD
+259,Stuttgart II,Grune,23.7,Grune
+259,Stuttgart II,AfD,7.2,AfD
+259,Stuttgart II,Linke,4.8,Linke
+259,Stuttgart II,FDP,11.1,FDP
+259,Stuttgart II,CDU_CSU,25.9,CDU/CSU
+260,Böblingen,SPD,21.1,SPD
+260,Böblingen,Grune,15.6,Grune
+260,Böblingen,AfD,8.3,AfD
+260,Böblingen,Linke,2.3,Linke
+260,Böblingen,FDP,16.6,FDP
+260,Böblingen,CDU_CSU,29.7,CDU/CSU
+261,Esslingen,SPD,21.8,SPD
+261,Esslingen,Grune,18.4,Grune
+261,Esslingen,AfD,7,AfD
+261,Esslingen,Linke,2.7,Linke
+261,Esslingen,FDP,12.2,FDP
+261,Esslingen,CDU_CSU,32,CDU/CSU
+262,Nürtingen,SPD,21,SPD
+262,Nürtingen,Grune,18,Grune
+262,Nürtingen,AfD,8.3,AfD
+262,Nürtingen,Linke,2.4,Linke
+262,Nürtingen,FDP,13.8,FDP
+262,Nürtingen,CDU_CSU,30.1,CDU/CSU
+263,Göppingen,SPD,23.7,SPD
+263,Göppingen,Grune,11.9,Grune
+263,Göppingen,AfD,11.8,AfD
+263,Göppingen,Linke,2.2,Linke
+263,Göppingen,FDP,12.3,FDP
+263,Göppingen,CDU_CSU,31,CDU/CSU
+264,Waiblingen,SPD,22.7,SPD
+264,Waiblingen,Grune,15,Grune
+264,Waiblingen,AfD,8.7,AfD
+264,Waiblingen,Linke,2.6,Linke
+264,Waiblingen,FDP,15.6,FDP
+264,Waiblingen,CDU_CSU,29,CDU/CSU
+265,Ludwigsburg,SPD,18.4,SPD
+265,Ludwigsburg,Grune,20.3,Grune
+265,Ludwigsburg,AfD,8.4,AfD
+265,Ludwigsburg,Linke,2.9,Linke
+265,Ludwigsburg,FDP,14,FDP
+265,Ludwigsburg,CDU_CSU,29.5,CDU/CSU
+266,Neckar-Zaber,SPD,22.5,SPD
+266,Neckar-Zaber,Grune,15.7,Grune
+266,Neckar-Zaber,AfD,10,AfD
+266,Neckar-Zaber,Linke,2.4,Linke
+266,Neckar-Zaber,FDP,12.3,FDP
+266,Neckar-Zaber,CDU_CSU,30.4,CDU/CSU
+267,Heilbronn,SPD,24.3,SPD
+267,Heilbronn,Grune,12.7,Grune
+267,Heilbronn,AfD,12.8,AfD
+267,Heilbronn,Linke,2.3,Linke
+267,Heilbronn,FDP,13.7,FDP
+267,Heilbronn,CDU_CSU,27.8,CDU/CSU
+268,Schwäbisch Hall – Hohenlohe,SPD,19.6,SPD
+268,Schwäbisch Hall – Hohenlohe,Grune,15.1,Grune
+268,Schwäbisch Hall – Hohenlohe,AfD,12,AfD
+268,Schwäbisch Hall – Hohenlohe,Linke,2.4,Linke
+268,Schwäbisch Hall – Hohenlohe,FDP,11.7,FDP
+268,Schwäbisch Hall – Hohenlohe,CDU_CSU,32.1,CDU/CSU
+269,Backnang – Schwäbisch Gmünd,SPD,24.4,SPD
+269,Backnang – Schwäbisch Gmünd,Grune,11.5,Grune
+269,Backnang – Schwäbisch Gmünd,AfD,11.7,AfD
+269,Backnang – Schwäbisch Gmünd,Linke,2.9,Linke
+269,Backnang – Schwäbisch Gmünd,FDP,12,FDP
+269,Backnang – Schwäbisch Gmünd,CDU_CSU,30.5,CDU/CSU
+270,Aalen – Heidenheim,SPD,21.9,SPD
+270,Aalen – Heidenheim,Grune,12.2,Grune
+270,Aalen – Heidenheim,AfD,10.2,AfD
+270,Aalen – Heidenheim,Linke,2.3,Linke
+270,Aalen – Heidenheim,FDP,9.4,FDP
+270,Aalen – Heidenheim,CDU_CSU,37,CDU/CSU
+271,Karlsruhe-Stadt,SPD,21.3,SPD
+271,Karlsruhe-Stadt,Grune,30,Grune
+271,Karlsruhe-Stadt,AfD,6.8,AfD
+271,Karlsruhe-Stadt,Linke,5,Linke
+271,Karlsruhe-Stadt,FDP,10,FDP
+271,Karlsruhe-Stadt,CDU_CSU,19.5,CDU/CSU
+272,Karlsruhe-Land,SPD,22.8,SPD
+272,Karlsruhe-Land,Grune,16.7,Grune
+272,Karlsruhe-Land,AfD,9,AfD
+272,Karlsruhe-Land,Linke,2.4,Linke
+272,Karlsruhe-Land,FDP,11.5,FDP
+272,Karlsruhe-Land,CDU_CSU,30.4,CDU/CSU
+273,Rastatt,SPD,22.7,SPD
+273,Rastatt,Grune,13,Grune
+273,Rastatt,AfD,10.7,AfD
+273,Rastatt,Linke,2.7,Linke
+273,Rastatt,FDP,11.6,FDP
+273,Rastatt,CDU_CSU,33.2,CDU/CSU
+274,Heidelberg,SPD,20.2,SPD
+274,Heidelberg,Grune,30.2,Grune
+274,Heidelberg,AfD,6.1,AfD
+274,Heidelberg,Linke,4,Linke
+274,Heidelberg,FDP,9,FDP
+274,Heidelberg,CDU_CSU,24.1,CDU/CSU
+275,Mannheim,SPD,26.4,SPD
+275,Mannheim,Grune,22.5,Grune
+275,Mannheim,AfD,9.8,AfD
+275,Mannheim,Linke,4.8,Linke
+275,Mannheim,FDP,10.6,FDP
+275,Mannheim,CDU_CSU,19.9,CDU/CSU
+276,Odenwald – Tauber,SPD,20.6,SPD
+276,Odenwald – Tauber,Grune,11,Grune
+276,Odenwald – Tauber,AfD,12.1,AfD
+276,Odenwald – Tauber,Linke,2.3,Linke
+276,Odenwald – Tauber,FDP,9.7,FDP
+276,Odenwald – Tauber,CDU_CSU,35.8,CDU/CSU
+277,Rhein-Neckar,SPD,27,SPD
+277,Rhein-Neckar,Grune,14.9,Grune
+277,Rhein-Neckar,AfD,10,AfD
+277,Rhein-Neckar,Linke,2.6,Linke
+277,Rhein-Neckar,FDP,11.7,FDP
+277,Rhein-Neckar,CDU_CSU,28.5,CDU/CSU
+278,Bruchsal – Schwetzingen,SPD,21.9,SPD
+278,Bruchsal – Schwetzingen,Grune,14.7,Grune
+278,Bruchsal – Schwetzingen,AfD,11.6,AfD
+278,Bruchsal – Schwetzingen,Linke,2.6,Linke
+278,Bruchsal – Schwetzingen,FDP,11.7,FDP
+278,Bruchsal – Schwetzingen,CDU_CSU,29.6,CDU/CSU
+279,Pforzheim,SPD,20.9,SPD
+279,Pforzheim,Grune,12.7,Grune
+279,Pforzheim,AfD,14.1,AfD
+279,Pforzheim,Linke,2.3,Linke
+279,Pforzheim,FDP,12.7,FDP
+279,Pforzheim,CDU_CSU,28.5,CDU/CSU
+280,Calw,SPD,17.2,SPD
+280,Calw,Grune,11.7,Grune
+280,Calw,AfD,12.3,AfD
+280,Calw,Linke,2,Linke
+280,Calw,FDP,15,FDP
+280,Calw,CDU_CSU,33.8,CDU/CSU
+281,Freiburg,SPD,26.3,SPD
+281,Freiburg,Grune,28.8,Grune
+281,Freiburg,AfD,4.5,AfD
+281,Freiburg,Linke,5.3,Linke
+281,Freiburg,FDP,7.7,FDP
+281,Freiburg,CDU_CSU,20.6,CDU/CSU
+282,Lörrach – Müllheim,SPD,21.8,SPD
+282,Lörrach – Müllheim,Grune,20.6,Grune
+282,Lörrach – Müllheim,AfD,8.1,AfD
+282,Lörrach – Müllheim,Linke,2.7,Linke
+282,Lörrach – Müllheim,FDP,14.2,FDP
+282,Lörrach – Müllheim,CDU_CSU,25.2,CDU/CSU
+283,Emmendingen – Lahr,SPD,27.8,SPD
+283,Emmendingen – Lahr,Grune,14,Grune
+283,Emmendingen – Lahr,AfD,8.6,AfD
+283,Emmendingen – Lahr,Linke,3,Linke
+283,Emmendingen – Lahr,FDP,10,FDP
+283,Emmendingen – Lahr,CDU_CSU,27.8,CDU/CSU
+284,Offenburg,SPD,18.7,SPD
+284,Offenburg,Grune,14,Grune
+284,Offenburg,AfD,8.9,AfD
+284,Offenburg,Linke,2.7,Linke
+284,Offenburg,FDP,10.8,FDP
+284,Offenburg,CDU_CSU,34.9,CDU/CSU
+285,Rottweil – Tuttlingen,SPD,16.2,SPD
+285,Rottweil – Tuttlingen,Grune,12.3,Grune
+285,Rottweil – Tuttlingen,AfD,13.7,AfD
+285,Rottweil – Tuttlingen,Linke,2.1,Linke
+285,Rottweil – Tuttlingen,FDP,16.8,FDP
+285,Rottweil – Tuttlingen,CDU_CSU,31.5,CDU/CSU
+286,Schwarzwald-Baar,SPD,18.1,SPD
+286,Schwarzwald-Baar,Grune,12.1,Grune
+286,Schwarzwald-Baar,AfD,10.5,AfD
+286,Schwarzwald-Baar,Linke,2.3,Linke
+286,Schwarzwald-Baar,FDP,13.8,FDP
+286,Schwarzwald-Baar,CDU_CSU,36.4,CDU/CSU
+287,Konstanz,SPD,20.1,SPD
+287,Konstanz,Grune,18,Grune
+287,Konstanz,AfD,8.6,AfD
+287,Konstanz,Linke,3.6,Linke
+287,Konstanz,FDP,10.9,FDP
+287,Konstanz,CDU_CSU,34.1,CDU/CSU
+288,Waldshut,SPD,25.5,SPD
+288,Waldshut,Grune,15.3,Grune
+288,Waldshut,AfD,8.5,AfD
+288,Waldshut,Linke,2.7,Linke
+288,Waldshut,FDP,7.6,FDP
+288,Waldshut,CDU_CSU,33.6,CDU/CSU
+289,Reutlingen,SPD,17.9,SPD
+289,Reutlingen,Grune,16.7,Grune
+289,Reutlingen,AfD,10.1,AfD
+289,Reutlingen,Linke,4,Linke
+289,Reutlingen,FDP,13.4,FDP
+289,Reutlingen,CDU_CSU,32.5,CDU/CSU
+290,Tübingen,SPD,18.2,SPD
+290,Tübingen,Grune,25.7,Grune
+290,Tübingen,AfD,7.8,AfD
+290,Tübingen,Linke,4.7,Linke
+290,Tübingen,FDP,9.4,FDP
+290,Tübingen,CDU_CSU,27,CDU/CSU
+291,Ulm,SPD,18.3,SPD
+291,Ulm,Grune,18.8,Grune
+291,Ulm,AfD,9.1,AfD
+291,Ulm,Linke,2.6,Linke
+291,Ulm,FDP,11.2,FDP
+291,Ulm,CDU_CSU,32.7,CDU/CSU
+292,Biberach,SPD,18.6,SPD
+292,Biberach,Grune,13.6,Grune
+292,Biberach,AfD,10.2,AfD
+292,Biberach,Linke,1.6,Linke
+292,Biberach,FDP,9.9,FDP
+292,Biberach,CDU_CSU,35.1,CDU/CSU
+293,Bodensee,SPD,20.8,SPD
+293,Bodensee,Grune,17.1,Grune
+293,Bodensee,AfD,9.2,AfD
+293,Bodensee,Linke,2.7,Linke
+293,Bodensee,FDP,12.2,FDP
+293,Bodensee,CDU_CSU,30.4,CDU/CSU
+294,Ravensburg,SPD,13.8,SPD
+294,Ravensburg,Grune,21.1,Grune
+294,Ravensburg,AfD,8,AfD
+294,Ravensburg,Linke,3,Linke
+294,Ravensburg,FDP,14.3,FDP
+294,Ravensburg,CDU_CSU,30.6,CDU/CSU
+295,Zollernalb – Sigmaringen,SPD,18.3,SPD
+295,Zollernalb – Sigmaringen,Grune,16.9,Grune
+295,Zollernalb – Sigmaringen,AfD,11.4,AfD
+295,Zollernalb – Sigmaringen,Linke,2.1,Linke
+295,Zollernalb – Sigmaringen,FDP,13.7,FDP
+295,Zollernalb – Sigmaringen,CDU_CSU,30.1,CDU/CSU
+296,Saarbrücken,SPD,36.9,SPD
+296,Saarbrücken,Grune,7.9,Grune
+296,Saarbrücken,AfD,9,AfD
+296,Saarbrücken,Linke,6.2,Linke
+296,Saarbrücken,FDP,8.3,FDP
+296,Saarbrücken,CDU_CSU,25.1,CDU/CSU
+297,Saarlouis,SPD,36.7,SPD
+297,Saarlouis,Grune,4.7,Grune
+297,Saarlouis,AfD,9.7,AfD
+297,Saarlouis,Linke,5.4,Linke
+297,Saarlouis,FDP,8.2,FDP
+297,Saarlouis,CDU_CSU,28,CDU/CSU
+298,St. Wendel,SPD,35.1,SPD
+298,St. Wendel,Grune,4.2,Grune
+298,St. Wendel,AfD,9,AfD
+298,St. Wendel,Linke,4.2,Linke
+298,St. Wendel,FDP,8.3,FDP
+298,St. Wendel,CDU_CSU,32.1,CDU/CSU
+299,Homburg,SPD,36.6,SPD
+299,Homburg,Grune,4.9,Grune
+299,Homburg,AfD,11.6,AfD
+299,Homburg,Linke,5.2,Linke
+299,Homburg,FDP,7.9,FDP
+299,Homburg,CDU_CSU,26.1,CDU/CSU
