@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Election Forecasts Work — zweitstimme.org</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --black: #1a1a1a;
+  --white: #fafaf8;
+  --gray-100: #f3f2ee;
+  --gray-400: #a09e96;
+  --gray-600: #6b6963;
+  --orange: #e85d26;
+  --orange-light: #f5e8e0;
+  --text: #1a1a1a;
+  --text-muted: #6b6963;
+  --border: #e5e3dc;
+  --font-display: 'Georgia','Times New Roman',serif;
+  --font-body: 'Helvetica Neue',Arial,sans-serif;
+  --font-mono: 'Courier New',monospace;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--white); color: var(--text); font-size: 16px; line-height: 1.7; }
+
+header { border-bottom: 1.5px solid var(--black); padding: 1.25rem 2rem; display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 3rem; }
+.site-name { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; color: var(--orange); text-transform: uppercase; }
+.site-nav a { font-family: var(--font-mono); font-size: 11px; color: var(--gray-600); text-decoration: none; }
+.site-nav a:hover { color: var(--orange); }
+
+.hero { max-width: 1200px; margin: 0 auto 1rem; padding: 0 2rem; }
+.hero-label { font-family: var(--font-mono); font-size: 11px; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+h1 { font-family: var(--font-display); font-size: clamp(1.8rem,4vw,2.6rem); font-weight: normal; line-height: 1.2; color: var(--black); margin-bottom: 1.25rem; }
+.hero-sub { font-size: 16px; color: var(--text-muted); max-width: 600px; line-height: 1.65; }
+.hero-meta { margin-top: 1.5rem; display: flex; gap: 2rem; font-family: var(--font-mono); font-size: 11px; color: var(--gray-400); }
+.rule { border: none; border-top: 1px solid var(--border); margin: 2.5rem auto; max-width: 1200px; }
+.section-intro { max-width: 1200px; margin: 0 auto 1rem; padding: 0 2rem; }
+.section-label { font-family: var(--font-mono); font-size: 16px; color: var(--orange); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.75rem; }
+h2 { font-family: var(--font-display); font-size: clamp(1.3rem,2.5vw,1.75rem); font-weight: normal; line-height: 1.25; margin-bottom: 0.9rem; color: var(--black); }
+p { margin-bottom: 0.9rem; }
+p:last-child { margin-bottom: 0; }
+a { color: var(--orange); text-decoration: none; border-bottom: 1px solid var(--orange-light); }
+a:hover { border-bottom-color: var(--orange); }
+
+/* ── SCROLLY ── */
+.scrolly-wrap {
+  display: flex;
+  gap: 0;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  align-items: flex-start;
+}
+
+/* Left sticky: 65% */
+.scrolly-left {
+  width: 65%;
+  flex-shrink: 0;
+  position: sticky;
+  top: 1.5rem;
+  height: calc(100vh - 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 3rem;
+}
+
+/* Right scrolling: 35% */
+.scrolly-right {
+  width: 35%;
+  padding-left: 0.5rem;
+}
+
+/* Formula */
+.formula-box {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  background: var(--gray-100);
+  border-left: 3px solid var(--orange);
+  padding: 0.65rem 1rem;
+  margin-bottom: 0.85rem;
+  line-height: 1.7;
+  color: var(--gray-600);
+  border-radius: 0 3px 3px 0;
+  white-space: normal;
+  line-height: 2.0;
+}
+.formula-box .hl { color: var(--black); font-weight: 700; }
+
+/* Main chart area */
+.main-chart-outer {
+  position: relative;
+  width: 100%;
+}
+#main-chart-wrap {
+  position: relative;
+  height: 420px;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
+#main-chart-wrap canvas { display: block; width: 100% !important; }
+
+/* Zoom overlay canvas */
+#zoom-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* Threshold chart */
+#thr-chart-wrap {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.6s ease;
+  position: relative;
+}
+
+/* Legend */
+.legend { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 0.6rem; }
+.leg-item { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--gray-600); font-family: var(--font-mono); }
+.leg-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.chart-caption { font-family: var(--font-mono); font-size: 10px; color: var(--gray-400); margin-top: 0.4rem; line-height: 1.4; }
+
+/* Steps */
+.step { min-height: 90vh; display: flex; align-items: center; padding: 3rem 0; }
+.step-inner { width: 100%; }
+.step-tag { font-family: var(--font-mono); font-size: 10px; color: var(--orange); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.step h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: normal; margin-bottom: 0.6rem; color: var(--black); line-height: 1.3; }
+.step p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.6rem; }
+
+/* Embedded bar chart in text panel */
+.embedded-chart { margin: 0.85rem 0 0.4rem; background: var(--white); border: 1px solid var(--border); border-radius: 4px; padding: 0.75rem; }
+.embed-btns { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.embed-btn { font-family: var(--font-mono); font-size: 9px; padding: 2px 7px; border: 1px solid var(--border); border-radius: 2px; cursor: pointer; background: var(--white); color: var(--gray-600); }
+.embed-btn.active { background: var(--black); color: var(--white); border-color: var(--black); }
+.embedded-chart-caption { font-family: var(--font-mono); font-size: 10px; color: var(--gray-400); margin-top: 0.35rem; line-height: 1.4; }
+
+.footnote { max-width: 1200px; margin: 4rem auto 2rem; padding: 1.5rem 2rem 0; border-top: 1px solid var(--border); font-size: 13px; color: var(--gray-400); line-height: 1.6; }
+.footnote p { color: var(--gray-400); font-size: 13px; margin-bottom: 0.4rem; }
+
+@media (max-width: 800px) {
+  .scrolly-wrap { flex-direction: column; }
+  .scrolly-left { width: 100%; position: relative; top: 0; height: auto; padding-right: 0; }
+  .scrolly-right { width: 100%; padding-left: 0; }
+  .step { min-height: auto; padding: 2rem 0; }
+  .formula-box { white-space: normal; }
+}
+</style>
+</head>
+<body>
+
+
+<div class="hero">
+  <p class="hero-label">Explainer · Bundestagswahl 2025</p>
+  <h1>How does an election forecast model work?</h1>
+  <p style="font-family:var(--font-mono);font-size:12px;color:var(--gray-400);margin-top:0.5rem;">Chirag Ramesh &nbsp;·&nbsp; Data Journalism Final Project &nbsp;·&nbsp; Hertie School 2026</p>
+  <p class="hero-sub">
+    <p>You've read the headlines talking about where the polls are at right now and who is leading them. You may have also read about an election forecasting model predicting a certain party to win the elections. But have you wondered what may be happening underneath? Did you think polls and election forecasting models are the same thing? Are they claiming that something is going to happen for sure? These are the nuances this explainer aims to explore.</p>
+    <p>For starters, polls and election forecasting models are not the same thing, and whoever makes them are not entirely certain of the results either. To understand polls, click here to read our other explainer where we get into polls and their results. In this explainer we're going to understand election forecasting models, what they are, how we do it here at Zweitstimme and what we are trying to say with its output.</p>
+    <p>Before we go into the details, for those of you who may not know what a model is, here's a simple explanation. When scientists build models, they mean to say that they're trying to predict something based on some patterns observed. It is basically a formula that takes inputs and generates an output. Inputs can be anything from people's salaries, a constituency's education level, a country's temperature, or a region's unemployment rate. The output is what we're trying to predict, and it could be anything from people's likelihood of buying a car, whether a region will see rainfall, or in the case of election forecasting models, probability of a party's vote share or a candidate's chances of winning a constituency. The result is what we call a prediction, and there are nuances to these results, but more on that in a moment. That is the simplified explanation of what we mean when we say "model".</p>
+    <p>At Zweitstimme, we predict the results of both the vote shares of parties of Zweitstimme and constituency-level candidate win probabilities of Erststimme. We do this with two models, one for each Zweitstimme and Erststimme, respectively. These models are the election forecasting models. They are different from what polls are meant to do. A poll tells us that if, for whatever reason, an election were to be conducted, say next Sunday, what would the results look like? It is a snapshot at a given time, and they do this by surveying people across the country by asking people a simple question, "Who would you vote for?". Polls are conducted throughout the year, even during years with no election scheduled.</p>
+    </p>
+    <div class="hero-meta">
+    <span>Bundestagswahl · February 2025</span>
+    <span>Data: zweitstimme.org</span>
+  </div>
+</div>
+
+<hr class="rule">
+
+<div class="section-intro">
+  <p class="section-label">Part I · The Zweitstimme Model</p>
+  <h2>Building a forecast, ingredient by ingredient</h2>
+  <p style="max-width:600px;color:var(--text-muted);font-size:15px;">But an election forecasting model on the other hand is more than that. The Zweitstimme model combines what history tells us with what current polls say to make predictions about the upcoming election. It's not just a snapshot, it's trying to say that while polls are saying X, there are historical patterns which tell us how the results are probably going to be different or sometimes, it might just confirm what the polls are trying to say. The model shows different results when checked four months prior to the election, versus just two days before the election.<br><br>Let's start with the Zweitstimme model explainer, one ingredient or component at a time, and see how the model predicts the 2025 federal election party vote shares.</p>
+</div>
+
+<!-- SCROLLY -->
+<div class="scrolly-wrap">
+
+  <!-- LEFT STICKY -->
+  <div class="scrolly-left">
+
+    <div class="formula-box" id="formula">
+      Predicted Predicted Vote Share = <span class="hl">Previous Result</span>
+    </div>
+
+    <div class="main-chart-outer">
+      <div id="main-chart-wrap" style="position:relative;">
+        <canvas id="main-chart"></canvas>
+        <canvas id="dash-overlay"></canvas>
+        <canvas id="zoom-overlay"></canvas>
+        <div id="zs-tooltip" style="position:absolute;display:none;background:rgba(26,26,26,0.88);color:#fafaf8;font-family:'Courier New',monospace;font-size:11px;padding:5px 9px;border-radius:3px;pointer-events:none;white-space:nowrap;"></div>
+      </div>
+      <div id="thr-chart-wrap">
+        <canvas id="thr-chart"></canvas>
+      </div>
+    </div>
+
+    <div class="legend" id="main-legend">
+      <span class="leg-item"><span class="leg-dot" style="background:#555555"></span>CDU/CSU</span>
+      <span class="leg-item"><span class="leg-dot" style="background:#009EE0"></span>AfD</span>
+      <span class="leg-item"><span class="leg-dot" style="background:#DD0000"></span>SPD</span>
+      <span class="leg-item"><span class="leg-dot" style="background:#4C9A2A"></span>Grüne</span>
+      <span class="leg-item"><span class="leg-dot" style="background:#AA00AA"></span>Linke</span>
+      <span class="leg-item"><span class="leg-dot" style="background:#B8960C"></span>FDP</span>
+      <span class="leg-item"><span class="leg-dot" style="background:#FF6A13"></span>BSW</span>
+    </div>
+    <p class="chart-caption" id="main-caption">Actual results: 2017 and 2021 Bundestagswahl.</p>
+    <p style="font-family:var(--font-mono);font-size:10px;color:var(--black);line-height:1.5;margin-top:0.5rem;">* Simplified illustration. Addition indicates model components, not literal summation. See Stoetzer et al. (2019) and Neunhoeffer et al. (2020).</p>
+
+  </div><!-- /scrolly-left -->
+
+  <!-- RIGHT SCROLLING -->
+  <div class="scrolly-right">
+
+    <!-- STEP 0 -->
+    <div class="step" data-step="0">
+      <div class="step-inner">
+        <p class="step-tag">Structural component · Step 0</p>
+        <h3>What the 2021 result tells us.</h3>
+        <p>The most recent election result, 2021, is the starting point the model builds on. Each party's line begins in 2017 and ends in 2021 to reflect how vote shares changed between the two most recent elections.</p>
+      </div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="step" data-step="1">
+      <div class="step-inner">
+        <p class="step-tag">Structural component · Step 1</p>
+        <h3>What happens if the trend continues.</h3>
+        <p>To illustrate why more inputs are needed, if we simply extended the 2017 to 2021 trend forward, it would predict SPD as the clear winner with a vote share above 30%. But we know that's nowhere close to the truth. Hence the model will need other inputs to make a better prediction.<br><br><em>Note: While only 2017 and 2021 vote shares are used for describing how historical patterns are included, in reality, data of party vote share since 1949 elections are fed into the model.</em></p>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" data-step="2">
+      <div class="step-inner">
+        <p class="step-tag">Polling component · Step 2</p>
+        <h3>What polls are saying now.</h3>
+        <p>The model also needs current trends, so a simple average of all polls conducted by different institutes between Oct 2024–Feb 2025 are added into the model. We are already closer to the actual result now.</p>
+      </div>
+    </div>
+
+    <!-- STEP 3: house effects — bar chart embedded in text -->
+    <div class="step" data-step="3">
+      <div class="step-inner">
+        <p class="step-tag">Polling component · Step 3</p>
+        <h3>Not all institutes are equal.</h3>
+        <p>Unfortunately different institutes have historically shown systematic tendencies to over- or under-report certain parties' vote shares. This is called a house effect. Click on the different parties below to see how INSA runs high for AfD, while Forschungsgruppe runs low. These house effects need to be corrected, so another input in the model is the house effect corrections. So now do we have the forecast?</p>
+        <div class="embedded-chart">
+          <div class="embed-btns">
+            <button class="embed-btn active" onclick="hbSet('AfD')" id="hb-AfD">AfD</button>
+            <button class="embed-btn" onclick="hbSet('FDP')" id="hb-FDP">FDP</button>
+            <button class="embed-btn" onclick="hbSet('CDU/CSU')" id="hb-CDUCSU">CDU/CSU</button>
+            <button class="embed-btn" onclick="hbSet('SPD')" id="hb-SPD">SPD</button>
+            <button class="embed-btn" onclick="hbSet('Grüne')" id="hb-Grune">Grüne</button>
+            <button class="embed-btn" onclick="hbSet('Linke')" id="hb-Linke">Linke</button>
+            <button class="embed-btn" onclick="hbSet('BSW')" id="hb-BSW">BSW</button>
+          </div>
+          <div style="position:relative;height:170px;"><canvas id="hb-embed"></canvas></div>
+        </div>
+        <p class="embedded-chart-caption">House effect = institute average minus field average. Positive = runs high.</p>
+      </div>
+    </div>
+
+    <!-- STEP 4: Uncertainty 4 months prior -->
+    <div class="step" data-step="4">
+      <div class="step-inner">
+        <p class="step-tag">Uncertainty · <strong>4 months prior</strong></p>
+        <h3>The forecast is a range, not a number.</h3>
+        <p>Not yet, these forecasts are not certain. The model runs thousands of simulations to arrive at these forecasted vote shares. Four months prior to the election, CDU's estimate shows 30.2%, the model is saying that of the many simulations run, CDU's vote share of 30.2% is the result achieved 1 of 6 times. Some of the simulations showed results of ~35% and some even ~25%, this is the confidence interval which describes the uncertainty component of the model. The predictions of ~35% and ~25% happen rarely, when compared to 30.2%, which appears 1 in 6 times.<br><br>Also, notice the size of the I bar, that is how much uncertainty exists with the result of 30.2% four months prior to the election, because at this time, the model considers the historical results more seriously than the latest polls.</p>
+      </div>
+    </div>
+
+    <!-- STEP 5: Uncertainty 3 months prior -->
+    <div class="step" data-step="5">
+      <div class="step-inner">
+        <p class="step-tag">Uncertainty · <strong>3 months prior</strong></p>
+        <h3>More polls, narrower range.</h3>
+        <p>3 months out: Intervals begin to narrow slightly as more polls arrive, more weight is given to the polls now than the historical patterns.</p>
+      </div>
+    </div>
+
+    <!-- STEP 6: Uncertainty 1 month prior -->
+    <div class="step" data-step="6">
+      <div class="step-inner">
+        <p class="step-tag">Uncertainty · <strong>1 month prior</strong></p>
+        <h3>Something unusual is happening.</h3>
+        <p>1 month out: Linke's point estimate is rising but the interval is not shrinking. Something unusual is happening here. That's because it reflects the truth. Die Linke's popularity rose sharply in the weeks before the election, but the polls disagreed with each other about how much, so the model's uncertainty grew alongside the rising estimate.</p>
+      </div>
+    </div>
+
+    <!-- STEP 7: Final prediction -->
+    <div class="step" data-step="7">
+      <div class="step-inner">
+        <p class="step-tag">Uncertainty · <strong>Final prediction</strong></p>
+        <h3>The final picture.</h3>
+        <p>The final predictions are released 2 days before the election. Notice how BSW's interval halved, Linke's widened. Die Linke, FDP and BSW straddle the 5% line. Let's take a closer look at what happened here.</p>
+      </div>
+    </div>
+
+    <!-- STEP 8: zoom signal -->
+    <div class="step" data-step="8">
+      <div class="step-inner">
+        <p class="step-tag">The 5% threshold</p>
+        <h3>Who was at risk of disappearing.</h3>
+        <p>Since 5% is the threshold for entering parliament, its important to see what happened here. FDP fell to 4.3%. BSW scraped through at 4.97%. Linke surged to 8.8%. So was the model wrong? No, it was correct, because the model reported confidence intervals along with the point estimates for each party's vote share. Even the unexpected 8.8% result of Die Linke was within the 8.9% upper limit of the confidence interval!</p>
+      </div>
+    </div>
+
+  </div><!-- /scrolly-right -->
+</div><!-- /scrolly-wrap -->
+
+
+<!-- TRANSITION PARAGRAPH -->
+<div class="hero" style="border-top:1px solid var(--border);padding-top:2.5rem;margin-top:0;">
+  <p style="font-size:17px;line-height:1.75;color:var(--text);margin-bottom:1rem;">Zweitstimme gives national vote shares, but that's not the end of the model's work. Nearly half of Bundestag seats come from 299 direct constituency races. And the two are connected: a party that falls below 5% can still enter parliament if it wins at least three direct constituencies, the Grundmandatsklausel. The Erststimme model predicts those constituency races. Together, the two models produce parliament entry probabilities and coalition majority probabilities.</p>
+  <p style="font-size:17px;line-height:1.75;color:var(--text);">Also an important note on the explainer so far, the explainer is only a simplified version of what the actual model does, where more complex techniques such as a joint Bayesian framework combining historical and polling components, estimated using Stan (Stoetzer et al. 2019) are used to predict vote share.</p>
+</div>
+</div>
+
+
+<!-- ERSTSTIMME SECTION INTRO -->
+<div class="section-intro">
+  <p class="section-label">Part II · The Erststimme Model</p>
+  <h2>Predicting 299 constituency races</h2>
+  <p style="max-width:600px;color:var(--text-muted);font-size:15px;">
+    <!-- FILL ~60 words: No local polls exist for individual constituencies. The model instead builds up from what we know nationally, then adjusts for local and candidate-level factors. Scroll through to see how each ingredient changes the prediction for two very different constituencies. -->
+    Building the Erststimme model is fundamentally different because no local polls exist for individual constituencies. The Erststimme model instead builds up from the national Zweitstimme forecast, applies it proportionally to each constituency, then adjusts for local and candidate-level factors. The output is a win probability across thousands of simulations. Scroll through two contrasting cases, one where the model worked, and one where it did not.
+  </p>
+</div>
+
+<!-- ERSTSTIMME SCROLLY -->
+<div class="scrolly-wrap" id="es-scrolly">
+
+  <!-- LEFT STICKY -->
+  <div class="scrolly-left" id="es-left">
+
+    <div id="es-wk-subtitle" style="font-family:var(--font-display);font-size:1.05rem;font-weight:normal;margin-bottom:0.6rem;min-height:1.4rem;color:var(--gray-600);"></div>
+    <div class="formula-box" id="es-formula">
+      Predicted Predicted Win Probability = <span class="hl">Previous Result</span>
+    </div>
+
+    <!-- Constituency label (driven by scroll) -->
+    <div id="es-wk-header" style="font-family:var(--font-mono);font-size:11px;color:var(--gray-600);margin-bottom:0.75rem;min-height:1.4rem;"></div>
+
+    <!-- Bar chart -->
+    <div style="position:relative;height:380px;">
+      <canvas id="es-chart"></canvas>
+      <div id="es-tooltip" style="position:absolute;display:none;background:rgba(26,26,26,0.88);color:#fafaf8;font-family:'Courier New',monospace;font-size:11px;padding:5px 9px;border-radius:3px;pointer-events:none;white-space:nowrap;"></div>
+    </div>
+
+    <!-- Winner banner -->
+    <div id="es-banner" style="margin-top:0.75rem;font-family:var(--font-mono);font-size:11px;padding:0.5rem 0.85rem;border-radius:4px;border:1px solid var(--border);background:var(--gray-100);display:none;">
+      <span id="es-banner-text"></span>
+    </div>
+
+    <p class="chart-caption" id="es-caption">2021 first vote results. Source: Bundeswahlleiterin.</p>
+    <p style="font-family:var(--font-mono);font-size:10px;color:var(--black);line-height:1.5;margin-top:0.5rem;">* Simplified illustration. Addition indicates model components, not literal summation. See Stoetzer et al. (2019) and Neunhoeffer et al. (2020).</p>
+  </div>
+
+  <!-- RIGHT SCROLLING — 8 steps: freiburg 0,1,2(unc),3(full) then neukoelln 0,1,2(unc),3(full) -->
+  <div class="scrolly-right" id="es-right">
+
+    <!-- FR STEP 0 -->
+    <div class="step" data-es-step="0">
+      <div class="step-inner">
+        <p class="step-tag">Freiburg (WK 281) · 2021 baseline</p>
+        <h3>Who won Freiburg in 2021.</h3>
+        <p>Freiburg 2021: Grüne led with 28.8%, SPD close behind at 26.3%. This is the most recent constituency result, the starting point the model builds on.</p>
+      </div>
+    </div>
+
+    <!-- FR STEP 1 -->
+    <div class="step" data-es-step="1">
+      <div class="step-inner">
+        <p class="step-tag">Freiburg (WK 281) · Proportional swing</p>
+        <h3>Applying the national swing.</h3>
+        <p>The national Zweitstimme forecast is applied proportionally to each constituency's 2021 second vote result. SPD collapses to 12.6%, the national SPD collapse hits hard. CDU/CSU rises to 21.4% and now threatens Grüne.<br><br><em>Note: these figures are simplified, the real model uses the full simulated distribution from the Zweitstimme model.</em></p>
+      </div>
+    </div>
+
+    <!-- FR STEP 2: constituency & candidate factors -->
+    <div class="step" data-es-step="2">
+      <div class="step-inner">
+        <p class="step-tag">Freiburg (WK 281) · Constituency &amp; candidate factors</p>
+        <h3>Local knowledge changes everything.</h3>
+        <p>Adding constituency and candidate factors: Freiburg is a university city with a strong Grüne tradition and a well-known incumbent candidate. These factors include whether the incumbent is running, the candidate's list position, prior candidacy experience, gender, academic title, number of candidates in the constituency, and the Zweitstimme forecast for that constituency. The full model pushes Grüne to 32.8%, win probability 94%. The filled dot shows the point estimate, the hollow circle shows the actual 2025 result. The model got it right. (Neunhoeffer et al. 2020, Politische Vierteljahresschrift)</p>
+        <p style="font-size:13px;color:var(--gray-400);">★ Actual 2025 result: <strong id="es-actual-text" style="color:var(--text-muted);"></strong></p>
+      </div>
+    </div>
+
+    <!-- FR STEP 3: uncertainty -->
+    <div class="step" data-es-step="3">
+      <div class="step-inner">
+        <p class="step-tag">Freiburg (WK 281) · Uncertainty</p>
+        <h3>How confident was the model.</h3>
+        <p>The I-bars show the 83% credibility interval. Grüne's interval [29.6–35.8%] sits well clear of CDU/CSU's [20.4–25.7%], no overlap. The model was confident, and the confidence was justified.</p>
+      </div>
+    </div>
+
+    <!-- NK STEP 0 -->
+    <div class="step" data-es-step="4">
+      <div class="step-inner">
+        <p class="step-tag">Berlin-Neukölln (WK 81) · 2021 baseline</p>
+        <h3>Who won Neukölln in 2021.</h3>
+        <p>Berlin-Neukölln 2021: SPD led with 25.8%, with Grüne and CDU/CSU close behind. This is the most recent constituency result, the starting point the model builds on.</p>
+      </div>
+    </div>
+
+    <!-- NK STEP 1 -->
+    <div class="step" data-es-step="5">
+      <div class="step-inner">
+        <p class="step-tag">Berlin-Neukölln (WK 81) · Proportional swing</p>
+        <h3>The national collapse hits hard.</h3>
+        <p>The national SPD collapse pushes its Neukölln estimate to 14.2%. CDU/CSU rises to 20.9% and takes the lead. AfD surges to 15.3%. The race suddenly looks wide open between three parties.</p>
+      </div>
+    </div>
+
+    <!-- NK STEP 2: constituency & candidate factors -->
+    <div class="step" data-es-step="6">
+      <div class="step-inner">
+        <p class="step-tag">Berlin-Neukölln (WK 81) · Constituency &amp; candidate factors</p>
+        <h3>A coin flip prediction.</h3>
+        <p>The full model gives CDU/CSU 20.5% versus Grüne 20.3%, essentially a coin flip. Win probabilities: CDU/CSU 45%, Grüne 40%, Linke 0%. The filled dot shows the point estimate, the hollow circle shows what actually happened. Linke won with ~26%. The Linke candidate's personal vote was invisible to any of the model's factors.</p>
+        <p style="font-size:13px;color:var(--gray-400);">★ Actual 2025 result: <strong id="es-actual-text-nk" style="color:var(--text-muted);"></strong></p>
+      </div>
+    </div>
+
+    <!-- NK STEP 3: uncertainty -->
+    <div class="step" data-es-step="7">
+      <div class="step-inner">
+        <p class="step-tag">Berlin-Neukölln (WK 81) · Uncertainty</p>
+        <h3>Where the model's honesty ends.</h3>
+        <p>CDU/CSU [17.9–22.9%] and Grüne [17.7–22.6%] have almost identical intervals, the model honestly could not call this race. But Linke, the actual winner, had a 0% win probability. The model's uncertainty was real, but it was uncertain about the wrong candidates. This is the honest limit of any statistical model: it cannot predict what it cannot measure.</p>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /es-scrolly -->
+
+<!-- ERSTSTIMME FOOTNOTE -->
+<div style="max-width:1200px;margin:2rem auto 0;padding:0 1.5rem;">
+  <p style="font-family:var(--font-mono);font-size:10px;color:var(--gray-600);line-height:1.6;border-top:1px solid var(--border);padding-top:1rem;">
+    Erststimme model: Neunhoeffer et al. (2020), <em>Politische Vierteljahresschrift</em>.
+    Step 0 and Step 1 are calculated from official 2021 results and the Zweitstimme forecast.
+    Step 2 data from prediction_data_districts.rds, zweitstimme.org 2025 replication materials.
+    Step 1 is a simplified illustration, the real model uses the full Zweitstimme simulation output.
+  </p>
+</div>
+
+<!-- CONCLUSION -->
+<div class="hero" style="border-top:1px solid var(--border);padding-top:2.5rem;margin-top:0;">
+  <p class="section-label">Conclusion</p>
+  <p style="font-size:17px;line-height:1.75;color:var(--text);">The Zweitstimme and Erststimme models work as a system, where the vote share forecasts from Zweitstimme model feed into parliament entry probabilities, accounting for both the 5% threshold and the Grundmandatsklausel. Constituency predictions then feed into coalition majority probability calculations, which is another thing we predict at Zweitstimme. The model got 270 of 299 constituencies right, and in the remaining 29, personal vote factors that no model can measure made the difference. The credibility intervals told you in advance the model did not know. That honesty is a feature of the election forecasting model, not a flaw. A forecast that admits uncertainty is more useful than one that claims false certainty. Understanding these nuances makes all the difference between reading a headline and understanding what it actually means. Read the full evaluation of the 2025 forecast at <a href="https://zweitstimme.org/posts/blog/evaluation-2025">zweitstimme.org</a>.</p>
+</div>
+</div>
+
+<div class="footnote">
+  <p>The Zweitstimme model is described in Munzert et al. (2017), <em>Politische Vierteljahresschrift</em>, and Stoetzer et al. (2019), <em>Political Analysis</em>. Replication materials: <a href="https://github.com/zweitstimme-org/prediction-2025-replication">github.com/zweitstimme-org</a>.</p>
+  <p>Poll data: <a href="https://api.fasttrack29.com">api.fasttrack29.com</a>. Credibility intervals from Zweitstimme forecast API.</p>
+  <p>This explainer was produced as part of GRAD-E1493, Hertie School, Berlin.</p>
+</div>
+
+<script>
+/* DATA */
+const PC={'CDU/CSU':'#555555','AfD':'#009EE0','SPD':'#DD0000','Grüne':'#4C9A2A','Linke':'#AA00AA','FDP':'#B8960C','BSW':'#FF6A13'};
+const ZS=[
+  {name:'CDU/CSU',color:'#555555',v17:33.0,v21:24.1,vS2:30.5,vS3:30.2,v25:28.6},
+  {name:'SPD',    color:'#DD0000',v17:20.5,v21:25.7,vS2:16.4,vS3:17.1,v25:16.4},
+  {name:'AfD',    color:'#009EE0',v17:12.6,v21:10.4,vS2:19.1,vS3:18.2,v25:20.8},
+  {name:'FDP',    color:'#B8960C',v17:10.7,v21:11.4,vS2:3.9, vS3:3.8, v25:4.3},
+  {name:'Linke',  color:'#AA00AA',v17:9.2, v21:4.9, vS2:4.5, vS3:4.7, v25:8.8},
+  {name:'Grüne',  color:'#4C9A2A',v17:8.9, v21:14.7,vS2:12.9,vS3:13.4,v25:11.6},
+  {name:'BSW',    color:'#FF6A13',v17:0,   v21:0,   vS2:6.1, vS3:5.3, v25:4.97},
+];
+const WINDOWS=[
+  {vals:{CDU:30.2,AfD:18.2,SPD:17.1,Grüne:13.4,Linke:4.7,FDP:3.8,BSW:5.3},low:{CDU:24.1,AfD:13.2,SPD:12.8,Grüne:8.3,Linke:2.0,FDP:3.3,BSW:4.0},high:{CDU:36.0,AfD:22.0,SPD:21.1,Grüne:14.3,Linke:4.5,FDP:6.7,BSW:10.9}},
+  {vals:{CDU:29.6,AfD:18.6,SPD:17.3,Grüne:13.8,Linke:5.0,FDP:3.8,BSW:5.0},low:{CDU:25.8,AfD:13.6,SPD:12.3,Grüne:8.6,Linke:2.5,FDP:3.2,BSW:3.7},high:{CDU:37.1,AfD:22.1,SPD:19.8,Grüne:14.4,Linke:4.9,FDP:6.3,BSW:9.7}},
+  {vals:{CDU:28.5,AfD:19.2,SPD:17.5,Grüne:13.9,Linke:5.9,FDP:3.9,BSW:4.6},low:{CDU:24.1,AfD:15.8,SPD:12.7,Grüne:10.2,Linke:2.5,FDP:3.2,BSW:3.4},high:{CDU:34.8,AfD:24.3,SPD:20.2,Grüne:16.3,Linke:4.7,FDP:5.6,BSW:10.4}},
+  {vals:{CDU:29.6,AfD:20.6,SPD:15.3,Grüne:12.3,Linke:7.8,FDP:4.5,BSW:4.5},low:{CDU:24.3,AfD:16.5,SPD:12.3,Grüne:10.2,Linke:5.5,FDP:3.3,BSW:3.3},high:{CDU:34.3,AfD:24.7,SPD:18.7,Grüne:15.9,Linke:8.9,FDP:5.3,BSW:6.7}},
+];
+const WIN_KEYS={CDU:'CDU/CSU',AfD:'AfD',SPD:'SPD',Grüne:'Grüne',Linke:'Linke',FDP:'FDP',BSW:'BSW'};
+
+const FORMULAS=[
+  'Predicted Vote Share = <span class="hl">Previous Result</span>',
+  'Predicted Vote Share = <span class="hl">Previous Result + Simple Extrapolation</span>',
+  'Predicted Vote Share = <span class="hl">Historical Results + Polls</span>',
+  'Predicted Vote Share = <span class="hl">Historical Results + Polls + House Effect Correction</span>',
+  'Predicted Vote Share = <span class="hl">Historical Results + Polls + House Effect Correction + ε</span>',
+  'Predicted Vote Share = <span class="hl">Historical Results + Polls + House Effect Correction + ε</span>',
+  'Predicted Vote Share = <span class="hl">Historical Results + Polls + House Effect Correction + ε</span>',
+  'Predicted Vote Share = <span class="hl">Historical Results + Polls + House Effect Correction + ε</span>',
+  'Predicted Vote Share = <span class="hl">Historical Results + Polls + House Effect Correction + ε</span>',
+];
+const CAPTIONS=[
+  'Actual results: 2017 and 2021 Bundestagswahl.',
+  'Dashed: if 2017→2021 swing continued. SPD ~31%, CDU/CSU ~15%.',
+  'Simple poll average Oct 2024 – Feb 2025. ○ = actual 2025 result.',
+  'House-effect corrected: each institute gets one equal vote. ○ = actual 2025 result.',
+  '83% credibility intervals — 4 months prior (Oct 2024). ○ = actual 2025 result.',
+  '83% credibility intervals — 3 months prior (Nov 2024).',
+  '83% credibility intervals — 1 month prior (Jan 2025).',
+  '83% credibility intervals — final prediction, 2 days before election.',
+  'Zooming into the 5% threshold zone.',
+];
+
+let mainChart=null, curStep=-1, curWin=-1, step8Entered=false;
+
+/* PLUGINS */
+const threshPlugin={id:'thr',afterDraw(c){
+  if(curStep<2)return;
+  const ctx=c.ctx,y=c.scales.y.getPixelForValue(5);
+  ctx.save();ctx.strokeStyle='#cc0000';ctx.lineWidth=1.2;ctx.setLineDash([5,4]);
+  ctx.beginPath();ctx.moveTo(c.chartArea.left,y);ctx.lineTo(c.chartArea.right,y);ctx.stroke();
+  ctx.setLineDash([]);ctx.font='10px Courier New';ctx.fillStyle='#cc0000';
+  ctx.fillText('5% threshold',c.chartArea.left+4,y-5);ctx.restore();
+}};
+
+const actualPlugin={id:'act',afterDatasetsDraw(c){
+  if(curStep<2)return;
+  const ctx=c.ctx,xS=c.scales.x,yS=c.scales.y;
+  ZS.forEach(p=>{
+    const x=xS.getPixelForValue(2025.4),y=yS.getPixelForValue(p.v25);
+    ctx.save();ctx.strokeStyle=p.color;ctx.lineWidth=1.2;
+    ctx.beginPath();ctx.arc(x,y,2.5,0,Math.PI*2);ctx.stroke();ctx.restore();
+  });
+}};
+
+const ebPlugin={id:'eb',afterDatasetsDraw(c){
+  if(curStep<4||curWin<0)return;
+  const ctx=c.ctx,capW=4,w=WINDOWS[curWin];
+  ZS.forEach((p,i)=>{
+    const ds=c.getDatasetMeta(i),pt=ds.data[2];
+    if(!pt)return;
+    const k=Object.keys(WIN_KEYS).find(key=>WIN_KEYS[key]===p.name);
+    if(!k||w.low[k]===undefined)return;
+    const yT=c.scales.y.getPixelForValue(w.high[k]),yB=c.scales.y.getPixelForValue(w.low[k]);
+    ctx.save();ctx.strokeStyle=p.color;ctx.lineWidth=1.5;
+    ctx.beginPath();
+    ctx.moveTo(pt.x,yT);ctx.lineTo(pt.x,yB);
+    ctx.moveTo(pt.x-capW,yT);ctx.lineTo(pt.x+capW,yT);
+    ctx.moveTo(pt.x-capW,yB);ctx.lineTo(pt.x+capW,yB);
+    ctx.stroke();ctx.restore();
+  });
+}};
+
+function getVal(p,step){
+  if(step===0)return null;
+  if(step===1)return Math.max(0,parseFloat((p.v21+(p.v21-p.v17)).toFixed(1)));
+  if(step===2)return p.vS2;
+  return p.vS3;
+}
+
+function buildMain(){
+  mainChart=new Chart(document.getElementById('main-chart'),{
+    type:'scatter',
+    data:{datasets:ZS.map(p=>({
+      type:'line',label:p.name,
+      data:[{x:2017,y:p.v17},{x:2021,y:p.v21},{x:2025,y:null}],
+      borderColor:p.color,backgroundColor:p.color,
+      borderWidth:2,pointRadius:[2,2,2],pointHoverRadius:[4,4,4],
+      tension:0,spanGaps:false,
+    }))},
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      animation:{duration:600,easing:'easeInOutQuart'},
+      plugins:{legend:{display:false},tooltip:{
+        filter:ctx=>ctx.raw.y!==null,
+        callbacks:{
+          title:ctx=>{const x=ctx[0].raw.x;return x<2018?'2017':x<2022?'2021':'2025 estimate';},
+          label:ctx=>ctx.dataset.label+': '+ctx.raw.y?.toFixed(1)+'%'
+        }
+      }},
+      scales:{
+        x:{type:'linear',min:2016,max:2026.8,
+          ticks:{stepSize:1,callback:v=>[2017,2021,2025].includes(v)?v.toString():'',color:'#a09e96',font:{size:11,family:'Courier New'}},
+          grid:{color:'rgba(160,158,150,0.15)'}},
+        y:{min:0,max:42,
+          ticks:{callback:v=>v+'%',color:'#a09e96',font:{size:11,family:'Courier New'}},
+          grid:{color:'rgba(160,158,150,0.15)'}}
+      }
+    },
+    plugins:[threshPlugin,actualPlugin,ebPlugin]
+  });
+
+  /* size overlays */
+  const wrap=document.getElementById('main-chart-wrap');
+  const ov=document.getElementById('zoom-overlay');
+  ov.width=wrap.clientWidth; ov.height=wrap.clientHeight;
+  ov.style.width=wrap.clientWidth+'px'; ov.style.height=wrap.clientHeight+'px';
+  const dov=document.getElementById('dash-overlay');
+  dov.width=wrap.clientWidth; dov.height=wrap.clientHeight;
+  dov.style.width=wrap.clientWidth+'px'; dov.style.height=wrap.clientHeight+'px';
+  dov.style.position='absolute'; dov.style.top='0'; dov.style.left='0'; dov.style.pointerEvents='none';
+
+  // Tooltip for actual result circles
+  const zsTooltip = document.getElementById('zs-tooltip');
+  document.getElementById('main-chart').addEventListener('mousemove', e => {
+    if(curStep < 2) { zsTooltip.style.display='none'; return; }
+    const rect = document.getElementById('main-chart').getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    const xActual = mainChart.scales.x.getPixelForValue(2025.4);
+    let found = null;
+    ZS.forEach(p => {
+      const yPx = mainChart.scales.y.getPixelForValue(p.v25);
+      const dist = Math.sqrt((mx-xActual)**2 + (my-yPx)**2);
+      if(dist < 8) found = p;
+    });
+    if(found) {
+      zsTooltip.style.display = 'block';
+      zsTooltip.style.left = (mx + 12) + 'px';
+      zsTooltip.style.top = (my - 10) + 'px';
+      zsTooltip.textContent = found.name + ' — actual: ' + found.v25 + '%';
+    } else {
+      zsTooltip.style.display = 'none';
+    }
+  });
+  document.getElementById('main-chart').addEventListener('mouseleave', () => {
+    zsTooltip.style.display = 'none';
+  });
+}
+
+/* startZoomCircle: show blur+circle, hold until scroll triggers showThreshold */
+function startZoomCircle(){
+  const ov=document.getElementById('zoom-overlay');
+  const ctx=ov.getContext('2d');
+  const W=ov.width, H=ov.height;
+  const chart=mainChart;
+  const yPx=chart.scales.y.getPixelForValue(5);
+  const x5=chart.scales.x.getPixelForValue(2025);
+  const cx=x5+30, cy=yPx, r=65;
+
+  let alpha=0;
+  const fadeIn=setInterval(()=>{
+    alpha=Math.min(alpha+0.04, 0.75);
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle=`rgba(250,250,248,${alpha})`;
+    ctx.fillRect(0,0,W,H);
+    ctx.save();
+    ctx.globalCompositeOperation='destination-out';
+    ctx.beginPath();
+    ctx.arc(cx,cy,r,0,Math.PI*2);
+    ctx.fill();
+    ctx.restore();
+    ctx.strokeStyle=`rgba(232,93,38,${alpha*1.3})`;
+    ctx.lineWidth=2;
+    ctx.beginPath();
+    ctx.arc(cx,cy,r,0,Math.PI*2);
+    ctx.stroke();
+    if(alpha>=0.75) clearInterval(fadeIn);
+  },16);
+  ov.style.opacity='1';
+}
+
+function showThreshold(){
+  document.getElementById('main-chart-wrap').style.height='0';
+  document.getElementById('main-chart-wrap').style.overflow='hidden';
+  document.getElementById('thr-chart-wrap').style.height='370px';
+  document.getElementById('main-legend').style.display='none';
+  document.getElementById('formula').style.display='none';
+  document.getElementById('main-caption').textContent='Final prediction — 2 days before election. I-bars = 83% CI. ★ = actual 2025 result.';
+}
+
+function updateMain(step){
+  curStep=step;
+  if(step>=4&&step<=7) curWin=step-4;
+  else curWin=-1;
+
+  document.getElementById('formula').innerHTML=FORMULAS[Math.min(step,8)];
+  document.getElementById('main-caption').textContent=CAPTIONS[Math.min(step,8)];
+
+  /* show/hide threshold */
+  if(step===8){
+    // zoom handled by scroll listener — just ensure main chart stays visible with final window
+    curWin = 3;
+    const w3 = WINDOWS[3].vals;
+    ZS.forEach((p,i)=>{
+      const wKey = Object.keys(WIN_KEYS).find(k=>WIN_KEYS[k]===p.name);
+      mainChart.data.datasets[i].data[2]={x:2025, y:wKey?w3[wKey]:getVal(p,3)};
+      mainChart.data.datasets[i].segment={};
+    });
+    mainChart.update();
+    return;
+  } else {
+    /* restore main chart if coming back */
+    document.getElementById('main-chart-wrap').style.height='420px';
+    document.getElementById('main-chart-wrap').style.overflow='visible';
+    document.getElementById('thr-chart-wrap').style.height='0';
+    document.getElementById('main-legend').style.display='flex';
+    document.getElementById('formula').style.display='block';
+    document.getElementById('zoom-overlay').style.opacity='0';
+    const ov=document.getElementById('zoom-overlay');
+    ov.getContext('2d').clearRect(0,0,ov.width,ov.height);
+  }
+
+  const ptStep=step<=3?step:3;
+  // For steps 4-7: use the window-specific point estimate, not vS3
+  const winVals = (step>=4 && step<=8 && curWin>=0) ? WINDOWS[curWin].vals : null;
+  ZS.forEach((p,i)=>{
+    let y2025;
+    if(step===0 || step===1) {
+      y2025 = null;
+    } else if(winVals) {
+      // Map full party name to WINDOWS key
+      const wKey = Object.keys(WIN_KEYS).find(k=>WIN_KEYS[k]===p.name);
+      y2025 = wKey ? winVals[wKey] : getVal(p,3);
+    } else {
+      y2025 = getVal(p, ptStep>=2 ? ptStep : step);
+    }
+    mainChart.data.datasets[i].data[2]={x:2025, y:y2025};
+    mainChart.data.datasets[i].segment={};
+  });
+  mainChart.update();
+
+  // Clear dash overlay unless step 1
+  const dov=document.getElementById('dash-overlay');
+  if(step===1){
+    animateDashes();
+  } else {
+    if(dashRaf){ cancelAnimationFrame(dashRaf); dashRaf=null; }
+    const dc=dov.getContext('2d');
+    dc.clearRect(0,0,dov.width,dov.height);
+  }
+}
+
+/* DOT-BY-DOT DASH ANIMATION for step 1 */
+let dashRaf=null;
+function animateDashes(){
+  const dov=document.getElementById('dash-overlay');
+  const ctx=dov.getContext('2d');
+  ctx.clearRect(0,0,dov.width,dov.height);
+  if(dashRaf){cancelAnimationFrame(dashRaf);}
+
+  const chart=mainChart;
+  // For each party: draw dashed line from pixel(2021) to pixel(extrapolated 2025 value)
+  // Animate: progress 0→1 over ~900ms
+  const duration=900, start=performance.now();
+
+  function frame(now){
+    const t=Math.min((now-start)/duration,1);
+    ctx.clearRect(0,0,dov.width,dov.height);
+
+    ZS.forEach(p=>{
+      const x0=chart.scales.x.getPixelForValue(2021);
+      const y0=chart.scales.y.getPixelForValue(p.v21);
+      const extraVal=Math.max(0,p.v21+(p.v21-p.v17));
+      const x1=chart.scales.x.getPixelForValue(2025);
+      const y1=chart.scales.y.getPixelForValue(extraVal);
+
+      // Current end point based on progress t
+      const xC=x0+(x1-x0)*t;
+      const yC=y0+(y1-y0)*t;
+
+      ctx.save();
+      ctx.strokeStyle=p.color;
+      ctx.lineWidth=2;
+      ctx.setLineDash([5,5]);
+      ctx.lineDashOffset=0;
+      ctx.beginPath();
+      ctx.moveTo(x0,y0);
+      ctx.lineTo(xC,yC);
+      ctx.stroke();
+      ctx.restore();
+    });
+
+    if(t<1){ dashRaf=requestAnimationFrame(frame); }
+  }
+  dashRaf=requestAnimationFrame(frame);
+}
+
+/* HOUSE EFFECTS EMBEDDED BAR */
+const HB_FIELD={'AfD':19.1,'FDP':3.9,'CDU/CSU':30.5,'SPD':16.4,'Grüne':12.9,'Linke':4.5,'BSW':6.1};
+const HB_AVGS={
+  'AfD':{'INSA':21.0,'Forsa':18.1,'Infratest Dimap':17.5,'Forschungsgruppe Wahlen':17.3,'YouGov':20.2,'Ipsos':19.2,'Allensbach':18.4,'GMS':18.8,'Civey':18.5,'Verian (Emnid)':18.0},
+  'FDP':{'INSA':4.3,'Forsa':3.7,'Infratest Dimap':3.7,'Forschungsgruppe Wahlen':3.3,'YouGov':4.2,'Ipsos':4.1,'Allensbach':4.4,'GMS':4.0,'Civey':2.3,'Verian (Emnid)':3.8},
+  'CDU/CSU':{'INSA':31.1,'Forsa':30.7,'Infratest Dimap':27.5,'Forschungsgruppe Wahlen':30.4,'YouGov':29.3,'Ipsos':30.6,'Allensbach':33.6,'GMS':31.4,'Civey':31.2,'Verian (Emnid)':31.5},
+  'SPD':{'INSA':15.0,'Forsa':16.4,'Infratest Dimap':19.7,'Forschungsgruppe Wahlen':16.7,'YouGov':16.2,'Ipsos':15.2,'Allensbach':16.4,'GMS':15.7,'Civey':16.5,'Verian (Emnid)':15.4},
+  'Grüne':{'INSA':11.3,'Forsa':12.4,'Infratest Dimap':14.3,'Forschungsgruppe Wahlen':16.6,'YouGov':12.1,'Ipsos':12.5,'Allensbach':11.9,'GMS':12.8,'Civey':13.1,'Verian (Emnid)':11.7},
+  'Linke':{'INSA':4.2,'Forsa':4.9,'Infratest Dimap':5.2,'Forschungsgruppe Wahlen':5.7,'YouGov':5.3,'Ipsos':4.1,'Allensbach':6.5,'GMS':4.3,'Civey':4.2,'Verian (Emnid)':3.2},
+  'BSW':{'INSA':7.9,'Forsa':4.7,'Infratest Dimap':5.8,'Forschungsgruppe Wahlen':4.7,'YouGov':4.9,'Ipsos':5.3,'Allensbach':5.4,'GMS':5.6,'Civey':5.2,'Verian (Emnid)':5.2},
+};
+const INSTS=['INSA','Forsa','Infratest Dimap','Forschungsgruppe Wahlen','YouGov','Ipsos','Allensbach','GMS','Civey','Verian (Emnid)'];
+let hbEmbedChart=null;
+
+function hbData(party){
+  const f=HB_FIELD[party],a=HB_AVGS[party],c=PC[party]||'#555';
+  const effects=INSTS.map(i=>({inst:i,eff:parseFloat((a[i]-f).toFixed(1))})).sort((a,b)=>b.eff-a.eff);
+  return{effects,color:c};
+}
+
+function buildHbEmbed(){
+  const{effects,color}=hbData('AfD');
+  hbEmbedChart=new Chart(document.getElementById('hb-embed'),{
+    type:'bar',
+    data:{labels:effects.map(e=>e.inst),datasets:[{
+      data:effects.map(e=>e.eff),
+      backgroundColor:effects.map(e=>e.eff>=0?color+'CC':'#a09e9677'),
+      borderColor:effects.map(e=>e.eff>=0?color:'#a09e96'),
+      borderWidth:1,borderRadius:2
+    }]},
+    options:{
+      indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      animation:{duration:300},
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{const v=ctx.raw;return(v>=0?'+':'')+v.toFixed(1)+'pp vs average';}}},},
+      scales:{
+        x:{ticks:{callback:v=>(v>=0?'+':'')+v+'pp',color:'#a09e96',font:{size:9,family:'Courier New'}},grid:{color:'rgba(160,158,150,0.15)'}},
+        y:{ticks:{color:'#6b6963',font:{size:9,family:'Courier New'}},grid:{display:false}}
+      }
+    }
+  });
+}
+
+function hbSet(party){
+  const keys=['AfD','FDP','CDU/CSU','SPD','Grüne','Linke','BSW'];
+  keys.forEach(p=>{
+    const id='hb-'+p.replace('/','');
+    const el=document.getElementById(id);
+    if(el){el.classList.toggle('active',p===party);}
+  });
+  const{effects,color}=hbData(party);
+  hbEmbedChart.data.labels=effects.map(e=>e.inst);
+  hbEmbedChart.data.datasets[0].data=effects.map(e=>e.eff);
+  hbEmbedChart.data.datasets[0].backgroundColor=effects.map(e=>e.eff>=0?color+'CC':'#a09e9677');
+  hbEmbedChart.data.datasets[0].borderColor=effects.map(e=>e.eff>=0?color:'#a09e96');
+  hbEmbedChart.update();
+}
+
+/* THRESHOLD CHART */
+const THR=[
+  {name:'FDP',  color:'#B8960C',est:4.5,low:3.3,high:5.3,actual:4.3},
+  {name:'BSW',  color:'#FF6A13',est:4.5,low:3.3,high:6.7,actual:4.97},
+  {name:'Linke',color:'#AA00AA',est:7.8,low:5.5,high:8.9,actual:8.8},
+];
+const thrEBPlugin={id:'teb',afterDatasetsDraw(c){
+  const ctx=c.ctx,capW=10;
+  THR.forEach((p,i)=>{
+    const xC=c.scales.x.getPixelForValue(i),yS=c.scales.y;
+    const yT=yS.getPixelForValue(p.high),yB=yS.getPixelForValue(p.low),yE=yS.getPixelForValue(p.est);
+    ctx.save();ctx.strokeStyle=p.color;ctx.lineWidth=2;
+    ctx.beginPath();ctx.moveTo(xC,yT);ctx.lineTo(xC,yB);
+    ctx.moveTo(xC-capW,yT);ctx.lineTo(xC+capW,yT);
+    ctx.moveTo(xC-capW,yB);ctx.lineTo(xC+capW,yB);ctx.stroke();
+    ctx.fillStyle=p.color;ctx.beginPath();ctx.arc(xC,yE,5,0,Math.PI*2);ctx.fill();
+    ctx.font='bold 11px Courier New';ctx.textAlign='right';ctx.fillStyle=p.color;
+    ctx.fillText(p.est.toFixed(2)+'%',xC-14,yS.getPixelForValue(4.7));
+    ctx.font='10px Courier New';ctx.textAlign='center';
+    ctx.fillText(p.high.toFixed(2)+'%',xC,yT-6);
+    ctx.fillText(p.low.toFixed(2)+'%',xC,yB+14);
+    const xStar=xC+28,yA=yS.getPixelForValue(p.actual);
+    ctx.font='bold 13px Courier New';ctx.fillStyle=p.color;ctx.textAlign='center';
+    ctx.fillText('★',xStar,yA+5);
+    const yLab=i===0?yA-38:i<2?yA-22:yA-10;
+    ctx.strokeStyle=p.color;ctx.lineWidth=0.8;
+    ctx.beginPath();ctx.moveTo(xStar+5,yA-2);ctx.lineTo(xStar+12,yLab+4);ctx.stroke();
+    ctx.font='10px Courier New';ctx.textAlign='left';ctx.fillStyle=p.color;
+    ctx.fillText('actual: '+(typeof p.actual==='number'?p.actual.toFixed(2):p.actual)+'%',xStar+14,yLab+4);
+    ctx.restore();
+  });
+}};
+const thrLinePlugin={id:'tline',afterDraw(c){
+  const ctx=c.ctx,y=c.scales.y.getPixelForValue(5);
+  ctx.save();ctx.strokeStyle='#cc0000';ctx.lineWidth=1.5;ctx.setLineDash([6,4]);
+  ctx.beginPath();ctx.moveTo(c.chartArea.left,y);ctx.lineTo(c.chartArea.right,y);ctx.stroke();
+  ctx.setLineDash([]);ctx.font='11px Courier New';ctx.fillStyle='#cc0000';
+  ctx.fillText('5% threshold',c.chartArea.left+6,y-5);ctx.restore();
+}};
+
+function buildThr(){
+  new Chart(document.getElementById('thr-chart'),{
+    type:'bar',
+    data:{labels:THR.map(p=>p.name),datasets:[{
+      data:THR.map(p=>p.est),
+      backgroundColor:THR.map(p=>p.color+'33'),
+      borderColor:THR.map(p=>p.color),
+      borderWidth:1.5,borderRadius:3,
+    }]},
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      layout:{padding:{right:90}},
+      plugins:{legend:{display:false},tooltip:{enabled:false}},
+      scales:{
+        x:{ticks:{color:'#6b6963',font:{size:13,weight:'500',family:'Courier New'}},grid:{display:false}},
+        y:{min:0,max:12,ticks:{callback:v=>v+'%',color:'#a09e96',font:{size:11,family:'Courier New'}},grid:{color:'rgba(160,158,150,0.15)'}}
+      }
+    },
+    plugins:[thrEBPlugin,thrLinePlugin]
+  });
+}
+
+/* INIT */
+window.addEventListener('DOMContentLoaded',()=>{
+  buildMain();
+  buildHbEmbed();
+  buildThr();
+  updateMain(0);
+
+  scrollama().setup({step:'.step',offset:0.5}).onStepEnter(({index})=>{
+    // For step 8 (zoom step), don't trigger immediately — handled by scroll
+    if(index !== 8){
+      updateMain(index);
+    } else {
+      step8Entered = true;
+      // Just update formula/caption but don't start zoom yet
+      curStep = 8;
+      document.getElementById('formula').innerHTML=FORMULAS[7];
+      document.getElementById('main-caption').textContent=CAPTIONS[7];
+      // make sure main chart is visible and I-bars show final window
+      curWin = 3;
+      ZS.forEach((p,i)=>{
+        mainChart.data.datasets[i].data[2]={x:2025,y:getVal(p,3)};
+        mainChart.data.datasets[i].segment={};
+      });
+      mainChart.update();
+    }
+  });
+
+  // Zoom scroll logic:
+  // Circle+blur fires when step 7 (Uncertainty·Final prediction) exits upward past viewport centre
+  // Chart switches when step 8 (The 5% threshold) centre reaches viewport centre
+  let zoomCircleShown = false;
+  let zoomTriggered = false;
+
+  window.addEventListener('scroll', () => {
+    const vh = window.innerHeight;
+
+    // Reset if scrolled back above step 7
+    const step7el = document.querySelector('[data-step="7"]');
+    if(step7el) {
+      const r7 = step7el.getBoundingClientRect();
+      if(r7.top > vh * 0.6 && zoomCircleShown) {
+        zoomCircleShown = false;
+        zoomTriggered = false;
+        const ov = document.getElementById('zoom-overlay');
+        ov.style.opacity = '0';
+        ov.getContext('2d').clearRect(0, 0, ov.width, ov.height);
+        document.getElementById('main-chart-wrap').style.height = '420px';
+        document.getElementById('main-chart-wrap').style.overflow = 'visible';
+        document.getElementById('thr-chart-wrap').style.height = '0';
+        document.getElementById('main-legend').style.display = 'flex';
+        document.getElementById('formula').style.display = 'block';
+        // Restore chart to final prediction state
+        updateMain(7);
+        return;
+      }
+    }
+
+    // Fire zoom circle when step 7 centre scrolls past viewport centre (exits upward)
+    if(!zoomCircleShown && step7el) {
+      const r7 = step7el.getBoundingClientRect();
+      const centre7 = r7.top + r7.height / 2;
+      if(centre7 < vh / 2) {
+        zoomCircleShown = true;
+        startZoomCircle();
+      }
+    }
+
+    // Fire chart switch when step 8 centre reaches viewport centre
+    if(zoomCircleShown && !zoomTriggered) {
+      const step8el = document.querySelector('[data-step="8"]');
+      if(step8el) {
+        const r8 = step8el.getBoundingClientRect();
+        const centre8 = r8.top + r8.height / 2;
+        if(centre8 <= vh / 2) {
+          zoomTriggered = true;
+          const ov = document.getElementById('zoom-overlay');
+          ov.style.opacity = '0';
+          setTimeout(() => ov.getContext('2d').clearRect(0, 0, ov.width, ov.height), 600);
+          showThreshold();
+        }
+      }
+    }
+  });
+});
+
+/* ═══════════════════════════════════════════
+   ERSTSTIMME CHART
+═══════════════════════════════════════════ */
+const ES_DATA = {
+  freiburg: {
+    name: 'WK 281 · Freiburg',
+    label: 'A case where the model worked',
+    actual: 'Grüne',
+    actual_note: 'Grüne won with ~29% of first votes. Model win probability: Grüne 94% ✓',
+    steps: [
+      {AfD:4.5,  'CDU/CSU':20.6, FDP:7.7, Grüne:28.8, SPD:26.3, Linke:5.3,  BSW:0.0},
+      {AfD:9.7,  'CDU/CSU':21.4, FDP:4.2, Grüne:26.4, SPD:12.6, Linke:5.6,  BSW:3.5},
+      {AfD:8.0,  'CDU/CSU':23.1, FDP:3.6, Grüne:32.8, SPD:17.5, Linke:4.6,  BSW:5.8},
+      {AfD:8.0,  'CDU/CSU':23.1, FDP:3.6, Grüne:32.8, SPD:17.5, Linke:4.6,  BSW:5.8},
+    ],
+    ci:  {AfD:[6.5,9.4],'CDU/CSU':[20.4,25.7],FDP:[2.8,4.3],Grüne:[29.6,35.8],SPD:[15.5,19.4],Linke:[3.5,5.6],BSW:[2.9,8.5]},
+    prob:{AfD:0,'CDU/CSU':5,FDP:0,Grüne:94,SPD:0,Linke:0,BSW:0},
+  },
+  neukoelln: {
+    name: 'WK 81 · Berlin-Neukölln',
+    label: 'A case where the model failed',
+    actual: 'Linke',
+    actual_note: 'Linke won with ~26% of first votes. Model win probability: Linke 0% ✗',
+    steps: [
+      {AfD:7.7,  'CDU/CSU':19.2, FDP:6.3, Grüne:19.7, SPD:25.8, Linke:12.9, BSW:0.0},
+      {AfD:15.3, 'CDU/CSU':20.9, FDP:2.8, Grüne:18.7, SPD:14.2, Linke:9.4,  BSW:5.9},
+      {AfD:12.8, 'CDU/CSU':20.5, FDP:2.1, Grüne:20.3, SPD:17.9, Linke:9.6,  BSW:10.4},
+      {AfD:12.8, 'CDU/CSU':20.5, FDP:2.1, Grüne:20.3, SPD:17.9, Linke:9.6,  BSW:10.4},
+    ],
+    ci:  {AfD:[10.8,14.6],'CDU/CSU':[17.9,22.9],FDP:[1.6,2.5],Grüne:[17.7,22.6],SPD:[15.8,19.9],Linke:[7.9,11.2],BSW:[5.9,14.7]},
+    prob:{AfD:1,'CDU/CSU':45,FDP:0,Grüne:40,SPD:10,Linke:0,BSW:4},
+  }
+};
+
+// Scroll sequence: 8 steps — fr0,fr1,fr_unc,fr_full, nk0,nk1,nk_unc,nk_full
+// step meanings: 0=2021, 1=propswing, 2=uncertainty(CI only no actual), 3=full+actual
+const ES_SEQ = [
+  {wk:'freiburg',  step:0},
+  {wk:'freiburg',  step:1},
+  {wk:'freiburg',  step:2},
+  {wk:'freiburg',  step:3},
+  {wk:'neukoelln', step:0},
+  {wk:'neukoelln', step:1},
+  {wk:'neukoelln', step:2},
+  {wk:'neukoelln', step:3},
+];
+
+const ES_FORMULAS = [
+  'Predicted Win Probability = <span class="hl">Previous Result</span>',
+  'Predicted Win Probability = <span class="hl">Historical Results + Zweitstimme Forecast × Proportional Swing</span>',
+  'Predicted Win Probability = <span class="hl">Historical Results + Zweitstimme Forecast × Proportional Swing + Constituency Factors + Candidate Factors</span>',
+  'Predicted Win Probability = <span class="hl">Historical Results + Zweitstimme Forecast × Proportional Swing + Constituency Factors + Candidate Factors + ε</span>',
+];
+const ES_CAPTIONS = [
+  '2021 first vote results. Source: prediction_data_districts.rds.',
+  'Proportional swing applied to 2021 second vote shares (simplified).',
+  'Full model output. ● = point estimate. ○ = actual 2025 result. Source: prediction_data_districts.rds.',
+  'Full model output with 83% CI. ● = point estimate. ○ = actual 2025 result.',
+];
+
+const ES_PARTY_ORDER = ['CDU/CSU','SPD','Grüne','AfD','Linke','BSW','FDP'];
+let esChart = null, esCurSeqIdx = -1;
+
+// CI, point estimate, actual circle plugin
+const ES_ACTUAL_SHARES = {
+  freiburg:  {'CDU/CSU':22.4, SPD:15.1, Grüne:29.0, AfD:8.5,  Linke:4.4, BSW:5.1,  FDP:3.2},
+  neukoelln: {'CDU/CSU':18.9, SPD:14.2, Grüne:17.4, AfD:11.8, Linke:26.0,BSW:7.2,  FDP:1.8},
+};
+const esEBPlugin = {
+  id:'eseb',
+  afterDatasetsDraw(c) {
+    const seq = ES_SEQ[esCurSeqIdx];
+    if(!seq || seq.step < 2) return;
+    const wk     = ES_DATA[seq.wk];
+    const ctx    = c.ctx, capH = 4;
+    const step0  = wk.steps[0];
+    const sorted = [...ES_PARTY_ORDER].sort((a,b) => step0[a] - step0[b]);
+    const actual = ES_ACTUAL_SHARES[seq.wk];
+
+    sorted.forEach((p, i) => {
+      const col = PC[p] || '#888';
+      const yI  = c.scales.y.getPixelForValue(i);
+      const val = wk.steps[2][p] || 0;
+      const xE  = c.scales.x.getPixelForValue(val);
+
+      ctx.save();
+
+      // Step 2+: point estimate filled dot
+      ctx.fillStyle = col;
+      ctx.beginPath();
+      ctx.arc(xE, yI, 3.5, 0, Math.PI*2);
+      ctx.fill();
+
+      // Step 2+: actual result hollow circle
+      if(actual[p] !== undefined) {
+        const xA = c.scales.x.getPixelForValue(actual[p]);
+        ctx.strokeStyle = col; ctx.lineWidth = 1.5;
+        ctx.fillStyle = 'rgba(250,250,248,0.85)';
+        ctx.beginPath();
+        ctx.arc(xA, yI, 4, 0, Math.PI*2);
+        ctx.fill();
+        ctx.stroke();
+      }
+
+      // Step 3 only: CI I-bar + caps
+      if(seq.step >= 3) {
+        const ci = wk.ci[p];
+        if(ci) {
+          const xL = c.scales.x.getPixelForValue(ci[0]);
+          const xR = c.scales.x.getPixelForValue(ci[1]);
+          ctx.strokeStyle = col; ctx.lineWidth = 1.5;
+          ctx.beginPath();
+          ctx.moveTo(xL, yI); ctx.lineTo(xR, yI);
+          ctx.moveTo(xL, yI-capH); ctx.lineTo(xL, yI+capH);
+          ctx.moveTo(xR, yI-capH); ctx.lineTo(xR, yI+capH);
+          ctx.stroke();
+        }
+      }
+
+      ctx.restore();
+    });
+  }
+};
+
+function esGetSorted(wk) {
+  const step0 = ES_DATA[wk].steps[0];
+  return [...ES_PARTY_ORDER].sort((a,b) => step0[a] - step0[b]);
+}
+
+function esBuildChart() {
+  const wk = ES_DATA['freiburg'];
+  const sorted = esGetSorted('freiburg');
+  esChart = new Chart(document.getElementById('es-chart'), {
+    type: 'bar',
+    data: {
+      labels: sorted,
+      datasets: [{
+        data: sorted.map(p => wk.steps[0][p] || 0),
+        backgroundColor: sorted.map(p => (PC[p]||'#888')+'99'),
+        borderColor:      sorted.map(p => PC[p]||'#888'),
+        borderWidth: 1.5, borderRadius: 3,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      animation: { duration: 600, easing: 'easeInOutQuart' },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ctx.raw.toFixed(1)+'%' } }
+      },
+      scales: {
+        x: { min:0, max:40,
+          ticks:{ callback:v=>v+'%', color:'#a09e96', font:{size:11,family:'Courier New'} },
+          grid:{ color:'rgba(160,158,150,0.15)' } },
+        y: { ticks:{ color:'#6b6963', font:{size:11,family:'Courier New'} }, grid:{display:false} }
+      }
+    },
+    plugins: [esEBPlugin]
+  });
+
+  // Tooltip: shows predicted and actual for hollow circles
+  const esCanvas = document.getElementById('es-chart');
+  const esTooltip = document.getElementById('es-tooltip');
+  if(esCanvas && esTooltip) {
+    esCanvas.addEventListener('mousemove', e => {
+      const seq = ES_SEQ[esCurSeqIdx];
+      if(!seq || seq.step < 2) { esTooltip.style.display='none'; return; }
+      const rect = esCanvas.getBoundingClientRect();
+      const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+      const wk = ES_DATA[seq.wk];
+      const actual = ES_ACTUAL_SHARES[seq.wk];
+      const step0 = wk.steps[0];
+      const sorted = [...ES_PARTY_ORDER].sort((a,b) => step0[a] - step0[b]);
+      let found = null;
+      sorted.forEach((p, i) => {
+        if(actual[p] === undefined) return;
+        const yI = esChart.scales.y.getPixelForValue(i);
+        const xA = esChart.scales.x.getPixelForValue(actual[p]);
+        if(Math.sqrt((mx-xA)**2 + (my-yI)**2) < 8) found = {p, val: actual[p]};
+      });
+      if(found) {
+        esTooltip.style.display = 'block';
+        esTooltip.style.left = (mx + 12) + 'px';
+        esTooltip.style.top = (my - 10) + 'px';
+        esTooltip.textContent = found.p + ' — actual: ' + found.val + '%';
+      } else {
+        esTooltip.style.display = 'none';
+      }
+    });
+    esCanvas.addEventListener('mouseleave', () => { esTooltip.style.display='none'; });
+  }
+}
+
+function esRender(seqIdx) {
+  if(seqIdx === esCurSeqIdx) return;
+  esCurSeqIdx = seqIdx;
+  const seq   = ES_SEQ[seqIdx];
+  const wk    = ES_DATA[seq.wk];
+  // step 0: 2021 bars | step 1: swing bars | step 2: full model bars + CI no dot | step 3: full model bars + CI + dot
+  const data = wk.steps[Math.min(seq.step, 3)];
+  const sorted = esGetSorted(seq.wk);
+  const winner = sorted.reduce((b,p) => data[p]>data[b]?p:b, sorted[0]);
+
+  // Update chart — no transparency: use full party color
+  esChart.data.labels = sorted;
+  esChart.data.datasets[0].data            = sorted.map(p => data[p]||0);
+  esChart.data.datasets[0].backgroundColor = sorted.map(p => (PC[p]||'#888')+'99');
+  esChart.data.datasets[0].borderColor     = sorted.map(p => PC[p]||'#888');
+  esChart.update();
+
+  // Formula & caption
+  document.getElementById('es-formula').innerHTML = ES_FORMULAS[seq.step];
+  document.getElementById('es-caption').textContent = ES_CAPTIONS[seq.step];
+
+  // WK header label
+  const hdr = document.getElementById('es-wk-header');
+  if(hdr){ hdr.innerHTML = '<span style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;">' + wk.name + '</span>'; }
+  const sub = document.getElementById('es-wk-subtitle');
+  if(sub){ sub.innerHTML = '<span style="color:' + (seq.wk==='freiburg' ? '#2d7d2d' : '#cc2222') + '">' + wk.label + '</span>'; }
+
+  // Banner
+  const banner = document.getElementById('es-banner');
+  const btext  = document.getElementById('es-banner-text');
+  banner.style.display   = 'block';
+  banner.style.borderColor = (PC[winner]||'#888')+'55';
+  if(seq.step >= 2) {
+    btext.innerHTML = 'Model predicts: <strong style="color:'+(PC[winner]||'#888')+'">'+winner+'</strong>'
+      + ' &nbsp;·&nbsp; win probability: ' + wk.prob[winner] + '%';
+  } else {
+    btext.innerHTML = 'Leading: <strong style="color:'+(PC[winner]||'#888')+'">'+winner+'</strong>'
+      + ' &nbsp;·&nbsp; ' + (data[winner]||0).toFixed(1)+'%';
+  }
+
+  // Actual note (step 2+)
+  const actualEl = document.getElementById('es-actual-text');
+  if(actualEl) actualEl.textContent = seq.step>=2 ? wk.actual_note : '';
+  const actualElNk = document.getElementById('es-actual-text-nk');
+  if(actualElNk) actualElNk.textContent = seq.step>=2 ? wk.actual_note : '';
+}
+
+function initES() {
+  esBuildChart();
+  esRender(0);
+
+  // Scroll-position aware: fire when centre of step reaches viewport centre
+  let lastFired = -1;
+  window.addEventListener('scroll', () => {
+    const steps = document.querySelectorAll('[data-es-step]');
+    const vh = window.innerHeight;
+    steps.forEach((el, i) => {
+      const rect = el.getBoundingClientRect();
+      const centre = rect.top + rect.height / 2;
+      if(centre <= vh / 2 && centre >= -rect.height / 2) {
+        const idx = parseInt(el.dataset.esStep);
+        if(idx !== lastFired) {
+          lastFired = idx;
+          esRender(idx);
+        }
+      }
+    });
+  });
+
+  // Also fire on scrollama enter as fallback for first/last steps
+  scrollama().setup({ step: '[data-es-step]', offset: 0.5 })
+    .onStepEnter(({ element }) => {
+      const idx = parseInt(element.dataset.esStep);
+      // only fire for step 0 and last step where scroll centre may not trigger
+      if(idx === 0 || idx === ES_SEQ.length-1) esRender(idx);
+    });
+}
+
+// init ES after DOM ready
+window.addEventListener("DOMContentLoaded",()=>{ setTimeout(initES,200); });
+</script>
+</body>
+</html>
