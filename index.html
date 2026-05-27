@@ -160,10 +160,9 @@ a:hover { border-bottom-color: var(--orange); }
   <h1>How does an election forecast model work?</h1>
   <p style="font-family:var(--font-mono);font-size:12px;color:var(--gray-400);margin-top:0.5rem;">Chirag Ramesh &nbsp;·&nbsp; Data Journalism Final Project &nbsp;·&nbsp; Hertie School 2026</p>
   <p class="hero-sub">
-    <p>You've read the headlines talking about where the polls are at right now and who is leading them. You may have also read about an election forecasting model predicting a certain party to win the elections. But have you wondered what may be happening underneath? Did you think polls and election forecasting models are the same thing? Are they claiming that something is going to happen for sure? These are the nuances this explainer aims to explore.</p>
-    <p>For starters, polls and election forecasting models are not the same thing, and whoever makes them are not entirely certain of the results either. To understand polls, click here to read our other explainer where we get into polls and their results. In this explainer we're going to understand election forecasting models, what they are, how we do it here at Zweitstimme and what we are trying to say with its output.</p>
-    <p>Before we go into the details, for those of you who may not know what a model is, here's a simple explanation. When scientists build models, they mean to say that they're trying to predict something based on some patterns observed. It is basically a formula that takes inputs and generates an output. Inputs can be anything from people's salaries, a constituency's education level, a country's temperature, or a region's unemployment rate. The output is what we're trying to predict, and it could be anything from people's likelihood of buying a car, whether a region will see rainfall, or in the case of election forecasting models, probability of a party's vote share or a candidate's chances of winning a constituency. The result is what we call a prediction, and there are nuances to these results, but more on that in a moment. That is the simplified explanation of what we mean when we say "model".</p>
-    <p>At Zweitstimme, we predict the results of both the vote shares of parties of Zweitstimme and constituency-level candidate win probabilities of Erststimme. We do this with two models, one for each Zweitstimme and Erststimme, respectively. These models are the election forecasting models. They are different from what polls are meant to do. A poll tells us that if, for whatever reason, an election were to be conducted, say next Sunday, what would the results look like? It is a snapshot at a given time, and they do this by surveying people across the country by asking people a simple question, "Who would you vote for?". Polls are conducted throughout the year, even during years with no election scheduled.</p>
+    <p>You've read the headlines talking about where the polls are at right now and who is leading them. You may have also read about an election forecasting model predicting a certain party to win the elections. But have you wondered what may be happening underneath? Did you think polls and election forecasting models are the same thing?</p>
+    <p>When scientists build models, they mean to say that they're trying to predict something based on some patterns observed. It is basically a formula that takes inputs and generates an output. Inputs can be anything from people's salaries, a constituency's education level, or a region's unemployment rate. The output is what we're trying to predict, and it could be anything from people's likelihood of buying a car, whether a region will see rainfall, or in the case of election forecasting models, probability of a party's vote share or a candidate's chances of winning a constituency. The result is what we call a prediction, and there are nuances to these results, but more on that in a moment.</p>
+    <p>Polls and election forecasting models are not the same thing, and whoever makes them are not entirely certain of the results either. At Zweitstimme, we predict the results of both the vote shares of parties of Zweitstimme and constituency-level candidate win probabilities of Erststimme. We do this with two models, one for each. A poll tells us that if, for whatever reason, an election were to be conducted, say next Sunday, what would the results look like? It is a snapshot at a given time, and they do this by surveying people across the country by asking people a simple question, "Who would you vote for?". Polls are conducted throughout the year, even during years with no election scheduled.</p>
     </p>
     <div class="hero-meta">
     <span>Bundestagswahl · February 2025</span>
@@ -176,7 +175,7 @@ a:hover { border-bottom-color: var(--orange); }
 <div class="section-intro">
   <p class="section-label">Part I · The Zweitstimme Model</p>
   <h2>Building a forecast, ingredient by ingredient</h2>
-  <p style="max-width:600px;color:var(--text-muted);font-size:15px;">But an election forecasting model on the other hand is more than that. The Zweitstimme model combines what history tells us with what current polls say to make predictions about the upcoming election. It's not just a snapshot, it's trying to say that while polls are saying X, there are historical patterns which tell us how the results are probably going to be different or sometimes, it might just confirm what the polls are trying to say. The model shows different results when checked four months prior to the election, versus just two days before the election.<br><br>Let's start with the Zweitstimme model explainer, one ingredient or component at a time, and see how the model predicts the 2025 federal election party vote shares.</p>
+  <p style="max-width:600px;color:var(--text-muted);font-size:15px;">The Zweitstimme model combines what history tells us with what current polls say to make predictions about the upcoming election. It's not just a snapshot, it's trying to say that while polls are saying X, there are historical patterns which tell us how the results are probably going to be different or sometimes, it might just confirm what the polls are showing. The model shows different results when checked four months prior to the election, versus just two days before the election.</p>
 </div>
 
 <!-- SCROLLY -->
@@ -196,8 +195,7 @@ a:hover { border-bottom-color: var(--orange); }
         <canvas id="zoom-overlay"></canvas>
         <div id="zs-tooltip" style="position:absolute;display:none;background:rgba(26,26,26,0.88);color:#fafaf8;font-family:'Courier New',monospace;font-size:11px;padding:5px 9px;border-radius:3px;pointer-events:none;white-space:nowrap;"></div>
       </div>
-      <div id="thr-chart-wrap">
-        <canvas id="thr-chart"></canvas>
+      <div id="thr-chart-wrap" style="display:none;">
       </div>
     </div>
 
@@ -303,18 +301,28 @@ a:hover { border-bottom-color: var(--orange); }
       </div>
     </div>
 
-    <!-- STEP 8: zoom signal -->
-    <div class="step" data-step="8">
-      <div class="step-inner">
-        <p class="step-tag">The 5% threshold</p>
-        <h3>Who was at risk of disappearing.</h3>
-        <p>Since 5% is the threshold for entering parliament, its important to see what happened here. FDP fell to 4.3%. BSW scraped through at 4.97%. Linke surged to 8.8%. So was the model wrong? No, it was correct, because the model reported confidence intervals along with the point estimates for each party's vote share. Even the unexpected 8.8% result of Die Linke was within the 8.9% upper limit of the confidence interval!</p>
-      </div>
-    </div>
-
   </div><!-- /scrolly-right -->
 </div><!-- /scrolly-wrap -->
 
+<!-- THRESHOLD STATIC SECTION -->
+<div style="max-width:1300px;margin:-2rem auto 2rem;padding:0 1.5rem;display:flex;align-items:center;gap:3rem;">
+
+  <!-- Left: chart -->
+  <div style="width:60%;flex-shrink:0;">
+    <p class="section-label" style="font-size:15px;">The 5% threshold</p>
+    <div style="position:relative;height:370px;">
+      <canvas id="thr-chart"></canvas>
+    </div>
+    <p class="chart-caption" style="color:var(--gray-600);margin-top:0.5rem;">Final prediction, 2 days before election. I-bars = 83% CI. ★ = actual 2025 result. Source: Zweitstimme forecast API, Jan 2025.</p>
+  </div>
+
+  <!-- Right: text -->
+  <div style="width:40%;">
+    <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:normal;margin-bottom:0.75rem;color:var(--black);line-height:1.3;">Who was at risk of disappearing.</h3>
+    <p style="font-size:15px;color:var(--text-muted);line-height:1.7;">Since 5% is the threshold for entering parliament, its important to see what happened here. FDP fell to 4.3%. BSW scraped through at 4.97%. Linke surged to 8.8%. So was the model wrong? No, it was correct, because the model reported confidence intervals along with the point estimates for each party's vote share. Even the unexpected 8.8% result of Die Linke was within the 8.9% upper limit of the confidence interval!</p>
+  </div>
+
+</div><!-- /threshold static -->
 
 <!-- TRANSITION PARAGRAPH -->
 <div class="hero" style="border-top:1px solid var(--border);padding-top:2.5rem;margin-top:0;">
@@ -389,7 +397,7 @@ a:hover { border-bottom-color: var(--orange); }
       <div class="step-inner">
         <p class="step-tag">Freiburg (WK 281) · Constituency &amp; candidate factors</p>
         <h3>Local knowledge changes everything.</h3>
-        <p>Adding constituency and candidate factors: Freiburg is a university city with a strong Grüne tradition and a well-known incumbent candidate. These factors include whether the incumbent is running, the candidate's list position, prior candidacy experience, gender, academic title, number of candidates in the constituency, and the Zweitstimme forecast for that constituency. The full model pushes Grüne to 32.8%, win probability 94%. The filled dot shows the point estimate, the hollow circle shows the actual 2025 result. The model got it right. (Neunhoeffer et al. 2020, Politische Vierteljahresschrift)</p>
+        <p>Adding constituency and candidate factors: Freiburg is a university city with a strong Grüne tradition and a well-known incumbent candidate. These factors include whether the incumbent is running, the candidate's list position, prior candidacy experience, gender, academic title, number of candidates in the constituency, and the Zweitstimme forecast for that constituency. The full model pushes Grüne to 32.8%, win probability 94%. The filled dot shows the point estimate, the hollow circle shows the actual 2025 result. The model predicted the right winner, but overshot the margin. (Neunhoeffer et al. 2020, Politische Vierteljahresschrift)</p>
         <p style="font-size:13px;color:var(--gray-400);">★ Actual 2025 result: <strong id="es-actual-text" style="color:var(--text-muted);"></strong></p>
       </div>
     </div>
@@ -399,7 +407,7 @@ a:hover { border-bottom-color: var(--orange); }
       <div class="step-inner">
         <p class="step-tag">Freiburg (WK 281) · Uncertainty</p>
         <h3>How confident was the model.</h3>
-        <p>The I-bars show the 83% credibility interval. Grüne's interval [29.6–35.8%] sits well clear of CDU/CSU's [20.4–25.7%], no overlap. The model was confident, and the confidence was justified.</p>
+        <p>The I-bars show the 83% credibility interval. Grüne's interval [29.6–35.8%] sits well above CDU/CSU's [20.4–25.7%]. The model was confident Grüne would win, and it did. But the actual result of 29.0% fell just outside the lower bound. The model correctly predicted the winner, but was overconfident about the margin.</p>
       </div>
     </div>
 
@@ -426,7 +434,7 @@ a:hover { border-bottom-color: var(--orange); }
       <div class="step-inner">
         <p class="step-tag">Berlin-Neukölln (WK 81) · Constituency &amp; candidate factors</p>
         <h3>A coin flip prediction.</h3>
-        <p>The full model gives CDU/CSU 20.5% versus Grüne 20.3%, essentially a coin flip. Win probabilities: CDU/CSU 45%, Grüne 40%, Linke 0%. The filled dot shows the point estimate, the hollow circle shows what actually happened. Linke won with ~26%. The Linke candidate's personal vote was invisible to any of the model's factors.</p>
+        <p>The full model gives CDU/CSU 20.5% versus Grüne 20.3%, essentially a coin flip. Win probabilities: CDU/CSU 45%, Grüne 40%, Linke 0%. The filled dot shows the point estimate, the hollow circle shows what actually happened. Linke won with ~26%. Neukölln is a traditionally left district. The Left party campaigned effectively into a void left by other parties, particularly the Greens, moving away from traditional left positions. That kind of campaign dynamic, voters actively shifting in response to other parties' positioning, is what no model can capture in advance.</p>
         <p style="font-size:13px;color:var(--gray-400);">★ Actual 2025 result: <strong id="es-actual-text-nk" style="color:var(--text-muted);"></strong></p>
       </div>
     </div>
@@ -435,7 +443,7 @@ a:hover { border-bottom-color: var(--orange); }
     <div class="step" data-es-step="7">
       <div class="step-inner">
         <p class="step-tag">Berlin-Neukölln (WK 81) · Uncertainty</p>
-        <h3>Where the model's honesty ends.</h3>
+        <h3>The model missed what it couldn't see.</h3>
         <p>CDU/CSU [17.9–22.9%] and Grüne [17.7–22.6%] have almost identical intervals, the model honestly could not call this race. But Linke, the actual winner, had a 0% win probability. The model's uncertainty was real, but it was uncertain about the wrong candidates. This is the honest limit of any statistical model: it cannot predict what it cannot measure.</p>
       </div>
     </div>
@@ -456,7 +464,7 @@ a:hover { border-bottom-color: var(--orange); }
 <!-- CONCLUSION -->
 <div class="hero" style="border-top:1px solid var(--border);padding-top:2.5rem;margin-top:0;">
   <p class="section-label">Conclusion</p>
-  <p style="font-size:17px;line-height:1.75;color:var(--text);">The Zweitstimme and Erststimme models work as a system, where the vote share forecasts from Zweitstimme model feed into parliament entry probabilities, accounting for both the 5% threshold and the Grundmandatsklausel. Constituency predictions then feed into coalition majority probability calculations, which is another thing we predict at Zweitstimme. The model got 270 of 299 constituencies right, and in the remaining 29, personal vote factors that no model can measure made the difference. The credibility intervals told you in advance the model did not know. That honesty is a feature of the election forecasting model, not a flaw. A forecast that admits uncertainty is more useful than one that claims false certainty. Understanding these nuances makes all the difference between reading a headline and understanding what it actually means. Read the full evaluation of the 2025 forecast at <a href="https://zweitstimme.org/posts/blog/evaluation-2025">zweitstimme.org</a>.</p>
+  <p style="font-size:17px;line-height:1.75;color:var(--text);">The Zweitstimme and Erststimme models work as a system, where the vote share forecasts from Zweitstimme model feed into parliament entry probabilities, accounting for both the 5% threshold and the Grundmandatsklausel. Constituency predictions then feed into coalition majority probability calculations, which is another thing we predict at Zweitstimme. The model got 270 of 299 constituencies right, and in the remaining 29, personal vote factors that no model can measure made the difference. The credibility intervals told you in advance the model did not know. That honesty is a feature of the election forecasting model, not a flaw. A forecast that admits uncertainty is more useful than one that claims false certainty. Understanding these nuances makes all the difference between reading a headline and understanding what it actually means. Read the full evaluation of the 2025 forecast at <a href="https://zweitstimme.org" style="color:var(--orange);border-bottom:1px solid var(--orange-light);">zweitstimme.org</a>.</p>
 </div>
 </div>
 
@@ -658,12 +666,7 @@ function startZoomCircle(){
 }
 
 function showThreshold(){
-  document.getElementById('main-chart-wrap').style.height='0';
-  document.getElementById('main-chart-wrap').style.overflow='hidden';
-  document.getElementById('thr-chart-wrap').style.height='370px';
-  document.getElementById('main-legend').style.display='none';
-  document.getElementById('formula').style.display='none';
-  document.getElementById('main-caption').textContent='Final prediction — 2 days before election. I-bars = 83% CI. ★ = actual 2025 result.';
+  // Threshold chart is now in its own scrolly section — nothing to swap
 }
 
 function updateMain(step){
@@ -898,6 +901,8 @@ window.addEventListener('DOMContentLoaded',()=>{
   buildHbEmbed();
   buildThr();
   updateMain(0);
+  // Init threshold scrollama (just 1 step, keeps chart visible)
+  scrollama().setup({step:'[data-thr-step]', offset:0.5}).onStepEnter(()=>{});
 
   scrollama().setup({step:'.step',offset:0.5}).onStepEnter(({index})=>{
     // For step 8 (zoom step), don't trigger immediately — handled by scroll
@@ -925,8 +930,11 @@ window.addEventListener('DOMContentLoaded',()=>{
   let zoomCircleShown = false;
   let zoomTriggered = false;
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', (e) => {
     const vh = window.innerHeight;
+
+    // (scroll is free after zoom circle appears — 1.8s timeout unlocks)
+
 
     // Reset if scrolled back above step 7
     const step7el = document.querySelector('[data-step="7"]');
@@ -949,29 +957,16 @@ window.addEventListener('DOMContentLoaded',()=>{
       }
     }
 
-    // Fire zoom circle when step 7 centre scrolls past viewport centre (exits upward)
+    // Fire zoom circle when step 7 centre reaches viewport centre
     if(!zoomCircleShown && step7el) {
       const r7 = step7el.getBoundingClientRect();
       const centre7 = r7.top + r7.height / 2;
-      if(centre7 < vh / 2) {
+      if(centre7 <= vh / 2) {
         zoomCircleShown = true;
+        window._lockedScrollY = window.scrollY;
         startZoomCircle();
-      }
-    }
-
-    // Fire chart switch when step 8 centre reaches viewport centre
-    if(zoomCircleShown && !zoomTriggered) {
-      const step8el = document.querySelector('[data-step="8"]');
-      if(step8el) {
-        const r8 = step8el.getBoundingClientRect();
-        const centre8 = r8.top + r8.height / 2;
-        if(centre8 <= vh / 2) {
-          zoomTriggered = true;
-          const ov = document.getElementById('zoom-overlay');
-          ov.style.opacity = '0';
-          setTimeout(() => ov.getContext('2d').clearRect(0, 0, ov.width, ov.height), 600);
-          showThreshold();
-        }
+        // Unlock after 1.8s — let user scroll into threshold section
+        setTimeout(() => { zoomTriggered = true; }, 1800);
       }
     }
   });
